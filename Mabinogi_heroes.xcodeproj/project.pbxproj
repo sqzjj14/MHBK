@@ -15,6 +15,30 @@
 		9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9412F77C1CA229E50037F461 /* LaunchScreen.storyboard */; };
 		9412F7891CA229E50037F461 /* Mabinogi_heroesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7881CA229E50037F461 /* Mabinogi_heroesTests.m */; };
 		9412F7941CA229E60037F461 /* Mabinogi_heroesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7931CA229E60037F461 /* Mabinogi_heroesUITests.m */; };
+		9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B21CA236EF0037F461 /* NewsViewController.m */; };
+		9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B51CA236FC0037F461 /* DataViewController.m */; };
+		9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B81CA237360037F461 /* CommunityViewController.m */; };
+		9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BB1CA237420037F461 /* MySelfViewController.m */; };
+		9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */; };
+		9412F7C51CA243080037F461 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7C31CA243080037F461 /* NewsCell.m */; };
+		9412F7C61CA243080037F461 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9412F7C41CA243080037F461 /* NewsCell.xib */; };
+		9447DA211CA26C4C0009AA60 /* jshop_searchbar_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */; };
+		9447DA221CA26C4C0009AA60 /* jshop_searchbar_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */; };
+		9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA251CA278DD0009AA60 /* MultLevelMeun.m */; };
+		9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA291CA2841B0009AA60 /* RightCellCollectionViewCell.m */; };
+		9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2A1CA2841B0009AA60 /* RightCellCollectionViewCell.xib */; };
+		9447DA301CA284370009AA60 /* LeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA2E1CA284370009AA60 /* LeftCell.m */; };
+		9447DA311CA284370009AA60 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2F1CA284370009AA60 /* LeftCell.xib */; };
+		9447DA341CA284630009AA60 /* RightHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA331CA284630009AA60 /* RightHeadView.m */; };
+		9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA351CA284DC0009AA60 /* RightHeadView.xib */; };
+		9447DA3F1CA2A3570009AA60 /* 利斯塔非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA371CA2A3570009AA60 /* 利斯塔非选中.png */; };
+		9447DA401CA2A3570009AA60 /* 利斯塔选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA381CA2A3570009AA60 /* 利斯塔选中.png */; };
+		9447DA411CA2A3570009AA60 /* 女妖非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA391CA2A3570009AA60 /* 女妖非选中.png */; };
+		9447DA421CA2A3570009AA60 /* 女妖选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA3A1CA2A3570009AA60 /* 女妖选中.png */; };
+		9447DA431CA2A3570009AA60 /* 维拉非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA3B1CA2A3570009AA60 /* 维拉非选中.png */; };
+		9447DA441CA2A3570009AA60 /* 维拉选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA3C1CA2A3570009AA60 /* 维拉选中.png */; };
+		9447DA451CA2A3570009AA60 /* 伊菲非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA3D1CA2A3570009AA60 /* 伊菲非选中.png */; };
+		9447DA461CA2A3570009AA60 /* 伊菲选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA3E1CA2A3570009AA60 /* 伊菲选中.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +75,41 @@
 		9412F78F1CA229E60037F461 /* Mabinogi_heroesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mabinogi_heroesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412F7931CA229E60037F461 /* Mabinogi_heroesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mabinogi_heroesUITests.m; sourceTree = "<group>"; };
 		9412F7951CA229E60037F461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9412F7B11CA236EF0037F461 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		9412F7B21CA236EF0037F461 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		9412F7B41CA236FC0037F461 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		9412F7B51CA236FC0037F461 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		9412F7B71CA237360037F461 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		9412F7B81CA237360037F461 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		9412F7BA1CA237420037F461 /* MySelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySelfViewController.h; sourceTree = "<group>"; };
+		9412F7BB1CA237420037F461 /* MySelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySelfViewController.m; sourceTree = "<group>"; };
+		9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
+		9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
+		9412F7C21CA243080037F461 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		9412F7C31CA243080037F461 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		9412F7C41CA243080037F461 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		9412F7C81CA24FCA0037F461 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jshop_searchbar_search@2x.png"; sourceTree = "<group>"; };
+		9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jshop_searchbar_search@3x.png"; sourceTree = "<group>"; };
+		9447DA241CA278DD0009AA60 /* MultLevelMeun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultLevelMeun.h; sourceTree = "<group>"; };
+		9447DA251CA278DD0009AA60 /* MultLevelMeun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultLevelMeun.m; sourceTree = "<group>"; };
+		9447DA281CA2841B0009AA60 /* RightCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCellCollectionViewCell.h; sourceTree = "<group>"; };
+		9447DA291CA2841B0009AA60 /* RightCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCellCollectionViewCell.m; sourceTree = "<group>"; };
+		9447DA2A1CA2841B0009AA60 /* RightCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		9447DA2D1CA284370009AA60 /* LeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftCell.h; sourceTree = "<group>"; };
+		9447DA2E1CA284370009AA60 /* LeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftCell.m; sourceTree = "<group>"; };
+		9447DA2F1CA284370009AA60 /* LeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCell.xib; sourceTree = "<group>"; };
+		9447DA321CA284630009AA60 /* RightHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightHeadView.h; sourceTree = "<group>"; };
+		9447DA331CA284630009AA60 /* RightHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightHeadView.m; sourceTree = "<group>"; };
+		9447DA351CA284DC0009AA60 /* RightHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightHeadView.xib; sourceTree = "<group>"; };
+		9447DA371CA2A3570009AA60 /* 利斯塔非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "利斯塔非选中.png"; sourceTree = "<group>"; };
+		9447DA381CA2A3570009AA60 /* 利斯塔选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "利斯塔选中.png"; sourceTree = "<group>"; };
+		9447DA391CA2A3570009AA60 /* 女妖非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "女妖非选中.png"; sourceTree = "<group>"; };
+		9447DA3A1CA2A3570009AA60 /* 女妖选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "女妖选中.png"; sourceTree = "<group>"; };
+		9447DA3B1CA2A3570009AA60 /* 维拉非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "维拉非选中.png"; sourceTree = "<group>"; };
+		9447DA3C1CA2A3570009AA60 /* 维拉选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "维拉选中.png"; sourceTree = "<group>"; };
+		9447DA3D1CA2A3570009AA60 /* 伊菲非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伊菲非选中.png"; sourceTree = "<group>"; };
+		9447DA3E1CA2A3570009AA60 /* 伊菲选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伊菲选中.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +168,13 @@
 				9412F77A1CA229E50037F461 /* Assets.xcassets */,
 				9412F77C1CA229E50037F461 /* LaunchScreen.storyboard */,
 				9412F77F1CA229E50037F461 /* Info.plist */,
+				9447DA1E1CA26C3B0009AA60 /* 图片 */,
+				9412F7C71CA24FA70037F461 /* 定义 */,
+				9412F7BD1CA240A50037F461 /* Tabbar */,
+				9412F7A11CA232CA0037F461 /* 资讯 */,
+				9412F7A21CA232DA0037F461 /* 数据 */,
+				9412F7A31CA232F60037F461 /* 社区 */,
+				9412F7A41CA232FE0037F461 /* 我的 */,
 				9412F76E1CA229E50037F461 /* Supporting Files */,
 			);
 			path = Mabinogi_heroes;
@@ -138,6 +204,114 @@
 				9412F7951CA229E60037F461 /* Info.plist */,
 			);
 			path = Mabinogi_heroesUITests;
+			sourceTree = "<group>";
+		};
+		9412F7A11CA232CA0037F461 /* 资讯 */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7C11CA242CE0037F461 /* cell */,
+				9412F7B11CA236EF0037F461 /* NewsViewController.h */,
+				9412F7B21CA236EF0037F461 /* NewsViewController.m */,
+			);
+			name = "资讯";
+			sourceTree = "<group>";
+		};
+		9412F7A21CA232DA0037F461 /* 数据 */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7B41CA236FC0037F461 /* DataViewController.h */,
+				9412F7B51CA236FC0037F461 /* DataViewController.m */,
+				9447DA231CA276E00009AA60 /* 混合三级视图 */,
+			);
+			name = "数据";
+			sourceTree = "<group>";
+		};
+		9412F7A31CA232F60037F461 /* 社区 */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7B71CA237360037F461 /* CommunityViewController.h */,
+				9412F7B81CA237360037F461 /* CommunityViewController.m */,
+			);
+			name = "社区";
+			sourceTree = "<group>";
+		};
+		9412F7A41CA232FE0037F461 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7BA1CA237420037F461 /* MySelfViewController.h */,
+				9412F7BB1CA237420037F461 /* MySelfViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		9412F7BD1CA240A50037F461 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */,
+				9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */,
+				9447DA371CA2A3570009AA60 /* 利斯塔非选中.png */,
+				9447DA381CA2A3570009AA60 /* 利斯塔选中.png */,
+				9447DA391CA2A3570009AA60 /* 女妖非选中.png */,
+				9447DA3A1CA2A3570009AA60 /* 女妖选中.png */,
+				9447DA3B1CA2A3570009AA60 /* 维拉非选中.png */,
+				9447DA3C1CA2A3570009AA60 /* 维拉选中.png */,
+				9447DA3D1CA2A3570009AA60 /* 伊菲非选中.png */,
+				9447DA3E1CA2A3570009AA60 /* 伊菲选中.png */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		9412F7C11CA242CE0037F461 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7C21CA243080037F461 /* NewsCell.h */,
+				9412F7C31CA243080037F461 /* NewsCell.m */,
+				9412F7C41CA243080037F461 /* NewsCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		9412F7C71CA24FA70037F461 /* 定义 */ = {
+			isa = PBXGroup;
+			children = (
+				9412F7C81CA24FCA0037F461 /* Header.h */,
+			);
+			name = "定义";
+			sourceTree = "<group>";
+		};
+		9447DA1E1CA26C3B0009AA60 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */,
+				9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */,
+			);
+			name = "图片";
+			sourceTree = "<group>";
+		};
+		9447DA231CA276E00009AA60 /* 混合三级视图 */ = {
+			isa = PBXGroup;
+			children = (
+				9447DA271CA283940009AA60 /* cell */,
+				9447DA241CA278DD0009AA60 /* MultLevelMeun.h */,
+				9447DA251CA278DD0009AA60 /* MultLevelMeun.m */,
+			);
+			name = "混合三级视图";
+			sourceTree = "<group>";
+		};
+		9447DA271CA283940009AA60 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9447DA281CA2841B0009AA60 /* RightCellCollectionViewCell.h */,
+				9447DA291CA2841B0009AA60 /* RightCellCollectionViewCell.m */,
+				9447DA2A1CA2841B0009AA60 /* RightCellCollectionViewCell.xib */,
+				9447DA2D1CA284370009AA60 /* LeftCell.h */,
+				9447DA2E1CA284370009AA60 /* LeftCell.m */,
+				9447DA2F1CA284370009AA60 /* LeftCell.xib */,
+				9447DA321CA284630009AA60 /* RightHeadView.h */,
+				9447DA331CA284630009AA60 /* RightHeadView.m */,
+				9447DA351CA284DC0009AA60 /* RightHeadView.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +420,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9447DA311CA284370009AA60 /* LeftCell.xib in Resources */,
+				9447DA3F1CA2A3570009AA60 /* 利斯塔非选中.png in Resources */,
+				9447DA211CA26C4C0009AA60 /* jshop_searchbar_search@2x.png in Resources */,
+				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
+				9447DA401CA2A3570009AA60 /* 利斯塔选中.png in Resources */,
+				9447DA431CA2A3570009AA60 /* 维拉非选中.png in Resources */,
+				9447DA411CA2A3570009AA60 /* 女妖非选中.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
+				9447DA461CA2A3570009AA60 /* 伊菲选中.png in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
+				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
+				9447DA441CA2A3570009AA60 /* 维拉选中.png in Resources */,
+				9412F7C61CA243080037F461 /* NewsCell.xib in Resources */,
+				9447DA451CA2A3570009AA60 /* 伊菲非选中.png in Resources */,
+				9447DA221CA26C4C0009AA60 /* jshop_searchbar_search@3x.png in Resources */,
+				9447DA421CA2A3570009AA60 /* 女妖选中.png in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +461,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */,
 				9412F7761CA229E50037F461 /* ViewController.m in Sources */,
+				9412F7C51CA243080037F461 /* NewsCell.m in Sources */,
+				9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */,
+				9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */,
 				9412F7731CA229E50037F461 /* AppDelegate.m in Sources */,
+				9447DA341CA284630009AA60 /* RightHeadView.m in Sources */,
 				9412F7701CA229E50037F461 /* main.m in Sources */,
+				9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */,
+				9447DA301CA284370009AA60 /* LeftCell.m in Sources */,
+				9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */,
+				9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */,
+				9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +699,7 @@
 				9412F79A1CA229E60037F461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9412F79B1CA229E60037F461 /* Build configuration list for PBXNativeTarget "Mabinogi_heroesTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +708,7 @@
 				9412F79D1CA229E60037F461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9412F79E1CA229E60037F461 /* Build configuration list for PBXNativeTarget "Mabinogi_heroesUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +717,7 @@
 				9412F7A01CA229E60037F461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
