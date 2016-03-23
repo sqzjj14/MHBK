@@ -13,6 +13,7 @@
 #import "LeftCell.h"
 
 #define KleftWidth 100
+#define kRightCell @"RightCellCollectionViewCell"
 
 @interface MultLevelMeun()
 
@@ -34,7 +35,7 @@
 {
     if (self == [super initWithFrame:frame]) {
         if (alldata.count == 0) {
-            return nil;
+            //return nil;
         }
         
         _block = selectIndexBlock;
@@ -68,7 +69,7 @@
             self.rightCollection.dataSource = self;
         
             //注册右边的xib
-            [self.rightCollection registerNib:[UINib nibWithNibName:@"RightCell" bundle:nil] forCellWithReuseIdentifier:@"RightCell"];
+            [self.rightCollection registerNib:[UINib nibWithNibName:kRightCell bundle:nil] forCellWithReuseIdentifier:kRightCell];
             [self.rightCollection registerNib:[UINib nibWithNibName:@"RightHeadView"  bundle:nil]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"RightHeadView"];
             
             [self addSubview:self.rightCollection];
@@ -131,7 +132,7 @@
     //cell.backgroundColor = ;
 }
 
-#pragma mark---右边的tablew 代理
+#pragma mark---右边的collection 代理
 #pragma mark--deleagte
 #pragma mark 二级目录数量设置
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

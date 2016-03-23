@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RightHeadView : UIView
+@interface RightHeadView : UICollectionReusableView
 @property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end
