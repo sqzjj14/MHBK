@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eRm-z6-E1m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eRm-z6-E1m">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -72,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VjY-rQ-coF" userLabel="headView">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43"/>
+                                <rect key="frame" x="0.0" y="21" width="375" height="43"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-nG-q8i" userLabel="searchView">
                                         <rect key="frame" x="8" y="8" width="359" height="27"/>
@@ -119,7 +119,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VjY-rQ-coF" firstAttribute="leading" secondItem="280-Ys-2qh" secondAttribute="leadingMargin" constant="-20" id="KEb-4w-HT1"/>
-                            <constraint firstItem="VjY-rQ-coF" firstAttribute="top" secondItem="aNH-Nw-cg2" secondAttribute="bottom" constant="8" id="f5q-iN-gph"/>
+                            <constraint firstItem="VjY-rQ-coF" firstAttribute="top" secondItem="aNH-Nw-cg2" secondAttribute="bottom" constant="1" id="f5q-iN-gph"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VjY-rQ-coF" secondAttribute="trailing" constant="-20" id="sjg-a4-FkW"/>
                         </constraints>
                     </view>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1017.5" y="906.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tabbar View Controller-->
         <scene sceneID="yZH-uS-CBk">
             <objects>
-                <tabBarController id="eRm-z6-E1m" sceneMemberID="viewController">
+                <tabBarController id="eRm-z6-E1m" customClass="MainTabbarViewController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DTU-wc-gws">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

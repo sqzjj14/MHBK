@@ -74,7 +74,7 @@
             
             [self addSubview:self.rightCollection];
             
-            //self.rightCollection.backgroundColor = ;
+            self.rightCollection.backgroundColor = [UIColor whiteColor] ;
             
             //self.backgroundColor = ;
     }
@@ -102,7 +102,7 @@
     
     LeftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftCell"];
     //cell.selectionStyle = UITableViewCellAccessoryNone;
-    cell.title.text = @"一级目录";
+    cell.title.text = @"武器";
     cell.title.numberOfLines = 2;
     
     
@@ -157,7 +157,7 @@
     //根据 selectIndex(tableview.indexpath.row)确认对应的section
     cell.title.text = @"无尽双剑";
     cell.backgroundColor = [UIColor clearColor];
-   // cell.image setImage:[UIImage imageNamed:];
+    [cell.image setImage:[UIImage imageNamed:@"无尽双剑.png"]];
     
     return cell;
 }
