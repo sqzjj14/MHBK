@@ -12,7 +12,6 @@
 		50F087191CA4E868005352B7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087111CA4E868005352B7 /* FMDatabasePool.m */; };
 		50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087131CA4E868005352B7 /* FMDatabaseQueue.m */; };
 		50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087161CA4E868005352B7 /* FMResultSet.m */; };
-		50F0871D1CA4EA6A005352B7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F0871C1CA4EA6A005352B7 /* libsqlite3.dylib */; };
 		9412F7701CA229E50037F461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F76F1CA229E50037F461 /* main.m */; };
 		9412F7731CA229E50037F461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7721CA229E50037F461 /* AppDelegate.m */; };
 		9412F7761CA229E50037F461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7751CA229E50037F461 /* ViewController.m */; };
@@ -35,6 +34,13 @@
 		9447DA311CA284370009AA60 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2F1CA284370009AA60 /* LeftCell.xib */; };
 		9447DA341CA284630009AA60 /* RightHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA331CA284630009AA60 /* RightHeadView.m */; };
 		9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA351CA284DC0009AA60 /* RightHeadView.xib */; };
+		947BC0931CA4FEA300AAFEB4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */; };
+		947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
+		947BC0971CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
+		947BC0981CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
+		947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
+		947BC09D1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
+		947BC09E1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +72,6 @@
 		50F087141CA4E868005352B7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		50F087151CA4E868005352B7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		50F087161CA4E868005352B7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		50F0871C1CA4EA6A005352B7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9412F76B1CA229E50037F461 /* Mabinogi_heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mabinogi_heroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412F76F1CA229E50037F461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9412F7711CA229E50037F461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +113,10 @@
 		9447DA321CA284630009AA60 /* RightHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightHeadView.h; sourceTree = "<group>"; };
 		9447DA331CA284630009AA60 /* RightHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightHeadView.m; sourceTree = "<group>"; };
 		9447DA351CA284DC0009AA60 /* RightHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightHeadView.xib; sourceTree = "<group>"; };
+		947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		947BC0951CA5286900AAFEB4 /* vindicyusdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vindicyusdb.db; sourceTree = "<group>"; };
+		947BC09A1CA5316F00AAFEB4 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F0871D1CA4EA6A005352B7 /* libsqlite3.dylib in Frameworks */,
+				947BC0931CA4FEA300AAFEB4 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +174,8 @@
 		9412F7621CA229E50037F461 = {
 			isa = PBXGroup;
 			children = (
-				50F0871C1CA4EA6A005352B7 /* libsqlite3.dylib */,
+				947BC0951CA5286900AAFEB4 /* vindicyusdb.db */,
+				947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */,
 				9412F76D1CA229E50037F461 /* Mabinogi_heroes */,
 				9412F7871CA229E50037F461 /* Mabinogi_heroesTests */,
 				9412F7921CA229E60037F461 /* Mabinogi_heroesUITests */,
@@ -194,6 +204,7 @@
 				9412F77A1CA229E50037F461 /* Assets.xcassets */,
 				9412F77C1CA229E50037F461 /* LaunchScreen.storyboard */,
 				9412F77F1CA229E50037F461 /* Info.plist */,
+				947BC0991CA5312A00AAFEB4 /* 数据库 */,
 				50F0870A1CA4E728005352B7 /* 3rd */,
 				9412F7C71CA24FA70037F461 /* 定义 */,
 				9412F7BD1CA240A50037F461 /* Tabbar */,
@@ -323,6 +334,15 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		947BC0991CA5312A00AAFEB4 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				947BC09A1CA5316F00AAFEB4 /* DatabaseManager.h */,
+				947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */,
+			);
+			name = "数据库";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +455,7 @@
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
 				9412F7C61CA243080037F461 /* NewsCell.xib in Resources */,
+				947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947BC0971CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947BC0981CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +485,7 @@
 			files = (
 				9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */,
 				9412F7761CA229E50037F461 /* ViewController.m in Sources */,
+				947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */,
 				9412F7C51CA243080037F461 /* NewsCell.m in Sources */,
 				50F087171CA4E868005352B7 /* FMDatabase.m in Sources */,
 				9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */,
@@ -485,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947BC09D1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */,
 				9412F7891CA229E50037F461 /* Mabinogi_heroesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947BC09E1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */,
 				9412F7941CA229E60037F461 /* Mabinogi_heroesUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

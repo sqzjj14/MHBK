@@ -8,9 +8,12 @@
 
 #import "NewsViewController.h"
 #import "Header.h"
+#import "DatabaseManager.h"
 
 @interface NewsViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
+
+@property (nonatomic,strong)FMDatabase *database;
 
 @end
 
@@ -22,7 +25,22 @@
     NSURL *newURL = [NSURL URLWithString:NEWS_URL];
     NSURLRequest *request = [NSURLRequest requestWithURL:newURL];
     [self.webview loadRequest:request];
+
+    NSString *selectSQL = @"SELECT * FROM role";
+    [[DatabaseManager mabinogiHelper].database open];
+    FMResultSet *rs = [[DatabaseManager mabinogiHelper].database executeQuery:selectSQL];
+    
+    while ([rs next]) {
+       
+        NSString * name = [rs stringForColumn:@"name"];
+       // NSString * age = [rs stringForColumn:AGE];
+        //NSString * address = [rs stringForColumn:ADDRESS];
+        NSLog(@"name = %@", name);
+    }
+    [self.database close];
+    
 }
+
 
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
