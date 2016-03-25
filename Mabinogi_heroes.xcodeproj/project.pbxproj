@@ -22,8 +22,6 @@
 		9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */; };
 		9412F7C51CA243080037F461 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7C31CA243080037F461 /* NewsCell.m */; };
 		9412F7C61CA243080037F461 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9412F7C41CA243080037F461 /* NewsCell.xib */; };
-		9447DA211CA26C4C0009AA60 /* jshop_searchbar_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */; };
-		9447DA221CA26C4C0009AA60 /* jshop_searchbar_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */; };
 		9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA251CA278DD0009AA60 /* MultLevelMeun.m */; };
 		9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA291CA2841B0009AA60 /* RightCellCollectionViewCell.m */; };
 		9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2A1CA2841B0009AA60 /* RightCellCollectionViewCell.xib */; };
@@ -31,15 +29,6 @@
 		9447DA311CA284370009AA60 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2F1CA284370009AA60 /* LeftCell.xib */; };
 		9447DA341CA284630009AA60 /* RightHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA331CA284630009AA60 /* RightHeadView.m */; };
 		9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA351CA284DC0009AA60 /* RightHeadView.xib */; };
-		947F11041CA3BE1500E6334A /* lynn_normol.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F10FC1CA3BE1500E6334A /* lynn_normol.png */; };
-		947F11051CA3BE1500E6334A /* lynn_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F10FD1CA3BE1500E6334A /* lynn_selected.png */; };
-		947F11061CA3BE1500E6334A /* 女妖非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F10FE1CA3BE1500E6334A /* 女妖非选中.png */; };
-		947F11071CA3BE1500E6334A /* 女妖选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F10FF1CA3BE1500E6334A /* 女妖选中.png */; };
-		947F11081CA3BE1500E6334A /* 维拉非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F11001CA3BE1500E6334A /* 维拉非选中.png */; };
-		947F11091CA3BE1500E6334A /* 维拉选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F11011CA3BE1500E6334A /* 维拉选中.png */; };
-		947F110A1CA3BE1500E6334A /* 伊菲非选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F11021CA3BE1500E6334A /* 伊菲非选中.png */; };
-		947F110B1CA3BE1500E6334A /* 伊菲选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F11031CA3BE1500E6334A /* 伊菲选中.png */; };
-		947F110D1CA3C60800E6334A /* 无尽双剑.png in Resources */ = {isa = PBXBuildFile; fileRef = 947F110C1CA3C60800E6334A /* 无尽双剑.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +79,6 @@
 		9412F7C31CA243080037F461 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		9412F7C41CA243080037F461 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		9412F7C81CA24FCA0037F461 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jshop_searchbar_search@2x.png"; sourceTree = "<group>"; };
-		9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jshop_searchbar_search@3x.png"; sourceTree = "<group>"; };
 		9447DA241CA278DD0009AA60 /* MultLevelMeun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultLevelMeun.h; sourceTree = "<group>"; };
 		9447DA251CA278DD0009AA60 /* MultLevelMeun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultLevelMeun.m; sourceTree = "<group>"; };
 		9447DA281CA2841B0009AA60 /* RightCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCellCollectionViewCell.h; sourceTree = "<group>"; };
@@ -103,15 +90,6 @@
 		9447DA321CA284630009AA60 /* RightHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightHeadView.h; sourceTree = "<group>"; };
 		9447DA331CA284630009AA60 /* RightHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightHeadView.m; sourceTree = "<group>"; };
 		9447DA351CA284DC0009AA60 /* RightHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightHeadView.xib; sourceTree = "<group>"; };
-		947F10FC1CA3BE1500E6334A /* lynn_normol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynn_normol.png; sourceTree = "<group>"; };
-		947F10FD1CA3BE1500E6334A /* lynn_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynn_selected.png; sourceTree = "<group>"; };
-		947F10FE1CA3BE1500E6334A /* 女妖非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "女妖非选中.png"; sourceTree = "<group>"; };
-		947F10FF1CA3BE1500E6334A /* 女妖选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "女妖选中.png"; sourceTree = "<group>"; };
-		947F11001CA3BE1500E6334A /* 维拉非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "维拉非选中.png"; sourceTree = "<group>"; };
-		947F11011CA3BE1500E6334A /* 维拉选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "维拉选中.png"; sourceTree = "<group>"; };
-		947F11021CA3BE1500E6334A /* 伊菲非选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伊菲非选中.png"; sourceTree = "<group>"; };
-		947F11031CA3BE1500E6334A /* 伊菲选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伊菲选中.png"; sourceTree = "<group>"; };
-		947F110C1CA3C60800E6334A /* 无尽双剑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "无尽双剑.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +148,6 @@
 				9412F77A1CA229E50037F461 /* Assets.xcassets */,
 				9412F77C1CA229E50037F461 /* LaunchScreen.storyboard */,
 				9412F77F1CA229E50037F461 /* Info.plist */,
-				9447DA1E1CA26C3B0009AA60 /* 图片 */,
 				9412F7C71CA24FA70037F461 /* 定义 */,
 				9412F7BD1CA240A50037F461 /* Tabbar */,
 				9412F7A11CA232CA0037F461 /* 资讯 */,
@@ -271,24 +248,6 @@
 				9412F7C81CA24FCA0037F461 /* Header.h */,
 			);
 			name = "定义";
-			sourceTree = "<group>";
-		};
-		9447DA1E1CA26C3B0009AA60 /* 图片 */ = {
-			isa = PBXGroup;
-			children = (
-				9447DA1F1CA26C4C0009AA60 /* jshop_searchbar_search@2x.png */,
-				9447DA201CA26C4C0009AA60 /* jshop_searchbar_search@3x.png */,
-				947F10FC1CA3BE1500E6334A /* lynn_normol.png */,
-				947F10FD1CA3BE1500E6334A /* lynn_selected.png */,
-				947F10FE1CA3BE1500E6334A /* 女妖非选中.png */,
-				947F10FF1CA3BE1500E6334A /* 女妖选中.png */,
-				947F11001CA3BE1500E6334A /* 维拉非选中.png */,
-				947F11011CA3BE1500E6334A /* 维拉选中.png */,
-				947F11021CA3BE1500E6334A /* 伊菲非选中.png */,
-				947F11031CA3BE1500E6334A /* 伊菲选中.png */,
-				947F110C1CA3C60800E6334A /* 无尽双剑.png */,
-			);
-			name = "图片";
 			sourceTree = "<group>";
 		};
 		9447DA231CA276E00009AA60 /* 混合三级视图 */ = {
@@ -424,22 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9447DA311CA284370009AA60 /* LeftCell.xib in Resources */,
-				947F11041CA3BE1500E6334A /* lynn_normol.png in Resources */,
-				9447DA211CA26C4C0009AA60 /* jshop_searchbar_search@2x.png in Resources */,
 				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
-				947F11051CA3BE1500E6334A /* lynn_selected.png in Resources */,
-				947F11081CA3BE1500E6334A /* 维拉非选中.png in Resources */,
-				947F11061CA3BE1500E6334A /* 女妖非选中.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
-				947F110B1CA3BE1500E6334A /* 伊菲选中.png in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
-				947F110D1CA3C60800E6334A /* 无尽双剑.png in Resources */,
-				947F11091CA3BE1500E6334A /* 维拉选中.png in Resources */,
 				9412F7C61CA243080037F461 /* NewsCell.xib in Resources */,
-				947F110A1CA3BE1500E6334A /* 伊菲非选中.png in Resources */,
-				9447DA221CA26C4C0009AA60 /* jshop_searchbar_search@3x.png in Resources */,
-				947F11071CA3BE1500E6334A /* 女妖选中.png in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
