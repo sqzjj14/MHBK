@@ -37,7 +37,7 @@
         //NSString * address = [rs stringForColumn:ADDRESS];
         NSLog(@"name = %@", name);
     }
-    [self.database close];
+    [[DatabaseManager mabinogiHelper].database close];
     
 }
 

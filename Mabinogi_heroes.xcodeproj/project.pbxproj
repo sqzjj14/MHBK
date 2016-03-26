@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50D9D7881CA6C54F002A6390 /* BossListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D9D7871CA6C54F002A6390 /* BossListModel.m */; };
+		50D9D78B1CA6C569002A6390 /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D9D78A1CA6C569002A6390 /* TitleModel.m */; };
+		50D9D78E1CA6C58C002A6390 /* EquipmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D9D78D1CA6C58C002A6390 /* EquipmentModel.m */; };
 		50F087171CA4E868005352B7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F0870D1CA4E868005352B7 /* FMDatabase.m */; };
 		50F087181CA4E868005352B7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F0870F1CA4E868005352B7 /* FMDatabaseAdditions.m */; };
 		50F087191CA4E868005352B7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087111CA4E868005352B7 /* FMDatabasePool.m */; };
@@ -61,6 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50D9D7861CA6C54F002A6390 /* BossListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossListModel.h; sourceTree = "<group>"; };
+		50D9D7871CA6C54F002A6390 /* BossListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossListModel.m; sourceTree = "<group>"; };
+		50D9D7891CA6C569002A6390 /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
+		50D9D78A1CA6C569002A6390 /* TitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
+		50D9D78C1CA6C58C002A6390 /* EquipmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentModel.h; sourceTree = "<group>"; };
+		50D9D78D1CA6C58C002A6390 /* EquipmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentModel.m; sourceTree = "<group>"; };
 		50F0870C1CA4E868005352B7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		50F0870D1CA4E868005352B7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		50F0870E1CA4E868005352B7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -145,6 +154,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50D9D77F1CA6BB05002A6390 /* 模型 */ = {
+			isa = PBXGroup;
+			children = (
+				50D9D7801CA6BB2C002A6390 /* 装备模型 */,
+				50D9D7821CA6BB4C002A6390 /* 副本模型 */,
+				50D9D7811CA6BB37002A6390 /* 头衔模型 */,
+			);
+			name = "模型";
+			sourceTree = "<group>";
+		};
+		50D9D7801CA6BB2C002A6390 /* 装备模型 */ = {
+			isa = PBXGroup;
+			children = (
+				50D9D78C1CA6C58C002A6390 /* EquipmentModel.h */,
+				50D9D78D1CA6C58C002A6390 /* EquipmentModel.m */,
+			);
+			name = "装备模型";
+			sourceTree = "<group>";
+		};
+		50D9D7811CA6BB37002A6390 /* 头衔模型 */ = {
+			isa = PBXGroup;
+			children = (
+				50D9D7891CA6C569002A6390 /* TitleModel.h */,
+				50D9D78A1CA6C569002A6390 /* TitleModel.m */,
+			);
+			name = "头衔模型";
+			sourceTree = "<group>";
+		};
+		50D9D7821CA6BB4C002A6390 /* 副本模型 */ = {
+			isa = PBXGroup;
+			children = (
+				50D9D7861CA6C54F002A6390 /* BossListModel.h */,
+				50D9D7871CA6C54F002A6390 /* BossListModel.m */,
+			);
+			name = "副本模型";
+			sourceTree = "<group>";
+		};
 		50F0870A1CA4E728005352B7 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +250,9 @@
 				9412F77A1CA229E50037F461 /* Assets.xcassets */,
 				9412F77C1CA229E50037F461 /* LaunchScreen.storyboard */,
 				9412F77F1CA229E50037F461 /* Info.plist */,
-				947BC0991CA5312A00AAFEB4 /* 数据库 */,
 				50F0870A1CA4E728005352B7 /* 3rd */,
+				50D9D77F1CA6BB05002A6390 /* 模型 */,
+				947BC0991CA5312A00AAFEB4 /* 数据库 */,
 				9412F7C71CA24FA70037F461 /* 定义 */,
 				9412F7BD1CA240A50037F461 /* Tabbar */,
 				9412F7A11CA232CA0037F461 /* 资讯 */,
@@ -489,7 +536,9 @@
 				9412F7C51CA243080037F461 /* NewsCell.m in Sources */,
 				50F087171CA4E868005352B7 /* FMDatabase.m in Sources */,
 				9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */,
+				50D9D7881CA6C54F002A6390 /* BossListModel.m in Sources */,
 				9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */,
+				50D9D78E1CA6C58C002A6390 /* EquipmentModel.m in Sources */,
 				50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */,
 				9412F7731CA229E50037F461 /* AppDelegate.m in Sources */,
 				9447DA341CA284630009AA60 /* RightHeadView.m in Sources */,
@@ -501,6 +550,7 @@
 				50F087191CA4E868005352B7 /* FMDatabasePool.m in Sources */,
 				50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */,
 				9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */,
+				50D9D78B1CA6C569002A6390 /* TitleModel.m in Sources */,
 				50F087181CA4E868005352B7 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mabinogi_heroes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sqzjj14.Mabinogi-heroes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -656,6 +707,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mabinogi_heroes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sqzjj14.Mabinogi-heroes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
