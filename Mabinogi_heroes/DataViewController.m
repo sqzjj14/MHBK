@@ -7,7 +7,6 @@
 //
 
 #import "DataViewController.h"
-#import "MultLevelMeun.h"
 #import "Header.h"
 
 @interface DataViewController ()
@@ -27,7 +26,7 @@
     self.navigationController.navigationBarHidden = YES;
     
     [self initsearchView];
-  //  [self initMultView];
+
     
     
 
@@ -46,15 +45,7 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(searchEvent:)];
     [searchView addGestureRecognizer:tapGesture];
 }
-#pragma mark 创建三级视图
--(void)initMultView
-{
-    MultLevelMeun *multView =[[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 63, kScreenWidth, kScreenHeight) WithAllData:nil withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
-        
-    }];
-    
-    [self.view addSubview:multView];
-}
+
 
 #pragma mark 搜索方法
 -(void)searchEvent:(UITapGestureRecognizer *)gesture{

@@ -115,6 +115,34 @@
                                     <constraint firstItem="bfG-nG-q8i" firstAttribute="top" secondItem="VjY-rQ-coF" secondAttribute="top" constant="8" id="htd-OO-vID"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-gJ-HZL">
+                                <rect key="frame" x="132" y="137" width="74" height="30"/>
+                                <state key="normal" title="equipment"/>
+                                <connections>
+                                    <segue destination="zfa-Nf-7we" kind="push" id="dTF-fJ-vO5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-H0-Cwp">
+                                <rect key="frame" x="152" y="235" width="34" height="30"/>
+                                <state key="normal" title="Boss"/>
+                                <connections>
+                                    <segue destination="Jbc-4f-gKd" kind="push" id="EQ7-jN-KaZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRt-7Q-APH">
+                                <rect key="frame" x="141" y="343" width="56" height="30"/>
+                                <state key="normal" title="enchant"/>
+                                <connections>
+                                    <segue destination="ScO-da-JHg" kind="push" id="S1M-jV-mXw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VME-5a-fus">
+                                <rect key="frame" x="154" y="461" width="30" height="30"/>
+                                <state key="normal" title="title"/>
+                                <connections>
+                                    <segue destination="d63-2n-gJL" kind="push" id="WMd-83-fRG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -133,12 +161,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKQ-mC-FIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017.5" y="906.5"/>
+            <point key="canvasLocation" x="995.5" y="906.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Equipment View Controller-->
         <scene sceneID="4xo-UK-GWx">
             <objects>
-                <viewController id="zfa-Nf-7we" sceneMemberID="viewController">
+                <viewController id="zfa-Nf-7we" customClass="EquipmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nz4-cR-SVf"/>
                         <viewControllerLayoutGuide type="bottom" id="pHw-KE-qs7"/>
@@ -146,13 +174,55 @@
                     <view key="view" contentMode="scaleToFill" id="Wwl-Lz-WLd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oii-ok-kW4">
+                                <rect key="frame" x="151" y="95" width="54" height="30"/>
+                                <state key="normal" title="weapon"/>
+                                <connections>
+                                    <segue destination="DHt-AC-GDt" kind="push" id="xu8-Vr-whL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7T5-NC-VZL">
+                                <rect key="frame" x="158" y="176" width="41" height="30"/>
+                                <state key="normal" title="armor"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jN-aK-o5s">
+                                <rect key="frame" x="154" y="256" width="49" height="30"/>
+                                <state key="normal" title="jewelry"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqO-5Q-gOF">
+                                <rect key="frame" x="160" y="338" width="37" height="30"/>
+                                <state key="normal" title="other"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Y7U-GR-gQ5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRq-kH-tDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462.5" y="906.5"/>
+            <point key="canvasLocation" x="1456.5" y="906.5"/>
+        </scene>
+        <!--Weapon View Controller-->
+        <scene sceneID="kLw-eu-dDo">
+            <objects>
+                <viewController id="DHt-AC-GDt" customClass="WeaponViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="soG-iW-DBG"/>
+                        <viewControllerLayoutGuide type="bottom" id="onY-CJ-7LY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TLz-zG-m0R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VzP-lr-Sse"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGX-2d-4f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456.5" y="1695.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fzw-0e-2jX">
@@ -167,6 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gdn-Az-wVO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgg-UN-w0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,6 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5ZN-m9-8Gg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVa-mc-Ja2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,6 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pfR-Z1-YEQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wX8-b1-AMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
