@@ -15,6 +15,7 @@
 
 + (instancetype)mabinogiHelper;
 
+- (void)initDoubleSword;
 @end
 
 

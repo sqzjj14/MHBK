@@ -27,7 +27,7 @@
     self.navigationController.navigationBarHidden = YES;
     
     [self initsearchView];
-    [self initMultView];
+  //  [self initMultView];
     
     
 

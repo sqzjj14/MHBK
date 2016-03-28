@@ -217,6 +217,66 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		940B473E1CA8E6DF00AFF747 /* 装备 */ = {
+			isa = PBXGroup;
+			children = (
+				940B473F1CA8E6E900AFF747 /* 武器 */,
+				940B47401CA8E6F000AFF747 /* 防具 */,
+				940B47411CA8E6F700AFF747 /* 首饰 */,
+				940B47421CA8E70100AFF747 /* 其他 */,
+			);
+			name = "装备";
+			sourceTree = "<group>";
+		};
+		940B473F1CA8E6E900AFF747 /* 武器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "武器";
+			sourceTree = "<group>";
+		};
+		940B47401CA8E6F000AFF747 /* 防具 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "防具";
+			sourceTree = "<group>";
+		};
+		940B47411CA8E6F700AFF747 /* 首饰 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "首饰";
+			sourceTree = "<group>";
+		};
+		940B47421CA8E70100AFF747 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "其他";
+			sourceTree = "<group>";
+		};
+		940B47431CA8E73600AFF747 /* 副本 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "副本";
+			sourceTree = "<group>";
+		};
+		940B47441CA8E78C00AFF747 /* 附魔 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "附魔";
+			sourceTree = "<group>";
+		};
+		940B47451CA8E88600AFF747 /* 头衔 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "头衔";
+			sourceTree = "<group>";
+		};
 		9412F7621CA229E50037F461 = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +365,10 @@
 			children = (
 				9412F7B41CA236FC0037F461 /* DataViewController.h */,
 				9412F7B51CA236FC0037F461 /* DataViewController.m */,
+				940B473E1CA8E6DF00AFF747 /* 装备 */,
+				940B47431CA8E73600AFF747 /* 副本 */,
+				940B47441CA8E78C00AFF747 /* 附魔 */,
+				940B47451CA8E88600AFF747 /* 头衔 */,
 				9447DA231CA276E00009AA60 /* 混合三级视图 */,
 			);
 			name = "数据";

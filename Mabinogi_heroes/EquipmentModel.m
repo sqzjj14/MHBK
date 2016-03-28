@@ -13,8 +13,30 @@
 -(instancetype)init
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
+        self.title = @"";
+        self.level = @"";
+        self.role = @"";
+        self.remarks = @"";
+        
+        self.att = 0;
+        self.bal = 0;
+        self.attspd = 0;
+        self.critical = 0;
+        
+        self.str = 0;
+        self.mint = 0;
+        self.agi = 0;
+        self.wil = 0;
+        
+        self.part = @"";
+        self.type = @"";
+        
+        self.critresist = 0;
+        self.def = 0;
+        self.shengmingzhi = 0;
+        self.sta = 0;
         
     }
     return self;

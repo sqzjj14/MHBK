@@ -40,12 +40,13 @@
     return self;
 }
 
-#pragma mark -双剑-
+#pragma mark -武器-
+//双剑
 - (void)initDoubleSword
 {
     [self.database open];
     
-    NSString *selecetSQL = @"SELECET * FROM equipment where part='双剑'";
+    NSString *selecetSQL = @"SELECT * FROM equipment where part='双剑'";
     FMResultSet *rs =  [self.database executeQuery:selecetSQL];
     
     while ([rs next]) {
@@ -73,23 +74,27 @@
         
         doubleSword.remarks = [rs stringForColumn:@"remarks"];
         
+        if (doubleSword.remarks == nil) {
+            doubleSword.remarks = @"无";
+        }
+        NSLog(@"%@",doubleSword.title);
         
         
     }
     
 }
-#pragma mark -双枪-
+//双枪-
 - (void)initDoubleSpear
 {
     
 }
-#pragma mark -单手剑-
+//单手剑-
 - (void)initSword
 {
     
 }
-#pragma mark -单手锤-
-#pragma mark -法杖-
-#pragma mark -镰刀-
+//单手锤-
+//法杖-
+//镰刀-
 
 @end

@@ -26,18 +26,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:newURL];
     [self.webview loadRequest:request];
 
-    NSString *selectSQL = @"SELECT * FROM role";
-    [[DatabaseManager mabinogiHelper].database open];
-    FMResultSet *rs = [[DatabaseManager mabinogiHelper].database executeQuery:selectSQL];
-    
-    while ([rs next]) {
-       
-        NSString * name = [rs stringForColumn:@"name"];
-       // NSString * age = [rs stringForColumn:AGE];
-        //NSString * address = [rs stringForColumn:ADDRESS];
-        NSLog(@"name = %@", name);
-    }
-    [[DatabaseManager mabinogiHelper].database close];
+    [[DatabaseManager mabinogiHelper]initDoubleSword];
     
 }
 
