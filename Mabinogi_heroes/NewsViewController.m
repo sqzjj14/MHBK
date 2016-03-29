@@ -26,7 +26,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:newURL];
     [self.webview loadRequest:request];
 
-    [[DatabaseManager mabinogiHelper]initDoubleSword];
+   // [[DatabaseManager mabinogiHelper]CreatDoubleSword];
     
 }
 

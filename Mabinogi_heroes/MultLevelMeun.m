@@ -31,10 +31,10 @@
 }
 */
 
--(id)initWithFrame:(CGRect)frame WithAllData:(NSArray *)alldata withSelecetIndex:(void (^)(NSInteger, NSInteger, id))selectIndexBlock
+-(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock
 {
     if (self == [super initWithFrame:frame]) {
-        if (alldata.count == 0) {
+        if (allData.count == 0) {
             //return nil;
         }
         

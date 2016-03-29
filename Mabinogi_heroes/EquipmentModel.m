@@ -38,6 +38,8 @@
         self.shengmingzhi = 0;
         self.sta = 0;
         
+        self.nextArray = [[NSMutableArray alloc]init];
+        self.meunTitle = @"";
     }
     return self;
 }

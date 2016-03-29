@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--NewsViewController-->
@@ -71,55 +70,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VjY-rQ-coF" userLabel="headView">
-                                <rect key="frame" x="0.0" y="21" width="375" height="43"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-nG-q8i" userLabel="searchView">
-                                        <rect key="frame" x="8" y="8" width="359" height="27"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jshop_searchbar_search.png" translatesAutoresizingMaskIntoConstraints="NO" id="42j-Wo-pI4">
-                                                <rect key="frame" x="8" y="4" width="22" height="19"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="22" id="7lU-f9-p1H"/>
-                                                    <constraint firstAttribute="height" constant="19" id="tSL-ss-JLW"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="搜索 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Re-PR-VNS">
-                                                <rect key="frame" x="38" y="8" width="305" height="11"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="11" id="fdS-fU-E0T"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" red="0.63086960079999999" green="0.63086960079999999" blue="0.63086960079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="1Re-PR-VNS" firstAttribute="top" secondItem="bfG-nG-q8i" secondAttribute="top" constant="8" id="8dC-3T-64p"/>
-                                            <constraint firstAttribute="bottom" secondItem="1Re-PR-VNS" secondAttribute="bottom" constant="8" id="D80-IR-nJY"/>
-                                            <constraint firstAttribute="bottom" secondItem="42j-Wo-pI4" secondAttribute="bottom" constant="4" id="LX8-uY-LKr"/>
-                                            <constraint firstItem="42j-Wo-pI4" firstAttribute="top" secondItem="bfG-nG-q8i" secondAttribute="top" constant="4" id="VgY-fF-6BC"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Re-PR-VNS" secondAttribute="trailing" constant="16" id="iIE-h4-Kdn"/>
-                                            <constraint firstItem="42j-Wo-pI4" firstAttribute="leading" secondItem="bfG-nG-q8i" secondAttribute="leading" constant="8" id="ktm-bg-SDi"/>
-                                            <constraint firstAttribute="height" constant="27" id="yV6-UN-OCR"/>
-                                            <constraint firstItem="1Re-PR-VNS" firstAttribute="leading" secondItem="42j-Wo-pI4" secondAttribute="trailing" constant="8" id="zEE-mQ-efp"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.38306884802158281" blue="0.37079445282973655" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bfG-nG-q8i" secondAttribute="bottom" constant="8" id="O5J-vq-DdD"/>
-                                    <constraint firstItem="bfG-nG-q8i" firstAttribute="leading" secondItem="VjY-rQ-coF" secondAttribute="leading" constant="8" id="UwW-Yp-lPp"/>
-                                    <constraint firstAttribute="trailing" secondItem="bfG-nG-q8i" secondAttribute="trailing" constant="8" id="ffT-6s-VNC"/>
-                                    <constraint firstItem="bfG-nG-q8i" firstAttribute="top" secondItem="VjY-rQ-coF" secondAttribute="top" constant="8" id="htd-OO-vID"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-gJ-HZL">
                                 <rect key="frame" x="132" y="137" width="74" height="30"/>
                                 <state key="normal" title="equipment"/>
                                 <connections>
-                                    <segue destination="zfa-Nf-7we" kind="push" id="dTF-fJ-vO5"/>
+                                    <segue destination="zfa-Nf-7we" kind="show" id="xg7-QH-lzH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-H0-Cwp">
@@ -145,19 +100,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VjY-rQ-coF" firstAttribute="leading" secondItem="280-Ys-2qh" secondAttribute="leadingMargin" constant="-20" id="KEb-4w-HT1"/>
-                            <constraint firstItem="VjY-rQ-coF" firstAttribute="top" secondItem="aNH-Nw-cg2" secondAttribute="bottom" constant="1" id="f5q-iN-gph"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VjY-rQ-coF" secondAttribute="trailing" constant="-20" id="sjg-a4-FkW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7xt-Kp-F72"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="headView" destination="VjY-rQ-coF" id="hnP-BO-7bX"/>
-                        <outlet property="searchView" destination="bfG-nG-q8i" id="DDw-T8-zLn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKQ-mC-FIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,7 +292,4 @@
             <point key="canvasLocation" x="-92.5" y="2335.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="jshop_searchbar_search.png" width="20" height="20"/>
-    </resources>
 </document>

@@ -14,5 +14,5 @@
 @property(nonatomic,assign)NSInteger selectIndex;
 @property(nonatomic,copy) id block ;
 
--(id)initWithFrame:(CGRect)frame WithAllData:(NSArray*)alldata withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock;
+-(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock;
 @end

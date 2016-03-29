@@ -25,11 +25,11 @@
 #pragma mark 创建三级视图
 -(void)initMultView
 {
-    MultLevelMeun *multView =[[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 63, kScreenWidth, kScreenHeight) WithAllData:nil withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
-        
-    }];
+//    MultLevelMeun *multView =[[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 63, kScreenWidth, kScreenHeight) WithAllData:nil withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+//        
+//    }];
     
-    [self.view addSubview:multView];
+  //  [self.view addSubview:multView];
 }
 
 - (void)didReceiveMemoryWarning {

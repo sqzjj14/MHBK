@@ -55,5 +55,8 @@
 //----------装备备注信息----------------------
 @property(nonatomic,copy)NSString *remarks;
 
+@property(nonatomic,copy)NSString *meunTitle;
+@property(nonatomic,strong)NSMutableArray *nextArray;
+
 
 @end
