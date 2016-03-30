@@ -10,6 +10,7 @@
 #define Header_h
 #import "MultLevelMeun.h"
 #import "EquipmentModel.h"
+#import "DatabaseManager.h"
 
 
 #endif /* Header_h */

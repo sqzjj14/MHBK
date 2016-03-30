@@ -17,7 +17,7 @@
 + (instancetype)mabinogiHelper;
 
 //创建武器总数据源
-- (NSArray *)CreatWeaponDataSource;
+- (NSMutableArray *)CreatWeaponDataSource;
 
 //封装一种武器的类型：如双剑 parma1:双剑 param2:lv90 lv80 lv70
 - (EquipmentModel *)packageOneTypeWeaponWithWeaponName:(NSString *)weaponName withLevel:(NSArray *)levelArr;

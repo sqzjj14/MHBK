@@ -10,8 +10,9 @@
 
 @interface MultLevelMeun : UIView<UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
-@property(nonatomic,readonly)NSArray *allData;
+@property(nonatomic,readonly)NSArray *dataSource;
 @property(nonatomic,assign)NSInteger selectIndex;
+@property(nonatomic,assign)NSInteger selectIndex_right;
 @property(nonatomic,copy) id block ;
 
 -(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock;

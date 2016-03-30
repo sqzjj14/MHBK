@@ -42,7 +42,7 @@
 
 #pragma mark -武器-
 
-- (NSArray *)CreatWeaponDataSource
+- (NSMutableArray *)CreatWeaponDataSource
 {
     NSMutableArray *AllDataSource = [[NSMutableArray alloc]init];
     

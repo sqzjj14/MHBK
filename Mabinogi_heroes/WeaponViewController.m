@@ -25,11 +25,13 @@
 #pragma mark 创建三级视图
 -(void)initMultView
 {
-//    MultLevelMeun *multView =[[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 63, kScreenWidth, kScreenHeight) WithAllData:nil withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
-//        
-//    }];
+    NSMutableArray *dataSource = [[DatabaseManager mabinogiHelper]CreatWeaponDataSource];
     
-  //  [self.view addSubview:multView];
+     MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) WithLeftData:dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+         
+     }];
+    
+    [self.view addSubview:multView];
 }
 
 - (void)didReceiveMemoryWarning {

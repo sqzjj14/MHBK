@@ -35,9 +35,9 @@
 {
     if (self == [super initWithFrame:frame]) {
         if (allData.count == 0) {
-            //return nil;
+            return nil;
         }
-        
+        _dataSource = allData;
         _block = selectIndexBlock;
  //左边的视图
         self.leftTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KleftWidth, frame.size.height)];
@@ -95,14 +95,13 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return self.allData.count;
-    return 10;
+    return _dataSource.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     LeftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftCell"];
     //cell.selectionStyle = UITableViewCellAccessoryNone;
-    cell.title.text = @"武器";
+    cell.title.text = [_dataSource[indexPath.row]meunTitle];
     cell.title.numberOfLines = 2;
     
     
@@ -121,14 +120,14 @@
     
     _selectIndex = indexPath.row;
     
-    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    //[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     [self.rightCollection reloadData];
     
 }
 //切换cell时 颜色回调
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     LeftCell *cell = (LeftCell *)[tableView cellForRowAtIndexPath:indexPath];
-    cell.title.textColor = [UIColor whiteColor];
+    cell.title.textColor = [UIColor blackColor];
     //cell.backgroundColor = ;
 }
 
@@ -137,10 +136,12 @@
 #pragma mark 二级目录数量设置
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 3;
+    
+    return [[_dataSource[_selectIndex]nextArray]count];
 }
 #pragma mark 三级目录数量设置
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+   // return [[_dataSource[_selectIndex]nextArray][_selectIndex_right]count];
     return 5;
 }
 //点击方法
@@ -155,9 +156,10 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     RightCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"RightCellCollectionViewCell" forIndexPath:indexPath];
     //根据 selectIndex(tableview.indexpath.row)确认对应的section
-    cell.title.text = @"无尽双剑";
+    _selectIndex_right = indexPath.section;
+    cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
     cell.backgroundColor = [UIColor clearColor];
-    [cell.image setImage:[UIImage imageNamed:@"无尽双剑.png"]];
+   // [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",cell.title.text]]];
     
     return cell;
 }
