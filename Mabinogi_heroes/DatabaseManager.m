@@ -46,29 +46,70 @@
 {
     NSMutableArray *AllDataSource = [[NSMutableArray alloc]init];
     
-    NSArray *arr1 = [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
-    EquipmentModel *DoubleSword = [self packageOneTypeWeaponWithWeaponName:DOUBLE_SWORD withLevel:arr1];
-    EquipmentModel *DoubleSpear = [self packageOneTypeWeaponWithWeaponName:DOUBLE_SPEAR withLevel:arr1];
+    NSArray *arr1 =
+    [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
+    NSArray *arr2 =
+    [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
     
     
+    EquipmentModel *DoubleSword =
+    [self packageOneTypeWeaponWithWeaponName:DOUBLE_SWORD withLevel:arr1];
+    EquipmentModel *DoubleSpear =
+    [self packageOneTypeWeaponWithWeaponName:DOUBLE_SPEAR withLevel:arr1];
+    EquipmentModel *SingleSword =
+    [self packageOneTypeWeaponWithWeaponName:SINGLE_SWORD withLevel:arr1];
+    EquipmentModel *SingleHammer =
+    [self packageOneTypeWeaponWithWeaponName:SINGLE_HAMMER withLevel:arr1];
+    EquipmentModel *Scythe =
+    [self packageOneTypeWeaponWithWeaponName:SCYTHE withLevel:arr1];
+    EquipmentModel *Stave =
+    [self packageOneTypeWeaponWithWeaponName:STAVE withLevel:arr1];
+    EquipmentModel *Pillar =
+    [self packageOneTypeWeaponWithWeaponName:PILLAR withLevel:arr2];
+    EquipmentModel *Cestus =
+    [self packageOneTypeWeaponWithWeaponName:CESTUS withLevel:arr1];
+    EquipmentModel *Arch =
+    [self packageOneTypeWeaponWithWeaponName:ARCH withLevel:arr1];
+    EquipmentModel *Gun =
+    [self packageOneTypeWeaponWithWeaponName:GUN withLevel:arr2];
+    EquipmentModel *Chain =
+    [self packageOneTypeWeaponWithWeaponName:CHAIN withLevel:arr2];
+    EquipmentModel *Pertuisane =
+    [self packageOneTypeWeaponWithWeaponName:PERTUISANE withLevel:arr2];
+    EquipmentModel *GreatSword =
+    [self packageOneTypeWeaponWithWeaponName:GREAT_SWORD withLevel:arr1];
+    EquipmentModel *MagicSword =
+    [self packageOneTypeWeaponWithWeaponName:MAGIC_SWORD withLevel:arr2];
+    EquipmentModel *GhostSword =
+    [self packageOneTypeWeaponWithWeaponName:GHOST_SWORD withLevel:arr2];
+    EquipmentModel *Claymore =
+    [self packageOneTypeWeaponWithWeaponName:CLAYMORE withLevel:arr2];
     
+    [AllDataSource addObject:DoubleSword];
+    [AllDataSource addObject:DoubleSpear];
+    [AllDataSource addObject:SingleSword];
+    [AllDataSource addObject:SingleHammer];
+    [AllDataSource addObject:Scythe];
+    [AllDataSource addObject:Stave];
+    [AllDataSource addObject:Pillar];
+    [AllDataSource addObject:Cestus];
+    [AllDataSource addObject:Arch];
+    [AllDataSource addObject:Gun];
+    [AllDataSource addObject:Chain];
+    [AllDataSource addObject:Pertuisane];
+    [AllDataSource addObject:GreatSword];
+    [AllDataSource addObject:MagicSword];
+    [AllDataSource addObject:GhostSword];
+    [AllDataSource addObject:Claymore];
     
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    return self;
+    return AllDataSource;
 }
 
 #pragma mark WeaponPackageHelper
 - (EquipmentModel *)packageOneTypeWeaponWithWeaponName:(NSString *)weaponName withLevel:(NSArray *)levelArr
 {
+    [self.database open];
+    
     EquipmentModel *secondModel = [[EquipmentModel alloc]init];
     //tableView的cell.title.text
     secondModel.meunTitle = weaponName;
@@ -113,6 +154,7 @@
         }
         [secondModel.nextArray addObject:thirdArray];
      }
+      [self.database close];
       return secondModel;
 }
 
