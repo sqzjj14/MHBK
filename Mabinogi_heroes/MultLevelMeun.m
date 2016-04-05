@@ -141,8 +141,8 @@
 }
 #pragma mark 三级目录数量设置
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-   // return [[_dataSource[_selectIndex]nextArray][_selectIndex_right]count];
-    return 5;
+    return [[_dataSource[_selectIndex]nextArray][section]count];
+    
 }
 //点击方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -168,7 +168,10 @@
     UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"RightHeadView" forIndexPath:indexPath];
     
     UILabel *title = (UILabel*)[view viewWithTag:1];
-    title.text = @"70级武器";
+    EquipmentModel *someoneThird = [[EquipmentModel alloc]init];
+    someoneThird = [_dataSource[_selectIndex]nextArray][indexPath.section][0];
+    title.text = someoneThird.level;
+    
     
     return view;
     
