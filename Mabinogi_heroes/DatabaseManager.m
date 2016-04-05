@@ -9,6 +9,7 @@
 #import "DatabaseManager.h"
 #import "EquipmentModel.h"
 #import "Header.h"
+
 @implementation DatabaseManager
 
 //单例的入口
@@ -36,77 +37,152 @@
         else {
             NSLog(@"Mabinogi.db Load Fail");
         }
+        
+        _dataSource = [[NSMutableArray alloc]init];
+        _arr1 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
+        _arr2 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
+        
     }
     return self;
 }
 
-#pragma mark -武器-
+#pragma mark -Eqiupent-
 
 - (NSMutableArray *)CreatWeaponDataSource
 {
-    NSMutableArray *AllDataSource = [[NSMutableArray alloc]init];
-    
-    NSArray *arr1 =
-    [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
-    NSArray *arr2 =
-    [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
-    
+    [_dataSource removeAllObjects];
     
     EquipmentModel *DoubleSword =
-    [self packageOneTypeWeaponWithWeaponName:DOUBLE_SWORD withLevel:arr1];
+    [self packageOneTypeWithName:DOUBLE_SWORD withLevel:_arr1];
     EquipmentModel *DoubleSpear =
-    [self packageOneTypeWeaponWithWeaponName:DOUBLE_SPEAR withLevel:arr1];
+    [self packageOneTypeWithName:DOUBLE_SPEAR withLevel:_arr1];
     EquipmentModel *SingleSword =
-    [self packageOneTypeWeaponWithWeaponName:SINGLE_SWORD withLevel:arr1];
+    [self packageOneTypeWithName:SINGLE_SWORD withLevel:_arr1];
     EquipmentModel *SingleHammer =
-    [self packageOneTypeWeaponWithWeaponName:SINGLE_HAMMER withLevel:arr1];
+    [self packageOneTypeWithName:SINGLE_HAMMER withLevel:_arr1];
     EquipmentModel *Scythe =
-    [self packageOneTypeWeaponWithWeaponName:SCYTHE withLevel:arr1];
+    [self packageOneTypeWithName:SCYTHE withLevel:_arr1];
     EquipmentModel *Stave =
-    [self packageOneTypeWeaponWithWeaponName:STAVE withLevel:arr1];
+    [self packageOneTypeWithName:STAVE withLevel:_arr1];
     EquipmentModel *Pillar =
-    [self packageOneTypeWeaponWithWeaponName:PILLAR withLevel:arr2];
+    [self packageOneTypeWithName:PILLAR withLevel:_arr2];
     EquipmentModel *Cestus =
-    [self packageOneTypeWeaponWithWeaponName:CESTUS withLevel:arr1];
+    [self packageOneTypeWithName:CESTUS withLevel:_arr1];
     EquipmentModel *Arch =
-    [self packageOneTypeWeaponWithWeaponName:ARCH withLevel:arr1];
+    [self packageOneTypeWithName:ARCH withLevel:_arr1];
     EquipmentModel *Gun =
-    [self packageOneTypeWeaponWithWeaponName:GUN withLevel:arr2];
+    [self packageOneTypeWithName:GUN withLevel:_arr2];
     EquipmentModel *Chain =
-    [self packageOneTypeWeaponWithWeaponName:CHAIN withLevel:arr2];
+    [self packageOneTypeWithName:CHAIN withLevel:_arr2];
     EquipmentModel *Pertuisane =
-    [self packageOneTypeWeaponWithWeaponName:PERTUISANE withLevel:arr2];
+    [self packageOneTypeWithName:PERTUISANE withLevel:_arr2];
     EquipmentModel *GreatSword =
-    [self packageOneTypeWeaponWithWeaponName:GREAT_SWORD withLevel:arr1];
+    [self packageOneTypeWithName:GREAT_SWORD withLevel:_arr1];
     EquipmentModel *MagicSword =
-    [self packageOneTypeWeaponWithWeaponName:MAGIC_SWORD withLevel:arr2];
+    [self packageOneTypeWithName:MAGIC_SWORD withLevel:_arr2];
     EquipmentModel *GhostSword =
-    [self packageOneTypeWeaponWithWeaponName:GHOST_SWORD withLevel:arr2];
+    [self packageOneTypeWithName:GHOST_SWORD withLevel:_arr2];
     EquipmentModel *Claymore =
-    [self packageOneTypeWeaponWithWeaponName:CLAYMORE withLevel:arr2];
+    [self packageOneTypeWithName:CLAYMORE withLevel:_arr2];
     
-    [AllDataSource addObject:DoubleSword];
-    [AllDataSource addObject:DoubleSpear];
-    [AllDataSource addObject:SingleSword];
-    [AllDataSource addObject:SingleHammer];
-    [AllDataSource addObject:Scythe];
-    [AllDataSource addObject:Stave];
-    [AllDataSource addObject:Pillar];
-    [AllDataSource addObject:Cestus];
-    [AllDataSource addObject:Arch];
-    [AllDataSource addObject:Gun];
-    [AllDataSource addObject:Chain];
-    [AllDataSource addObject:Pertuisane];
-    [AllDataSource addObject:GreatSword];
-    [AllDataSource addObject:MagicSword];
-    [AllDataSource addObject:GhostSword];
-    [AllDataSource addObject:Claymore];
+    [_dataSource addObject:DoubleSword];
+    [_dataSource addObject:DoubleSpear];
+    [_dataSource addObject:SingleSword];
+    [_dataSource addObject:SingleHammer];
+    [_dataSource addObject:Scythe];
+    [_dataSource addObject:Stave];
+    [_dataSource addObject:Pillar];
+    [_dataSource addObject:Cestus];
+    [_dataSource addObject:Arch];
+    [_dataSource addObject:Gun];
+    [_dataSource addObject:Chain];
+    [_dataSource addObject:Pertuisane];
+    [_dataSource addObject:GreatSword];
+    [_dataSource addObject:MagicSword];
+    [_dataSource addObject:GhostSword];
+    [_dataSource addObject:Claymore];
     
-    return AllDataSource;
+    return _dataSource;
+}
+- (NSMutableArray *)CreatArmorDataSource{
+    
+    [_dataSource removeAllObjects];
+    
+    
+    EquipmentModel *Head =
+    [self packageOneTypeWithName:HEAD withLevel:_arr2];
+    EquipmentModel *Chest =
+    [self packageOneTypeWithName:CHEST withLevel:_arr2];
+    EquipmentModel *Leg =
+    [self packageOneTypeWithName:LEG withLevel:_arr2];
+    EquipmentModel *Hand =
+    [self packageOneTypeWithName:HAND withLevel:_arr2];
+    EquipmentModel *Foot =
+    [self packageOneTypeWithName:FOOT withLevel:_arr2];
+    
+     [_dataSource addObject:Head];
+     [_dataSource addObject:Chest];
+     [_dataSource addObject:Leg];
+     [_dataSource addObject:Hand];
+     [_dataSource addObject:Foot];
+    
+    return _dataSource;
+}
+- (NSMutableArray *)CreatJewelryDataSource{
+    
+    [_dataSource removeAllObjects];
+    
+     _arr5 =[[NSArray alloc]initWithObjects:@"Lv70",@"Lv60",@"Lv44",@"Lv40",nil];
+    _arr6 = [[NSArray alloc]initWithObjects:@"Lv85",@"Lv80",@"Lv60",nil];
+    
+    EquipmentModel *Belt =
+    [self packageOneTypeWithName:BELT withLevel:_arr2];
+    EquipmentModel *Brooch =
+    [self packageOneTypeWithName:BROOCH withLevel:_arr5];
+    EquipmentModel *Earrings =
+    [self packageOneTypeWithName:EARRINGS withLevel:_arr6];
+    EquipmentModel *Ring =
+    [self packageOneTypeWithName:RING withLevel:_arr2];
+    
+    [_dataSource addObject:Belt];
+    [_dataSource addObject:Brooch];
+    [_dataSource addObject:Earrings];
+    [_dataSource addObject:Ring];
+    
+    return _dataSource;
+}
+- (NSMutableArray *)CreatOtherDataSource{
+    
+    [_dataSource removeAllObjects];
+    _arr3 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv60",@"Lv42",nil];
+    _arr4 = [[NSArray alloc]initWithObjects:@"Lv60",@"Lv54",@"Lv52",nil];
+    _arr7 = [[NSArray alloc]initWithObjects:@"Lv0", nil];
+    _arr8 =[ [NSArray alloc]initWithObjects:@"Lv80", nil];
+   
+    
+    EquipmentModel *Horcruxes =
+    [self packageOneTypeWithName:HORCRUXES withLevel:_arr3];
+    EquipmentModel *smallShield =
+    [self packageOneTypeWithName:SMALL_SHIELD withLevel:_arr8];
+    EquipmentModel *bigShield =
+    [self packageOneTypeWithName:BIG_SHIELD withLevel:_arr2];
+    EquipmentModel *magicBook =
+    [self packageOneTypeWithName:MAGIC_BOOK withLevel:_arr4];
+    EquipmentModel *craft =
+    [self packageOneTypeWithName:CRAFT withLevel:_arr7];
+    
+    [_dataSource addObject:Horcruxes];
+    [_dataSource addObject:smallShield];
+    [_dataSource addObject:bigShield];
+    [_dataSource addObject:magicBook];
+    [_dataSource addObject:craft];
+    
+    return _dataSource;
 }
 
-#pragma mark WeaponPackageHelper
-- (EquipmentModel *)packageOneTypeWeaponWithWeaponName:(NSString *)weaponName withLevel:(NSArray *)levelArr
+
+#pragma mark PackageHelper
+- (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr
 {
     [self.database open];
     

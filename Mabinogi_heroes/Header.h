@@ -22,11 +22,19 @@
 #define  kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 
+
+#pragma mark -装备-
+
+#define WEAPON @"weapon"
+#define ARMOR @"armor"
+#define JEWELRY @"jewelry"
+#define OTHER @"other"
+
 #define DOUBLE_SWORD @"双剑"
 #define DOUBLE_SPEAR @"双枪"
 
 #define SINGLE_SWORD @"单手剑"
-#define SINGLE_HAMMER @"单手锤子"
+#define SINGLE_HAMMER @"单手锤"
 
 #define SCYTHE @"战镰"
 #define STAVE @"法杖"
@@ -43,6 +51,27 @@
 #define MAGIC_SWORD @"魔刃"
 #define GHOST_SWORD @"幽灵短剑"
 #define CLAYMORE @"大剑"
+
+#define HEAD @"头部"
+#define CHEST @"胸部"
+#define LEG @"腿部"
+#define HAND @"手部"
+#define FOOT @"脚部"
+
+#define BELT @"腰带"
+#define BROOCH @"胸针"
+#define EARRINGS @"耳环"
+#define RING @"戒指"
+
+#define SMALL_SHIELD @"小盾"
+#define BIG_SHIELD @"巨盾"
+#define MAGIC_BOOK @"魔法书"
+#define HORCRUXES @"魂器"
+#define CRAFT @"工艺品"
+
+
+
+#pragma mark －角色－
 
 #define LANN @"利斯塔"
 #define FIONA @"菲欧纳"

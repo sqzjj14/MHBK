@@ -16,10 +16,6 @@
 		50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087131CA4E868005352B7 /* FMDatabaseQueue.m */; };
 		50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087161CA4E868005352B7 /* FMResultSet.m */; };
 		940B47481CA8EACC00AFF747 /* EquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B47471CA8EACC00AFF747 /* EquipmentViewController.m */; };
-		940B474B1CA8EAF900AFF747 /* WeaponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B474A1CA8EAF900AFF747 /* WeaponViewController.m */; };
-		940B474E1CA8EB4300AFF747 /* ArmorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B474D1CA8EB4300AFF747 /* ArmorViewController.m */; };
-		940B47511CA8F4BC00AFF747 /* JewelryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B47501CA8F4BC00AFF747 /* JewelryViewController.m */; };
-		940B47541CA8F4E400AFF747 /* OtherEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B47531CA8F4E400AFF747 /* OtherEquipmentViewController.m */; };
 		9412F7701CA229E50037F461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F76F1CA229E50037F461 /* main.m */; };
 		9412F7731CA229E50037F461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7721CA229E50037F461 /* AppDelegate.m */; };
 		9412F7761CA229E50037F461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7751CA229E50037F461 /* ViewController.m */; };
@@ -49,6 +45,7 @@
 		947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		947BC09D1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		947BC09E1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
+		9499FDDD1CB3A1A6000C8856 /* EquipmentChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,14 +85,6 @@
 		50F087161CA4E868005352B7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		940B47461CA8EACC00AFF747 /* EquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentViewController.h; sourceTree = "<group>"; };
 		940B47471CA8EACC00AFF747 /* EquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentViewController.m; sourceTree = "<group>"; };
-		940B47491CA8EAF900AFF747 /* WeaponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponViewController.h; sourceTree = "<group>"; };
-		940B474A1CA8EAF900AFF747 /* WeaponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponViewController.m; sourceTree = "<group>"; };
-		940B474C1CA8EB4300AFF747 /* ArmorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmorViewController.h; sourceTree = "<group>"; };
-		940B474D1CA8EB4300AFF747 /* ArmorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmorViewController.m; sourceTree = "<group>"; };
-		940B474F1CA8F4BC00AFF747 /* JewelryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JewelryViewController.h; sourceTree = "<group>"; };
-		940B47501CA8F4BC00AFF747 /* JewelryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JewelryViewController.m; sourceTree = "<group>"; };
-		940B47521CA8F4E400AFF747 /* OtherEquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherEquipmentViewController.h; sourceTree = "<group>"; };
-		940B47531CA8F4E400AFF747 /* OtherEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherEquipmentViewController.m; sourceTree = "<group>"; };
 		9412F76B1CA229E50037F461 /* Mabinogi_heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mabinogi_heroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412F76F1CA229E50037F461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9412F7711CA229E50037F461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +130,8 @@
 		947BC0951CA5286900AAFEB4 /* vindicyusdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vindicyusdb.db; sourceTree = "<group>"; };
 		947BC09A1CA5316F00AAFEB4 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		9499FDDB1CB3A1A6000C8856 /* EquipmentChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChartViewController.h; sourceTree = "<group>"; };
+		9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentChartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,48 +229,18 @@
 			children = (
 				940B47461CA8EACC00AFF747 /* EquipmentViewController.h */,
 				940B47471CA8EACC00AFF747 /* EquipmentViewController.m */,
-				940B473F1CA8E6E900AFF747 /* 武器 */,
-				940B47401CA8E6F000AFF747 /* 防具 */,
-				940B47411CA8E6F700AFF747 /* 首饰 */,
-				940B47421CA8E70100AFF747 /* 其他 */,
+				940B473F1CA8E6E900AFF747 /* 装备图表 */,
 			);
 			name = "装备";
 			sourceTree = "<group>";
 		};
-		940B473F1CA8E6E900AFF747 /* 武器 */ = {
+		940B473F1CA8E6E900AFF747 /* 装备图表 */ = {
 			isa = PBXGroup;
 			children = (
-				940B47491CA8EAF900AFF747 /* WeaponViewController.h */,
-				940B474A1CA8EAF900AFF747 /* WeaponViewController.m */,
+				9499FDDB1CB3A1A6000C8856 /* EquipmentChartViewController.h */,
+				9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */,
 			);
-			name = "武器";
-			sourceTree = "<group>";
-		};
-		940B47401CA8E6F000AFF747 /* 防具 */ = {
-			isa = PBXGroup;
-			children = (
-				940B474C1CA8EB4300AFF747 /* ArmorViewController.h */,
-				940B474D1CA8EB4300AFF747 /* ArmorViewController.m */,
-			);
-			name = "防具";
-			sourceTree = "<group>";
-		};
-		940B47411CA8E6F700AFF747 /* 首饰 */ = {
-			isa = PBXGroup;
-			children = (
-				940B474F1CA8F4BC00AFF747 /* JewelryViewController.h */,
-				940B47501CA8F4BC00AFF747 /* JewelryViewController.m */,
-			);
-			name = "首饰";
-			sourceTree = "<group>";
-		};
-		940B47421CA8E70100AFF747 /* 其他 */ = {
-			isa = PBXGroup;
-			children = (
-				940B47521CA8F4E400AFF747 /* OtherEquipmentViewController.h */,
-				940B47531CA8F4E400AFF747 /* OtherEquipmentViewController.m */,
-			);
-			name = "其他";
+			name = "装备图表";
 			sourceTree = "<group>";
 		};
 		940B47431CA8E73600AFF747 /* 副本 */ = {
@@ -621,7 +582,6 @@
 			files = (
 				9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */,
 				9412F7761CA229E50037F461 /* ViewController.m in Sources */,
-				940B474B1CA8EAF900AFF747 /* WeaponViewController.m in Sources */,
 				947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */,
 				9412F7C51CA243080037F461 /* NewsCell.m in Sources */,
 				50F087171CA4E868005352B7 /* FMDatabase.m in Sources */,
@@ -638,14 +598,12 @@
 				9447DA301CA284370009AA60 /* LeftCell.m in Sources */,
 				9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */,
 				9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */,
-				940B47511CA8F4BC00AFF747 /* JewelryViewController.m in Sources */,
+				9499FDDD1CB3A1A6000C8856 /* EquipmentChartViewController.m in Sources */,
 				50F087191CA4E868005352B7 /* FMDatabasePool.m in Sources */,
 				50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */,
-				940B474E1CA8EB4300AFF747 /* ArmorViewController.m in Sources */,
 				9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */,
 				50D9D78B1CA6C569002A6390 /* TitleModel.m in Sources */,
 				50F087181CA4E868005352B7 /* FMDatabaseAdditions.m in Sources */,
-				940B47541CA8F4E400AFF747 /* OtherEquipmentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

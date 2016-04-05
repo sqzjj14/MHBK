@@ -7,6 +7,7 @@
 //
 
 #import "EquipmentViewController.h"
+#import "Header.h"
 
 @interface EquipmentViewController ()
 
@@ -24,14 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:WEAPON]) {
+        [segue.destinationViewController setValue:WEAPON forKey:@"type"];
+    }
+    else if ([segue.identifier isEqualToString:ARMOR]){
+        [segue.destinationViewController setValue:ARMOR forKey:@"type"];
+    }
+    else if ([segue.identifier isEqualToString:JEWELRY]){
+        [segue.destinationViewController setValue:JEWELRY forKey:@"type"];
+    }
+    else if ([segue.identifier isEqualToString:OTHER]){
+        [segue.destinationViewController setValue:OTHER forKey:@"type"];
+    }
 }
-*/
+
 
 @end

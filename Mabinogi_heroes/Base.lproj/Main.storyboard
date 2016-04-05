@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eRm-z6-E1m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eRm-z6-E1m">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--NewsViewController-->
@@ -81,21 +81,23 @@
                                 <rect key="frame" x="152" y="235" width="34" height="30"/>
                                 <state key="normal" title="Boss"/>
                                 <connections>
-                                    <segue destination="Jbc-4f-gKd" kind="push" id="EQ7-jN-KaZ"/>
+                                    <segue destination="Jbc-4f-gKd" kind="show" id="drW-cw-thc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRt-7Q-APH">
                                 <rect key="frame" x="141" y="343" width="56" height="30"/>
                                 <state key="normal" title="enchant"/>
                                 <connections>
-                                    <segue destination="ScO-da-JHg" kind="push" id="S1M-jV-mXw"/>
+                                    <segue destination="ScO-da-JHg" kind="presentation" id="vBe-Ma-VsK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VME-5a-fus">
                                 <rect key="frame" x="154" y="461" width="30" height="30"/>
                                 <state key="normal" title="title"/>
                                 <connections>
-                                    <segue destination="d63-2n-gJL" kind="push" id="WMd-83-fRG"/>
+                                    <segue destination="d63-2n-gJL" kind="popoverPresentation" popoverAnchorView="VME-5a-fus" id="7FL-Ux-Vhd">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,20 +127,29 @@
                                 <rect key="frame" x="151" y="95" width="54" height="30"/>
                                 <state key="normal" title="weapon"/>
                                 <connections>
-                                    <segue destination="DHt-AC-GDt" kind="push" id="xu8-Vr-whL"/>
+                                    <segue destination="DHt-AC-GDt" kind="push" identifier="weapon" id="xu8-Vr-whL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7T5-NC-VZL">
                                 <rect key="frame" x="158" y="176" width="41" height="30"/>
                                 <state key="normal" title="armor"/>
+                                <connections>
+                                    <segue destination="DHt-AC-GDt" kind="push" identifier="armor" id="quR-O7-MZc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jN-aK-o5s">
                                 <rect key="frame" x="154" y="256" width="49" height="30"/>
                                 <state key="normal" title="jewelry"/>
+                                <connections>
+                                    <segue destination="DHt-AC-GDt" kind="push" identifier="jewelry" id="lyK-9y-MFP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqO-5Q-gOF">
                                 <rect key="frame" x="160" y="338" width="37" height="30"/>
                                 <state key="normal" title="other"/>
+                                <connections>
+                                    <segue destination="DHt-AC-GDt" kind="push" identifier="other" id="iMU-Co-efK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,12 +159,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRq-kH-tDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.5" y="906.5"/>
+            <point key="canvasLocation" x="1498.5" y="-29.5"/>
         </scene>
-        <!--Weapon View Controller-->
+        <!--Equipment Chart View Controller-->
         <scene sceneID="kLw-eu-dDo">
             <objects>
-                <viewController id="DHt-AC-GDt" customClass="WeaponViewController" sceneMemberID="viewController">
+                <viewController id="DHt-AC-GDt" customClass="EquipmentChartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="soG-iW-DBG"/>
                         <viewControllerLayoutGuide type="bottom" id="onY-CJ-7LY"/>
@@ -168,7 +179,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGX-2d-4f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.5" y="1695.5"/>
+            <point key="canvasLocation" x="1988.5" y="-29.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="miK-YD-gTD">
+            <objects>
+                <viewController id="ood-vU-wdb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FkT-ts-WJ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="urp-kr-N96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OxI-FE-rNt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vgg-xm-VWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456.5" y="3933.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fzw-0e-2jX">
@@ -188,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgg-UN-w0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907.5" y="906.5"/>
+            <point key="canvasLocation" x="1498.5" y="703.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P4E-Xq-x6V">
@@ -208,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVa-mc-Ja2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349.5" y="906.5"/>
+            <point key="canvasLocation" x="1498.5" y="1432.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cK4-Zq-UgL">
@@ -228,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wX8-b1-AMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2811.5" y="906.5"/>
+            <point key="canvasLocation" x="1498.5" y="2172.5"/>
         </scene>
         <!--Main Tabbar View Controller-->
         <scene sceneID="yZH-uS-CBk">
@@ -292,4 +322,7 @@
             <point key="canvasLocation" x="-92.5" y="2335.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xu8-Vr-whL"/>
+    </inferredMetricsTieBreakers>
 </document>
