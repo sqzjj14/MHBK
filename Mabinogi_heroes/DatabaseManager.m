@@ -39,8 +39,6 @@
         }
         
         _dataSource = [[NSMutableArray alloc]init];
-        _arr1 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
-        _arr2 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
         
     }
     return self;
@@ -51,6 +49,9 @@
 - (NSMutableArray *)CreatWeaponDataSource
 {
     [_dataSource removeAllObjects];
+    
+    _arr1 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv57",nil];
+    _arr2 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
     
     EquipmentModel *DoubleSword =
     [self packageOneTypeWithName:DOUBLE_SWORD withLevel:_arr1];
@@ -108,6 +109,7 @@
     
     [_dataSource removeAllObjects];
     
+    _arr2 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
     
     EquipmentModel *Head =
     [self packageOneTypeWithName:HEAD withLevel:_arr2];
@@ -179,7 +181,27 @@
     
     return _dataSource;
 }
-
+#pragma mark -副本、boss-
+- (NSMutableArray *)CreatBossDataSource{
+    [_dataSource removeAllObjects];
+    _arr_area1 = [[NSArray alloc]initWithObjects:@"梵赛诺山顶",@"梵赛诺山腰",@"梵赛诺山脚",@"梵赛诺入口",nil];
+    _arr_area2 = [[NSArray alloc]initWithObjects:@"安雯",@"迷雾峰",@"时光的沙漠",@"船之坟墓",nil];
+    _arr_area3 = [[NSArray alloc]initWithObjects:@"罗切斯特城主塔",@"奥鲁特城",@"卡塔克",@"魔族根据地",nil];
+    _arr_area4 = [[NSArray alloc]initWithObjects:@"艾贝尔",@"尼福尔海姆",nil];
+    _arr_area5 = [[NSArray alloc]initWithObjects:@"未知的区域",@"哈伊德",nil];
+    
+    EquipmentModel *Malina = [self packageOneSubAreaWithName:MALINA with:_arr_area2];
+    EquipmentModel *Rocheste = [self packageOneSubAreaWithName:ROCHESTE with:_arr_area3];
+    EquipmentModel *Colhen = [self packageOneSubAreaWithName:COLHEN with:_arr_area4];
+    EquipmentModel *Colhen_Rocheste = [self packageOneSubAreaWithName:COLHENANDROCHESTE with:_arr_area5];
+    
+    [_dataSource addObject:Malina];
+    [_dataSource addObject:Rocheste];
+    [_dataSource addObject:Colhen];
+    [_dataSource addObject:Colhen_Rocheste];
+    
+    return _dataSource;
+}
 
 #pragma mark PackageHelper
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr
@@ -232,6 +254,40 @@
      }
       [self.database close];
       return secondModel;
+}
+- (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr{
+    [self.database open];
+    
+    EquipmentModel *secondModel = [[EquipmentModel alloc]init];
+    //tableView的cell.title.text
+    secondModel.meunTitle = areaName;
+    //每个等级
+    for (NSString *SubArea in SubAreaArr) {
+        
+        NSString *selecetSQL = [NSString stringWithFormat:@"select * from battleslist where area like '%%%@%%'",SubArea];
+        FMResultSet *rs =  [self.database executeQuery:selecetSQL];
+        
+        //每个装备
+        NSMutableArray *thirdArray = [[NSMutableArray alloc]init];
+        
+        while ([rs next]) {
+            EquipmentModel *thirdModel = [[EquipmentModel alloc]init];
+            thirdModel.titleBossName = [rs stringForColumn:@"title"];
+            thirdModel.att = [[rs stringForColumn:@"att"]intValue];
+            thirdModel.critresist = [[rs stringForColumn:@"resist"]intValue];
+            thirdModel.def = [[rs stringForColumn:@"def"]intValue];
+            thirdModel.remarks = [rs stringForColumn:@"remarks"];
+            thirdModel.area = [rs stringForColumn:@"area"];
+            
+            NSArray *array = [thirdModel.area componentsSeparatedByString:@"--"];
+            thirdModel.title = array[2];
+            
+            [thirdArray addObject:thirdModel];
+        }
+        [secondModel.nextArray addObject:thirdArray];
+    }
+    [self.database close];
+    return secondModel;
 }
 
 @end

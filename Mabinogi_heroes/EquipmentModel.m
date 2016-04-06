@@ -40,6 +40,11 @@
         
         self.nextArray = [[NSMutableArray alloc]init];
         self.meunTitle = @"";
+        
+        //--副本
+        self.resist = @"";
+        self.area = @"";
+        self.titleBossName = @"";
     }
     return self;
 }

@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     [self initMultView];
-    self.tabBarController.hidesBottomBarWhenPushed = YES;
+   // self.tabBarController.hidesBottomBarWhenPushed = YES;
 }
 
 #pragma mark 创建三级视图

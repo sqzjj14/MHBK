@@ -159,6 +159,7 @@
     _selectIndex_right = indexPath.section;
     cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
     cell.backgroundColor = [UIColor clearColor];
+    cell.image.backgroundColor= [UIColor colorWithHexString:@"e0ffff"];
    // [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",cell.title.text]]];
     
     return cell;

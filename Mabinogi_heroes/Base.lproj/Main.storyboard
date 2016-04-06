@@ -203,7 +203,7 @@
         <!--View Controller-->
         <scene sceneID="fzw-0e-2jX">
             <objects>
-                <viewController id="Jbc-4f-gKd" sceneMemberID="viewController">
+                <viewController id="Jbc-4f-gKd" customClass="BOSSViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mix-o5-SFy"/>
                         <viewControllerLayoutGuide type="bottom" id="MnS-lO-PDg"/>
@@ -323,6 +323,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xu8-Vr-whL"/>
+        <segue reference="quR-O7-MZc"/>
     </inferredMetricsTieBreakers>
 </document>

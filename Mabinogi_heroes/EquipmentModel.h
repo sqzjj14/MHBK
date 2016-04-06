@@ -58,5 +58,11 @@
 @property(nonatomic,copy)NSString *meunTitle;
 @property(nonatomic,strong)NSMutableArray *nextArray;
 
+//---副本额外信息-----
+//暴抗
+@property(nonatomic,copy)NSString *resist;
+@property(nonatomic,copy)NSString *area;
+@property(nonatomic,copy)NSString *titleBossName;
+
 
 @end

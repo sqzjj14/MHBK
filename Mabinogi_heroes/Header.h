@@ -11,6 +11,7 @@
 #import "MultLevelMeun.h"
 #import "EquipmentModel.h"
 #import "DatabaseManager.h"
+#import "UIColor+HexString.h"
 
 
 #endif /* Header_h */
@@ -66,10 +67,15 @@
 #define SMALL_SHIELD @"小盾"
 #define BIG_SHIELD @"巨盾"
 #define MAGIC_BOOK @"魔法书"
-#define HORCRUXES @"魂器"
+#define HORCRUXES @"魂器"  
 #define CRAFT @"工艺品"
 
-
+#pragma mark -地区-
+#define FANDISAI @"梵赛诺"
+#define MALINA @"莫勒班"
+#define COLHEN @"库汉"
+#define ROCHESTE @"罗切斯特"
+#define COLHENANDROCHESTE @"库汉&罗切斯特"
 
 #pragma mark －角色－
 

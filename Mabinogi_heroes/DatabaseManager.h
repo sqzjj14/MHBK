@@ -17,18 +17,24 @@
 //level筛选数列
 @property(nonatomic,strong)NSArray *arr1;
 @property(nonatomic,strong)NSArray *arr2;
-//魂器
-@property(nonatomic,strong)NSArray *arr3;
-//魔法书
-@property(nonatomic,strong)NSArray *arr4;
-//胸针
-@property(nonatomic,strong)NSArray *arr5;
-//耳环
-@property(nonatomic,strong)NSArray *arr6;
-//工艺品
-@property(nonatomic,strong)NSArray *arr7;
-//小盾
-@property(nonatomic,strong)NSArray *arr8;
+@property(nonatomic,strong)NSArray *arr3;//魂器
+@property(nonatomic,strong)NSArray *arr4;//魔法书
+@property(nonatomic,strong)NSArray *arr5;//胸针
+@property(nonatomic,strong)NSArray *arr6;//耳环
+@property(nonatomic,strong)NSArray *arr7;//工艺品
+@property(nonatomic,strong)NSArray *arr8;//小盾
+
+//area筛选数列
+@property(nonatomic,strong)NSArray *arr_area1;
+@property(nonatomic,strong)NSArray *arr_area2;
+@property(nonatomic,strong)NSArray *arr_area3;
+@property(nonatomic,strong)NSArray *arr_area4;
+@property(nonatomic,strong)NSArray *arr_area5;
+@property(nonatomic,strong)NSArray *arr_area6;
+@property(nonatomic,strong)NSArray *arr_area7;
+
+
+
 
 //单例的入口
 + (instancetype)mabinogiHelper;
@@ -39,8 +45,13 @@
 - (NSMutableArray *)CreatJewelryDataSource;
 - (NSMutableArray *)CreatOtherDataSource;
 
+//BOSSdb源封装、
+- (NSMutableArray *)CreatBossDataSource;
+
 //封装一种武器的类型：如双剑 parma1:双剑 param2:lv90 lv80 lv70
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr;
+//封装副本Boss
+- (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr;
 @end
 
 
