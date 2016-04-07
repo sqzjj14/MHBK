@@ -202,8 +202,24 @@
     
     return _dataSource;
 }
+#pragma mark -头衔-
+- (NSMutableArray *)CreatAllRoleDataSource{
+    [_dataSource removeAllObjects];
+    _roleTitleArr = [[NSArray alloc]initWithObjects:@"titlethita",@"titlefiona",
+                     @"titleevy",
+                     @"titlekarok",@"titlekay",
+                     @"titlevella",@"titlelynn",@"titlehurk",
+                     @"titlearisha",@"titlehagie",@"titledelia",nil];
+    for (NSString *roleStr in _roleTitleArr) {
+        NSMutableArray *oneRoleArr = [[NSMutableArray alloc]init];
+        oneRoleArr = [self packageOneTitleWithName:roleStr];
+        [_dataSource addObject:oneRoleArr];
+    }
+    return _dataSource;
+}
 
 #pragma mark PackageHelper
+//装备
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr
 {
     [self.database open];
@@ -255,6 +271,7 @@
       [self.database close];
       return secondModel;
 }
+//boss
 - (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr{
     [self.database open];
     
@@ -289,5 +306,36 @@
     [self.database close];
     return secondModel;
 }
+
+//头衔
+- (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName{
+    [self.database open];
+    NSMutableArray *oneRoleArr = [[NSMutableArray alloc]init];
+    NSString *selecetSQL = [NSString stringWithFormat:@"select * from %@ order by _id",roleName];
+    FMResultSet *rs = [self.database executeQuery:selecetSQL];
+    while ([rs next]) {
+        TitleModel *titleMode = [[TitleModel alloc]init];
+        titleMode.title = [rs stringForColumn:@"title"];
+        titleMode.area = [rs stringForColumn:@"area"];
+        titleMode.carbons = [rs stringForColumn:@"carbons"];
+        titleMode.carbonf = [rs stringForColumn:@"carbonf"];
+        titleMode.channel = [rs stringForColumn:@"channel"];
+        titleMode.liliang = [rs stringForColumn:@"liliang"];
+        titleMode.minjie = [rs stringForColumn:@"minjie"];
+        titleMode.zhili = [rs stringForColumn:@"zhili"];
+        titleMode.yizhi = [rs stringForColumn:@"yizhi"];
+        titleMode.remark = [rs stringForColumn:@"remark"];
+        
+        [oneRoleArr addObject:titleMode];
+    }
+    
+    return oneRoleArr;
+}
+
+
+
+
+
+
 
 @end

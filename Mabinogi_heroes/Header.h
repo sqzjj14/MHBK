@@ -12,6 +12,8 @@
 #import "EquipmentModel.h"
 #import "DatabaseManager.h"
 #import "UIColor+HexString.h"
+#import "TitleModel.h"
+
 
 
 #endif /* Header_h */
@@ -21,6 +23,8 @@
 
 #define  kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kFont @"Helvetica Neue"
+#define kFontBold @"Helvetica Bold"
 
 
 

@@ -10,6 +10,7 @@
 #import "FMDB.h"
 #import "Header.h"
 
+
 @interface DatabaseManager : NSObject
 
 @property(nonatomic,strong)FMDatabase *database;
@@ -33,7 +34,8 @@
 @property(nonatomic,strong)NSArray *arr_area6;
 @property(nonatomic,strong)NSArray *arr_area7;
 
-
+//头衔的表名数列
+@property(nonatomic,strong)NSArray *roleTitleArr;
 
 
 //单例的入口
@@ -44,14 +46,19 @@
 - (NSMutableArray *)CreatArmorDataSource;
 - (NSMutableArray *)CreatJewelryDataSource;
 - (NSMutableArray *)CreatOtherDataSource;
-
 //BOSSdb源封装、
 - (NSMutableArray *)CreatBossDataSource;
+//头衔db源封装
+- (NSMutableArray *)CreatAllRoleDataSource;
+
+
 
 //封装一种武器的类型：如双剑 parma1:双剑 param2:lv90 lv80 lv70
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr;
 //封装副本Boss
 - (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr;
+//封装
+- (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName;
 @end
 
 

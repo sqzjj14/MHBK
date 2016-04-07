@@ -95,9 +95,7 @@
                                 <rect key="frame" x="154" y="461" width="30" height="30"/>
                                 <state key="normal" title="title"/>
                                 <connections>
-                                    <segue destination="d63-2n-gJL" kind="popoverPresentation" popoverAnchorView="VME-5a-fus" id="7FL-Ux-Vhd">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="d63-2n-gJL" kind="show" id="Ypq-1Z-v9U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -240,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="1498.5" y="1432.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Title View Controller-->
         <scene sceneID="cK4-Zq-UgL">
             <objects>
-                <viewController id="d63-2n-gJL" sceneMemberID="viewController">
+                <viewController id="d63-2n-gJL" customClass="TitleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MSB-su-tNc"/>
                         <viewControllerLayoutGuide type="bottom" id="Nbf-bX-CU3"/>
@@ -251,14 +249,63 @@
                     <view key="view" contentMode="scaleToFill" id="DIS-wQ-DCi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXJ-Ye-uVq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkA-k0-obF">
+                                        <rect key="frame" x="13" y="8" width="59" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="497-9p-kHK"/>
+                                            <constraint firstAttribute="width" constant="59" id="p23-8m-Xrm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="女妖"/>
+                                        <connections>
+                                            <action selector="openLLSlideMenuAction:" destination="d63-2n-gJL" eventType="touchUpInside" id="dal-JV-jHj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mkA-k0-obF" firstAttribute="leading" secondItem="dXJ-Ye-uVq" secondAttribute="leading" constant="13" id="7Lt-uD-5cW"/>
+                                    <constraint firstItem="mkA-k0-obF" firstAttribute="top" secondItem="dXJ-Ye-uVq" secondAttribute="top" constant="8" id="eEa-V7-T9e"/>
+                                    <constraint firstAttribute="height" constant="64" id="jBq-Y6-aT9"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w54-wG-Jnd">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d63-2n-gJL" id="qjy-k6-OPz"/>
+                                    <outlet property="delegate" destination="d63-2n-gJL" id="asc-UE-GJv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w54-wG-Jnd" firstAttribute="leading" secondItem="DIS-wQ-DCi" secondAttribute="leading" id="1N6-6t-FVG"/>
+                            <constraint firstItem="w54-wG-Jnd" firstAttribute="top" secondItem="dXJ-Ye-uVq" secondAttribute="bottom" constant="8" id="2V6-MQ-P0y"/>
+                            <constraint firstItem="Nbf-bX-CU3" firstAttribute="top" secondItem="w54-wG-Jnd" secondAttribute="bottom" id="CiO-dD-qNI"/>
+                            <constraint firstItem="dXJ-Ye-uVq" firstAttribute="top" secondItem="MSB-su-tNc" secondAttribute="bottom" id="EOt-RH-M94"/>
+                            <constraint firstAttribute="trailing" secondItem="w54-wG-Jnd" secondAttribute="trailing" id="L09-Md-hfr"/>
+                            <constraint firstAttribute="trailing" secondItem="dXJ-Ye-uVq" secondAttribute="trailing" id="LIH-pw-ew1"/>
+                            <constraint firstItem="dXJ-Ye-uVq" firstAttribute="leading" secondItem="DIS-wQ-DCi" secondAttribute="leading" id="mRg-aX-g75"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pfR-Z1-YEQ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bitchBtn" destination="mkA-k0-obF" id="Z6V-Tt-4xW"/>
+                        <outlet property="navigiBar" destination="dXJ-Ye-uVq" id="Va3-M0-ce5"/>
+                        <outlet property="tableView" destination="w54-wG-Jnd" id="XqR-j1-vn8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wX8-b1-AMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498.5" y="2172.5"/>
+            <point key="canvasLocation" x="1491.5" y="2189.5"/>
         </scene>
         <!--Main Tabbar View Controller-->
         <scene sceneID="yZH-uS-CBk">
@@ -322,6 +369,9 @@
             <point key="canvasLocation" x="-92.5" y="2335.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="女妖" width="100" height="100"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="quR-O7-MZc"/>
     </inferredMetricsTieBreakers>

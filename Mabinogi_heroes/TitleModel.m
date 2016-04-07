@@ -10,4 +10,24 @@
 
 @implementation TitleModel
 
+-(instancetype)init
+{
+    if (self = [super init]) {
+        self.title = @"";
+        self.area = @"";
+        self.carbonf = @"";
+        self.carbons = @"";
+        self.channel = @"";
+        self.liliang = @"";
+        self.minjie = @"";
+        self.zhili = @"";
+        self.yizhi = @"";
+        self.shengmingzhi = @"";
+        self.remark = @"";
+        
+        
+    }
+    return self;
+}
+
 @end
