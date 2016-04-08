@@ -1,0 +1,14 @@
+PODS:
+  - LIVBubbleMenu (1.1.0):
+    - pop (~> 1.0.7)
+  - pop (1.0.9)
+
+DEPENDENCIES:
+  - LIVBubbleMenu
+  - pop (~> 1.0)
+
+SPEC CHECKSUMS:
+  LIVBubbleMenu: 1bcaa61ac0379e32e88bb40a382f135717276c30
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+
+COCOAPODS: 0.39.0
