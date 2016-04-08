@@ -7,15 +7,24 @@
 //
 
 #import "titleViewController2.h"
+#import "TWSpringyFlowLayout.h"
+#import "TWMessageViewCell.h"
 #import "Header.h"
 
+// Numerics
+CGFloat const kTWMessageViewControllerCellPadding = 10;
+CGFloat const kTWMessageViewControllerCellHeight = 50;
 
-@interface titleViewController2 ()
 
+@interface titleViewController2 ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UIButton *bottomBtn;
 @property LIVBubbleMenu* bubbleMenu;
 @property NSArray* images;
 @property CGFloat radius;
+//云collection
+@property (nonatomic,strong)UICollectionView *_collectionView;
+@property (nonatomic,strong)NSMutableArray *dataSource;
+@property (nonatomic,strong)NSMutableArray *allData;
 
 @end
 
@@ -24,6 +33,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initBottomBtn];
+    [self initCollectionView];
+    _allData = [[DatabaseManager mabinogiHelper]CreatAllRoleDataSource];//总数据源
+    _dataSource = [[NSMutableArray alloc]init];//collection数据源
+    
    
 }
 
@@ -35,15 +48,15 @@
 -(void)initBottomBtn{
     _radius = 30;//半径
     _bottomBtn = [UIButton buttonWithType:0];
-    _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 70, 60, 60);
+    _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 65, 60, 60);
     [_bottomBtn setImage:[UIImage imageNamed:@"女妖"] forState:UIControlStateNormal];
     _bottomBtn.layer.masksToBounds = YES;
     _bottomBtn.layer.cornerRadius = _radius;
     _bottomBtn.layer.borderWidth = 2.f;
-    _bottomBtn.layer.borderColor = [[UIColor blackColor]CGColor];
+    _bottomBtn.layer.borderColor = [[UIColor colorWithWhite:1.0 alpha:0.5]CGColor];
     [_bottomBtn addTarget:self action:@selector(pickRole:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_bottomBtn];
-    [self.view bringSubviewToFront:_bottomBtn];
+    
     
     _images = [NSArray arrayWithObjects:
                [UIImage imageNamed:@"利斯塔"],
@@ -59,6 +72,59 @@
                [UIImage imageNamed:@"wink"],
                [UIImage imageNamed:@"wondering"],
                nil];
+}
+
+- (void)initCollectionView{
+    self.navigationItem.title = @"头衔";
+    
+    __collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) collectionViewLayout:[[TWSpringyFlowLayout alloc]init]];
+    // Background
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"messages_bg_2.png"]];
+    backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view insertSubview:backgroundImageView belowSubview:__collectionView];
+    
+    // Parallax effect
+    UIInterpolatingMotionEffect *interpolationHorizontal = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    interpolationHorizontal.minimumRelativeValue = @-20.0;
+    interpolationHorizontal.maximumRelativeValue = @20.0;
+    
+    UIInterpolatingMotionEffect *interpolationVertical = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    interpolationVertical.minimumRelativeValue = @-20.0;
+    interpolationVertical.maximumRelativeValue = @20.0;
+    
+    [backgroundImageView addMotionEffect:interpolationHorizontal];
+    [backgroundImageView addMotionEffect:interpolationVertical];
+    
+    __collectionView.backgroundColor = [UIColor clearColor];
+    [__collectionView registerClass:[TWMessageViewCell class]  forCellWithReuseIdentifier:@"cell"];
+    [self.view addSubview:__collectionView];
+    [self.view bringSubviewToFront:_bottomBtn];
+    __collectionView.delegate = self;
+    __collectionView.dataSource = self;
+    
+}
+#pragma mark - UICollectionView DataSource & Delegate methods
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TWMessageViewCell *cell = (TWMessageViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(kScreenWidth - (kTWMessageViewControllerCellPadding*2), kTWMessageViewControllerCellHeight);
 }
 
 - (void)pickRole:(UIButton *)btn{
@@ -86,36 +152,58 @@
     switch (index) {
         case 0:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 1:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 2:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 3:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 4:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 5:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 6:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 7:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 8:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 9:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
         case 10:
             [_bottomBtn setImage:_images[index] forState:0];
+            _dataSource = _allData[index];
+            [__collectionView reloadData];
             break;
             
         default:
@@ -126,7 +214,7 @@
 -(void)livBubbleMenuDidHide:(LIVBubbleMenu *)bubbleMenu {
     
     [UIView animateWithDuration:0.5 animations:^{
-        _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 70, 60, 60);
+        _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 65, 60, 60);
     }];
     
 }

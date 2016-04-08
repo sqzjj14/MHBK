@@ -37,6 +37,10 @@
 		9447DA311CA284370009AA60 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2F1CA284370009AA60 /* LeftCell.xib */; };
 		9447DA341CA284630009AA60 /* RightHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA331CA284630009AA60 /* RightHeadView.m */; };
 		9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA351CA284DC0009AA60 /* RightHeadView.xib */; };
+		947B97CD1CB79BAB001C5B98 /* TWSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B97CC1CB79BAB001C5B98 /* TWSpringyFlowLayout.m */; };
+		947B97D01CB79D3F001C5B98 /* messages_bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 947B97CE1CB79D3F001C5B98 /* messages_bg_2.png */; };
+		947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 947B97CF1CB79D3F001C5B98 /* messages_bg_2@2x.png */; };
+		947B97D41CB79F00001C5B98 /* TWMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */; };
 		947BC0931CA4FEA300AAFEB4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */; };
 		947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
 		947BC0971CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
@@ -136,6 +140,12 @@
 		9447DA321CA284630009AA60 /* RightHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightHeadView.h; sourceTree = "<group>"; };
 		9447DA331CA284630009AA60 /* RightHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightHeadView.m; sourceTree = "<group>"; };
 		9447DA351CA284DC0009AA60 /* RightHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightHeadView.xib; sourceTree = "<group>"; };
+		947B97CB1CB79BAB001C5B98 /* TWSpringyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpringyFlowLayout.h; sourceTree = "<group>"; };
+		947B97CC1CB79BAB001C5B98 /* TWSpringyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpringyFlowLayout.m; sourceTree = "<group>"; };
+		947B97CE1CB79D3F001C5B98 /* messages_bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messages_bg_2.png; sourceTree = "<group>"; };
+		947B97CF1CB79D3F001C5B98 /* messages_bg_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messages_bg_2@2x.png"; sourceTree = "<group>"; };
+		947B97D21CB79F00001C5B98 /* TWMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageViewCell.h; sourceTree = "<group>"; };
+		947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageViewCell.m; sourceTree = "<group>"; };
 		947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		947BC0951CA5286900AAFEB4 /* vindicyusdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vindicyusdb.db; sourceTree = "<group>"; };
 		947BC09A1CA5316F00AAFEB4 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
@@ -219,6 +229,7 @@
 		50F0870A1CA4E728005352B7 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				947B97CA1CB79B80001C5B98 /* TWmessage */,
 				94CEF6E01CB62ED5004356C1 /* LL侧滑 */,
 				94D982561CB4F8E2006E5AFE /* RBG */,
 				9447DA231CA276E00009AA60 /* 混合三级视图 */,
@@ -475,6 +486,19 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		947B97CA1CB79B80001C5B98 /* TWmessage */ = {
+			isa = PBXGroup;
+			children = (
+				947B97D21CB79F00001C5B98 /* TWMessageViewCell.h */,
+				947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */,
+				947B97CE1CB79D3F001C5B98 /* messages_bg_2.png */,
+				947B97CF1CB79D3F001C5B98 /* messages_bg_2@2x.png */,
+				947B97CB1CB79BAB001C5B98 /* TWSpringyFlowLayout.h */,
+				947B97CC1CB79BAB001C5B98 /* TWSpringyFlowLayout.m */,
+			);
+			name = TWmessage;
+			sourceTree = "<group>";
+		};
 		947BC0991CA5312A00AAFEB4 /* 数据库 */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,11 +663,13 @@
 			files = (
 				9447DA311CA284370009AA60 /* LeftCell.xib in Resources */,
 				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
+				947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
 				9412F7C61CA243080037F461 /* NewsCell.xib in Resources */,
 				947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
+				947B97D01CB79D3F001C5B98 /* messages_bg_2.png in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,10 +756,12 @@
 				9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */,
 				9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */,
 				940B47481CA8EACC00AFF747 /* EquipmentViewController.m in Sources */,
+				947B97D41CB79F00001C5B98 /* TWMessageViewCell.m in Sources */,
 				94CEF6DC1CB62ECA004356C1 /* LLCircleLayer.m in Sources */,
 				50D9D78E1CA6C58C002A6390 /* EquipmentModel.m in Sources */,
 				50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */,
 				9412F7731CA229E50037F461 /* AppDelegate.m in Sources */,
+				947B97CD1CB79BAB001C5B98 /* TWSpringyFlowLayout.m in Sources */,
 				94CEF6DF1CB62ECA004356C1 /* UIView+SetRect.m in Sources */,
 				9447DA341CA284630009AA60 /* RightHeadView.m in Sources */,
 				9412F7701CA229E50037F461 /* main.m in Sources */,

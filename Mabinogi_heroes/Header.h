@@ -75,7 +75,7 @@
 #define CRAFT @"工艺品"
 
 #pragma mark -地区-
-#define FANDISAI @"梵赛诺"
+#define BENCHENNER @"梵赛诺"
 #define MALINA @"莫勒班"
 #define COLHEN @"库汉"
 #define ROCHESTE @"罗切斯特"
