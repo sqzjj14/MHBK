@@ -295,7 +295,7 @@
     //每个等级
     for (NSString *SubArea in SubAreaArr) {
         
-        NSString *selecetSQL = [NSString stringWithFormat:@"select * from battleslist where area like '%@'",SubArea];
+        NSString *selecetSQL = [NSString stringWithFormat:@"select * from battleslist where area like '%%%@%%'",SubArea];
         FMResultSet *rs =  [self.database executeQuery:selecetSQL];
         
         //每个装备
@@ -311,7 +311,14 @@
             thirdModel.area = [rs stringForColumn:@"area"];
             
             NSArray *array = [thirdModel.area componentsSeparatedByString:@"--"];
-            thirdModel.title = array[2];
+            if (array.count == 2) {
+                thirdModel.title = array[0];
+                thirdModel.title2 = array[1];
+            }
+            else{
+               thirdModel.title = array[1];
+               thirdModel.title2 = array[2];
+            }
             
             [thirdArray addObject:thirdModel];
         }
@@ -350,7 +357,7 @@
     [self.database open];
     NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
     NSString *selecetSQL =
-    [NSString stringWithFormat:@"select * from enchant where part ='%@'"];
+    [NSString stringWithFormat:@"select * from enchant where part ='%@'",equipmentName];
     FMResultSet *rs = [self.database executeQuery:selecetSQL];
     while ([rs next]) {
         TitleModel *titleMode = [[TitleModel alloc]init];

@@ -14,13 +14,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-rR-gPf">
-                        <rect key="frame" x="8" y="21" width="84" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-rR-gPf">
+                        <rect key="frame" x="15" y="0.0" width="70" height="63"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.63086960079999999" green="0.63086960079999999" blue="0.63086960079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="WCc-rR-gPf" secondAttribute="trailing" constant="15" id="KRy-yI-r8y"/>
+                    <constraint firstItem="WCc-rR-gPf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ka2-oG-RCk"/>
+                    <constraint firstAttribute="bottom" secondItem="WCc-rR-gPf" secondAttribute="bottom" id="Khn-wU-B6f"/>
+                    <constraint firstItem="WCc-rR-gPf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="xwD-JK-X3E"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="title" destination="WCc-rR-gPf" id="cKo-76-l9s"/>
