@@ -49,6 +49,7 @@
 		947BC09D1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		947BC09E1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		9499FDDD1CB3A1A6000C8856 /* EquipmentChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */; };
+		94B42AA21CC09343007117B8 /* TWMessageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B42AA11CC09343007117B8 /* TWMessageViewCell.xib */; };
 		94CEF6D01CB62E1C004356C1 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF6CF1CB62E1C004356C1 /* TitleViewController.m */; };
 		94CEF6DB1CB62ECA004356C1 /* LLAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF6D21CB62ECA004356C1 /* LLAnimationManager.m */; };
 		94CEF6DC1CB62ECA004356C1 /* LLCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF6D41CB62ECA004356C1 /* LLCircleLayer.m */; };
@@ -152,6 +153,7 @@
 		947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		9499FDDB1CB3A1A6000C8856 /* EquipmentChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChartViewController.h; sourceTree = "<group>"; };
 		9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentChartViewController.m; sourceTree = "<group>"; };
+		94B42AA11CC09343007117B8 /* TWMessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWMessageViewCell.xib; sourceTree = "<group>"; };
 		94CEF6CE1CB62E1C004356C1 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		94CEF6CF1CB62E1C004356C1 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		94CEF6D11CB62ECA004356C1 /* LLAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAnimationManager.h; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 			children = (
 				947B97D21CB79F00001C5B98 /* TWMessageViewCell.h */,
 				947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */,
+				94B42AA11CC09343007117B8 /* TWMessageViewCell.xib */,
 				947B97CE1CB79D3F001C5B98 /* messages_bg_2.png */,
 				947B97CF1CB79D3F001C5B98 /* messages_bg_2@2x.png */,
 				947B97CB1CB79BAB001C5B98 /* TWSpringyFlowLayout.h */,
@@ -665,6 +668,7 @@
 				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
 				947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
+				94B42AA21CC09343007117B8 /* TWMessageViewCell.xib in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
 				9412F7C61CA243080037F461 /* NewsCell.xib in Resources */,

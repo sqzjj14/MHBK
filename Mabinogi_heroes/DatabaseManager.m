@@ -219,6 +219,18 @@
     }
     return _dataSource;
 }
+#pragma mark -附魔-
+- (NSMutableArray *)CreatEnchantDataSource{
+    [_dataSource removeAllObjects];
+    _enchantArr = [[NSArray alloc]initWithObjects:@"武器",@"防具",@"首饰",@"副手", nil];
+    for (NSString *part in _enchantArr) {
+        NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+       oneEnchantArr = [self packageOneEnchantWithEquipmentName:part];
+        [_dataSource addObject:oneEnchantArr];
+    }
+    return _dataSource;
+}
+
 
 #pragma mark PackageHelper
 //装备
@@ -283,7 +295,7 @@
     //每个等级
     for (NSString *SubArea in SubAreaArr) {
         
-        NSString *selecetSQL = [NSString stringWithFormat:@"select * from battleslist where area like '%%%@%%'",SubArea];
+        NSString *selecetSQL = [NSString stringWithFormat:@"select * from battleslist where area like '%@'",SubArea];
         FMResultSet *rs =  [self.database executeQuery:selecetSQL];
         
         //每个装备
@@ -333,7 +345,35 @@
     
     return oneRoleArr;
 }
-
+//附魔
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName{
+    [self.database open];
+    NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+    NSString *selecetSQL =
+    [NSString stringWithFormat:@"select * from enchant where part ='%@'"];
+    FMResultSet *rs = [self.database executeQuery:selecetSQL];
+    while ([rs next]) {
+        TitleModel *titleMode = [[TitleModel alloc]init];
+        titleMode.style = [rs stringForColumn:@"style"];
+        titleMode.customattribute = [rs stringForColumn:@"customattribute"];
+        titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
+        titleMode.custompart = [rs stringForColumn:@"custompart"];
+        titleMode.level_enchant = [rs stringForColumn:@"level_enchant"];
+        titleMode.part = [rs stringForColumn:@"part"];
+        titleMode.att = [rs stringForColumn:@"att"];
+        titleMode.mint = [rs stringForColumn:@"mint"];
+        titleMode.agi = [rs stringForColumn:@"agi"];
+        titleMode.will = [rs stringForColumn:@"will"];
+        titleMode.critresist = [rs stringForColumn:@"part"];
+        titleMode.del = [rs stringForColumn:@"att"];
+        titleMode.mint = [rs stringForColumn:@"mint"];
+        titleMode.sta = [rs stringForColumn:@"agi"];
+        titleMode.simulation = [rs stringForColumn:@"will"];
+        
+        [oneEnchantArr addObject:titleMode];
+    }
+    return oneEnchantArr;
+}
 
 
 

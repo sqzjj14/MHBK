@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TWMessageViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end

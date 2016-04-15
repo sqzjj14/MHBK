@@ -10,6 +10,9 @@
 #import "TWSpringyFlowLayout.h"
 #import "TWMessageViewCell.h"
 #import "Header.h"
+#import "TitleModel.h"
+
+#define kTWMessageViewCell @"TWMessageViewCell"
 
 // Numerics
 CGFloat const kTWMessageViewControllerCellPadding = 10;
@@ -96,7 +99,7 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
     [backgroundImageView addMotionEffect:interpolationVertical];
     
     __collectionView.backgroundColor = [UIColor clearColor];
-    [__collectionView registerClass:[TWMessageViewCell class]  forCellWithReuseIdentifier:@"cell"];
+     [__collectionView registerNib:[UINib nibWithNibName:kTWMessageViewCell bundle:nil] forCellWithReuseIdentifier:kTWMessageViewCell];
     [self.view addSubview:__collectionView];
     [self.view bringSubviewToFront:_bottomBtn];
     __collectionView.delegate = self;
@@ -112,13 +115,18 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    if (_dataSource == nil || _dataSource.count == 0) {
+        return 0;
+    }
+    return _dataSource.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TWMessageViewCell *cell = (TWMessageViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    TWMessageViewCell *cell = (TWMessageViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kTWMessageViewCell forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    TitleModel *titlemodel = _dataSource[indexPath.row];
+    cell.title.text = titlemodel.title;
     return cell;
 }
 
