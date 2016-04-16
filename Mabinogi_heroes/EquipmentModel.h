@@ -13,6 +13,7 @@
 //-----------------------------------------
 //名字
 @property(nonatomic,copy)NSString *title;
+@property(nonatomic,copy)NSString *title2;//三级地区表示
 //等级
 @property(nonatomic,copy)NSString *level;
 //细类型 （如：双剑）

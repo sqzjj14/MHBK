@@ -23,4 +23,19 @@
 @property (nonatomic,copy)NSString *shengmingzhi;
 @property (nonatomic,copy)NSString *remark;
 
+//附魔
+@property (nonatomic,copy)NSString *style;
+@property (nonatomic,copy)NSString *customattribute;
+@property (nonatomic,copy)NSString *customprovenance;
+@property (nonatomic,copy)NSString *custompart;
+@property (nonatomic,copy)NSString *level_enchant;
+@property (nonatomic,copy)NSString *part;
+@property (nonatomic,copy)NSString *att;
+@property (nonatomic,copy)NSString *mint;
+@property (nonatomic,copy)NSString *agi;
+@property (nonatomic,copy)NSString *will;
+@property (nonatomic,copy)NSString *critresist;
+@property (nonatomic,copy)NSString *del;
+@property (nonatomic,copy)NSString *sta;
+@property (nonatomic,copy)NSString *simulation;
 @end

@@ -16,6 +16,7 @@
     if (self)
     {
         self.title = @"";
+        self.title2 = @"";
         self.level = @"";
         self.role = @"";
         self.remarks = @"";

@@ -25,9 +25,10 @@
 - (void)initMulView{
     _dataSource = [[DatabaseManager mabinogiHelper]CreatBossDataSource];
     
-    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 44, kScreenWidth, kScreenHeight) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
+    meun.needToScorllerIndex = 0;
     
     [self.view addSubview:meun];
 }

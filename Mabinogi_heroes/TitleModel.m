@@ -25,6 +25,21 @@
         self.shengmingzhi = @"";
         self.remark = @"";
         
+        self.style = @"";
+        self.customattribute = @"";
+        self.customprovenance = @"";
+        self.custompart = @"";
+        self.level_enchant = @"";
+        self.part = @"";
+        self.att = @"";
+        self.mint = @"";
+        self.will = @"";
+        self.critresist = @"";
+        self.del = @"";self.title = @"";
+        self.sta = @"";
+        self.simulation = @"";
+
+        
         
     }
     return self;

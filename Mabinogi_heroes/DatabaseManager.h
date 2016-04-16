@@ -36,6 +36,8 @@
 
 //头衔的表名数列
 @property(nonatomic,strong)NSArray *roleTitleArr;
+//附魔部位筛选数列
+@property(nonatomic,strong)NSArray *enchantArr;
 
 
 //单例的入口
@@ -50,6 +52,8 @@
 - (NSMutableArray *)CreatBossDataSource;
 //头衔db源封装
 - (NSMutableArray *)CreatAllRoleDataSource;
+//附魔db源封装
+- (NSMutableArray *)CreatEnchantDataSource;
 
 
 
@@ -57,8 +61,10 @@
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr;
 //封装副本Boss
 - (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr;
-//封装
+//封装头衔
 - (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName;
+//封装附魔
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName;
 @end
 
 

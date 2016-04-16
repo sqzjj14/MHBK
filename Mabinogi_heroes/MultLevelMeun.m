@@ -12,7 +12,7 @@
 #import "RightHeadView.h"
 #import "LeftCell.h"
 
-#define KleftWidth 100
+#define KleftWidth 80
 #define kRightCell @"RightCellCollectionViewCell"
 
 @interface MultLevelMeun()
@@ -43,8 +43,8 @@
         self.leftTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KleftWidth, frame.size.height)];
         self.leftTable.delegate = self;
         self.leftTable.dataSource = self;
+        self.leftTable.backgroundColor = UIColorFromRGB(0xF3F4F6);
         
-        self.leftTable.tableFooterView = [[UIView alloc]init];
         [self addSubview:self.leftTable];
         
         //self.leftTable.backgroundColor = ;
@@ -80,7 +80,17 @@
     }
     return self;
 }
-
+-(void)setNeedToScorllerIndex:(NSInteger)needToScorllerIndex{
+    if (needToScorllerIndex>=0) {
+        [self.leftTable selectRowAtIndexPath:[NSIndexPath indexPathForRow:needToScorllerIndex inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        LeftCell * cell=(LeftCell*)[self.leftTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:needToScorllerIndex inSection:0]];
+        cell.title.textColor=[UIColor redColor];
+        cell.backgroundColor=[UIColor whiteColor];
+        _selectIndex=needToScorllerIndex;
+        [self.rightCollection reloadData];        
+    }
+    _needToScorllerIndex=needToScorllerIndex;
+}
 -(void)reloadData
 {
     [self.leftTable reloadData];
@@ -100,27 +110,25 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     LeftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftCell"];
-    //cell.selectionStyle = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellAccessoryNone;
     cell.title.text = [_dataSource[indexPath.row]meunTitle];
     cell.title.numberOfLines = 2;
+    cell.title.textColor=[UIColor blackColor];
+    cell.backgroundColor = UIColorFromRGB(0xF3F4F6);
     
     
     return cell;
     
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 64;
-}
 //cell的点击，记录selectIndex(indexPath.row)
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LeftCell *cell = (LeftCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.title.textColor = [UIColor redColor];
-    //cell.backgroundColor = ;
+    cell.backgroundColor = [UIColor whiteColor];
     
     _selectIndex = indexPath.row;
     
-    //[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     [self.rightCollection reloadData];
     
 }
@@ -128,9 +136,16 @@
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     LeftCell *cell = (LeftCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.title.textColor = [UIColor blackColor];
-    //cell.backgroundColor = ;
+    cell.backgroundColor = UIColorFromRGB(0xF3F4F6);
+    cell.title.textColor=[UIColor blackColor];
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0;
+}
 #pragma mark---右边的collection 代理
 #pragma mark--deleagte
 #pragma mark 二级目录数量设置
@@ -157,7 +172,14 @@
     RightCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"RightCellCollectionViewCell" forIndexPath:indexPath];
     //根据 selectIndex(tableview.indexpath.row)确认对应的section
     _selectIndex_right = indexPath.section;
-    cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
+    EquipmentModel *someoneThird = [[EquipmentModel alloc]init];
+    someoneThird = [_dataSource[_selectIndex]nextArray][indexPath.section][0];
+    if ([someoneThird.level isEqualToString:@""]) {
+        cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title2];
+    }
+    else{
+        cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
+    }
     cell.backgroundColor = [UIColor clearColor];
     cell.image.backgroundColor= [UIColor colorWithHexString:@"e0ffff"];
    // [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",cell.title.text]]];
@@ -172,13 +194,16 @@
     EquipmentModel *someoneThird = [[EquipmentModel alloc]init];
     someoneThird = [_dataSource[_selectIndex]nextArray][indexPath.section][0];
     title.text = someoneThird.level;
+    if ([someoneThird.level isEqualToString:@""]) {
+        title.text = someoneThird.title;
+    }
     
     
     return view;
     
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(60, 90);
+    return CGSizeMake(75, 100);
 }
 ////定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
@@ -186,7 +211,7 @@
 }
 //头视图参考大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    CGSize size={kScreenWidth,44};
+    CGSize size={kScreenWidth,35};
     return size;
 }
 @end

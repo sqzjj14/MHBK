@@ -43,7 +43,7 @@
     MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
-    
+    multView.needToScorllerIndex = 0;
     [self.view addSubview:multView];
 }
 

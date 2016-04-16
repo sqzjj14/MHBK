@@ -190,11 +190,13 @@
     _arr_area4 = [[NSArray alloc]initWithObjects:@"艾贝尔",@"尼福尔海姆",nil];
     _arr_area5 = [[NSArray alloc]initWithObjects:@"未知的区域",@"哈伊德",nil];
     
+    EquipmentModel *BenChenner = [self packageOneSubAreaWithName:BENCHENNER with:_arr_area1];
     EquipmentModel *Malina = [self packageOneSubAreaWithName:MALINA with:_arr_area2];
     EquipmentModel *Rocheste = [self packageOneSubAreaWithName:ROCHESTE with:_arr_area3];
     EquipmentModel *Colhen = [self packageOneSubAreaWithName:COLHEN with:_arr_area4];
     EquipmentModel *Colhen_Rocheste = [self packageOneSubAreaWithName:COLHENANDROCHESTE with:_arr_area5];
     
+    [_dataSource addObject:BenChenner];
     [_dataSource addObject:Malina];
     [_dataSource addObject:Rocheste];
     [_dataSource addObject:Colhen];
@@ -205,7 +207,7 @@
 #pragma mark -头衔-
 - (NSMutableArray *)CreatAllRoleDataSource{
     [_dataSource removeAllObjects];
-    _roleTitleArr = [[NSArray alloc]initWithObjects:@"titlethita",@"titlefiona",
+    _roleTitleArr = [[NSArray alloc]initWithObjects:@"titlelethita",@"titlefiona",
                      @"titleevy",
                      @"titlekarok",@"titlekay",
                      @"titlevella",@"titlelynn",@"titlehurk",
@@ -217,6 +219,18 @@
     }
     return _dataSource;
 }
+#pragma mark -附魔-
+- (NSMutableArray *)CreatEnchantDataSource{
+    [_dataSource removeAllObjects];
+    _enchantArr = [[NSArray alloc]initWithObjects:@"武器",@"防具",@"首饰",@"副手", nil];
+    for (NSString *part in _enchantArr) {
+        NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+       oneEnchantArr = [self packageOneEnchantWithEquipmentName:part];
+        [_dataSource addObject:oneEnchantArr];
+    }
+    return _dataSource;
+}
+
 
 #pragma mark PackageHelper
 //装备
@@ -297,7 +311,14 @@
             thirdModel.area = [rs stringForColumn:@"area"];
             
             NSArray *array = [thirdModel.area componentsSeparatedByString:@"--"];
-            thirdModel.title = array[2];
+            if (array.count == 2) {
+                thirdModel.title = array[0];
+                thirdModel.title2 = array[1];
+            }
+            else{
+               thirdModel.title = array[1];
+               thirdModel.title2 = array[2];
+            }
             
             [thirdArray addObject:thirdModel];
         }
@@ -331,7 +352,35 @@
     
     return oneRoleArr;
 }
-
+//附魔
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName{
+    [self.database open];
+    NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+    NSString *selecetSQL =
+    [NSString stringWithFormat:@"select * from enchant where part ='%@'",equipmentName];
+    FMResultSet *rs = [self.database executeQuery:selecetSQL];
+    while ([rs next]) {
+        TitleModel *titleMode = [[TitleModel alloc]init];
+        titleMode.style = [rs stringForColumn:@"style"];
+        titleMode.customattribute = [rs stringForColumn:@"customattribute"];
+        titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
+        titleMode.custompart = [rs stringForColumn:@"custompart"];
+        titleMode.level_enchant = [rs stringForColumn:@"level_enchant"];
+        titleMode.part = [rs stringForColumn:@"part"];
+        titleMode.att = [rs stringForColumn:@"att"];
+        titleMode.mint = [rs stringForColumn:@"mint"];
+        titleMode.agi = [rs stringForColumn:@"agi"];
+        titleMode.will = [rs stringForColumn:@"will"];
+        titleMode.critresist = [rs stringForColumn:@"part"];
+        titleMode.del = [rs stringForColumn:@"att"];
+        titleMode.mint = [rs stringForColumn:@"mint"];
+        titleMode.sta = [rs stringForColumn:@"agi"];
+        titleMode.simulation = [rs stringForColumn:@"will"];
+        
+        [oneEnchantArr addObject:titleMode];
+    }
+    return oneEnchantArr;
+}
 
 
 
