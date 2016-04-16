@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDB.h"
-#import "Header.h"
+
+#import "EquipmentModel.h"
 
 
 @interface DatabaseManager : NSObject

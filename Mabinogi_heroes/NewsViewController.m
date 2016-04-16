@@ -7,13 +7,13 @@
 //
 
 #import "NewsViewController.h"
-#import "Header.h"
-#import "DatabaseManager.h"
+#import "NewsDetailViewController.h"
 
-@interface NewsViewController ()<UIWebViewDelegate>
+@interface NewsViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 
-@property (nonatomic,strong)FMDatabase *database;
+@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
+- (IBAction)reloadButtonAction:(id)sender;
 
 @end
 
@@ -21,34 +21,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webview.delegate = self;
-    NSURL *newURL = [NSURL URLWithString:NEWS_URL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:newURL];
-    [self.webview loadRequest:request];
-
-    [[DatabaseManager mabinogiHelper]CreatWeaponDataSource];
     
+    self.title = @"资讯";
 }
 
-
-
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    return  YES;
+-(void)viewWillAppear:(BOOL)animated {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL_NEWS]];
+    [_webview loadRequest:request];
+    [request setTimeoutInterval:15];
 }
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        NewsDetailViewController *newsDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"NewsDetailVC"];
+        newsDetailVC.requestUrl = request.URL;
+        [self.navigationController pushViewController:newsDetailVC animated:YES];
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    _webview.hidden = YES;
+}
+
+- (IBAction)reloadButtonAction:(id)sender {
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL_NEWS]];
+    [_webview loadRequest:request];
+    [request setTimeoutInterval:15];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

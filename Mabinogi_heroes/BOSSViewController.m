@@ -7,7 +7,9 @@
 //
 
 #import "BOSSViewController.h"
-#import "Header.h"
+
+#import "DatabaseManager.h"
+#import "MultLevelMeun.h"
 
 @interface BOSSViewController ()
 
@@ -25,7 +27,7 @@
 - (void)initMulView{
     _dataSource = [[DatabaseManager mabinogiHelper]CreatBossDataSource];
     
-    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     meun.needToScorllerIndex = 0;

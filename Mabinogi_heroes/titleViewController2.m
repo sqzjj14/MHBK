@@ -9,8 +9,9 @@
 #import "titleViewController2.h"
 #import "TWSpringyFlowLayout.h"
 #import "TWMessageViewCell.h"
-#import "Header.h"
 #import "TitleModel.h"
+
+#import "DatabaseManager.h"
 
 #define kTWMessageViewCell @"TWMessageViewCell"
 
@@ -51,7 +52,7 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
 -(void)initBottomBtn{
     _radius = 30;//半径
     _bottomBtn = [UIButton buttonWithType:0];
-    _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 65, 60, 60);
+    _bottomBtn.frame = CGRectMake(WIDTH_SCREEN/2 - _radius, HEIGHT_SCREEN - 65, 60, 60);
     [_bottomBtn setImage:[UIImage imageNamed:@"女妖"] forState:UIControlStateNormal];
     _bottomBtn.layer.masksToBounds = YES;
     _bottomBtn.layer.cornerRadius = _radius;
@@ -80,7 +81,7 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
 - (void)initCollectionView{
     self.navigationItem.title = @"头衔";
     
-    __collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) collectionViewLayout:[[TWSpringyFlowLayout alloc]init]];
+    __collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, HEIGHT_SCREEN) collectionViewLayout:[[TWSpringyFlowLayout alloc]init]];
     // Background
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"messages_bg_2.png"]];
     backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -132,13 +133,13 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(kScreenWidth - (kTWMessageViewControllerCellPadding*2), kTWMessageViewControllerCellHeight);
+    return CGSizeMake(WIDTH_SCREEN - (kTWMessageViewControllerCellPadding*2), kTWMessageViewControllerCellHeight);
 }
 
 - (void)pickRole:(UIButton *)btn{
     
     [UIView animateWithDuration:0.5 animations:^{
-        _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight/2-_radius, 2*_radius+15, 2*_radius+15);
+        _bottomBtn.frame = CGRectMake(WIDTH_SCREEN/2 - _radius, HEIGHT_SCREEN/2-_radius, 2*_radius+15, 2*_radius+15);
        // _bottomBtn.layer.cornerRadius = (_radius+15) / 2.f;
     }];
     
@@ -222,7 +223,7 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
 -(void)livBubbleMenuDidHide:(LIVBubbleMenu *)bubbleMenu {
     
     [UIView animateWithDuration:0.5 animations:^{
-        _bottomBtn.frame = CGRectMake(kScreenWidth/2 - _radius, kScreenHeight - 65, 60, 60);
+        _bottomBtn.frame = CGRectMake(WIDTH_SCREEN/2 - _radius, HEIGHT_SCREEN - 65, 60, 60);
     }];
     
 }

@@ -7,10 +7,12 @@
 //
 
 #import "MultLevelMeun.h"
-#import "Header.h"
+
 #import "RightCellCollectionViewCell.h"
 #import "RightHeadView.h"
 #import "LeftCell.h"
+
+#import "EquipmentModel.h"
 
 #define KleftWidth 80
 #define kRightCell @"RightCellCollectionViewCell"
@@ -43,7 +45,7 @@
         self.leftTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KleftWidth, frame.size.height)];
         self.leftTable.delegate = self;
         self.leftTable.dataSource = self;
-        self.leftTable.backgroundColor = UIColorFromRGB(0xF3F4F6);
+        self.leftTable.backgroundColor = COLOR_LEFTTABLE_BACKGROUD;
         
         [self addSubview:self.leftTable];
         
@@ -64,7 +66,7 @@
             flowLayout.minimumLineSpacing = 0.f; //行间距
             
             float leftMargin =0; //距离左table的间距
-            self.rightCollection = [[UICollectionView alloc]initWithFrame:CGRectMake(KleftWidth + leftMargin, 0, kScreenWidth - KleftWidth - leftMargin*2, frame.size.height) collectionViewLayout:flowLayout];
+            self.rightCollection = [[UICollectionView alloc]initWithFrame:CGRectMake(KleftWidth + leftMargin, 0, WIDTH_SCREEN - KleftWidth - leftMargin*2, frame.size.height) collectionViewLayout:flowLayout];
             self.rightCollection.delegate = self;
             self.rightCollection.dataSource = self;
         
@@ -111,10 +113,10 @@
     
     LeftCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftCell"];
     cell.selectionStyle = UITableViewCellAccessoryNone;
-    cell.title.text = [_dataSource[indexPath.row]meunTitle];
+    cell.title.text = [_dataSource[indexPath.row] meunTitle];
     cell.title.numberOfLines = 2;
     cell.title.textColor=[UIColor blackColor];
-    cell.backgroundColor = UIColorFromRGB(0xF3F4F6);
+    cell.backgroundColor = COLOR_LEFTTABLE_BACKGROUD;
     
     
     return cell;
@@ -136,7 +138,7 @@
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     LeftCell *cell = (LeftCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.title.textColor = [UIColor blackColor];
-    cell.backgroundColor = UIColorFromRGB(0xF3F4F6);
+    cell.backgroundColor = COLOR_LEFTTABLE_BACKGROUD;
     cell.title.textColor=[UIColor blackColor];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -181,7 +183,7 @@
         cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
     }
     cell.backgroundColor = [UIColor clearColor];
-    cell.image.backgroundColor= [UIColor colorWithHexString:@"e0ffff"];
+    cell.image.backgroundColor= COLOR_LEFTTABLE_CELL_IMAGE_BACKGROUD;
    // [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",cell.title.text]]];
     
     return cell;
@@ -211,7 +213,7 @@
 }
 //头视图参考大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    CGSize size={kScreenWidth,35};
+    CGSize size={WIDTH_SCREEN,35};
     return size;
 }
 @end

@@ -7,7 +7,10 @@
 //
 
 #import "EquipmentChartViewController.h"
-#import "Header.h"
+
+#import "MultLevelMeun.h"
+
+#import "DatabaseManager.h"
 
 @interface EquipmentChartViewController ()
 
@@ -40,7 +43,7 @@
         _dataSource = [[DatabaseManager mabinogiHelper]CreatOtherDataSource];
     }
     
-    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     multView.needToScorllerIndex = 0;

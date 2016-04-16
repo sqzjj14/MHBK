@@ -8,7 +8,6 @@
 
 #import "TitleViewController.h"
 #import "LLSlideMenu.h"
-#import "Header.h"
 
 @interface TitleViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -33,7 +32,7 @@
     
     [self initLLSlideView];
     self.navigationController.navigationBarHidden = YES;
-    self.navigiBar.backgroundColor = [UIColor colorWithHexString:@"ff6347"];
+    self.navigiBar.backgroundColor = COLOR_NAVIBAR_BACKGROUD;
     
 }
 -(void)initLLSlideView{
@@ -41,20 +40,20 @@
     _slideMenu = [[LLSlideMenu alloc] init];
     [self.view addSubview:_slideMenu];
     // 设置菜单宽度
-    _slideMenu.ll_menuWidth = 2*kScreenWidth/3;
+    _slideMenu.ll_menuWidth = 2*WIDTH_SCREEN/3;
     // 设置菜单背景色
-    _slideMenu.ll_menuBackgroundColor = [UIColor colorWithHexString:@"ff6347"];
+    _slideMenu.ll_menuBackgroundColor = COLOR_NAVIBAR_BACKGROUD;
     // 设置弹力和速度，  默认的是20,15,60
     _slideMenu.ll_springDamping = 20;       // 阻力
     _slideMenu.ll_springVelocity = 15;      // 速度
     _slideMenu.ll_springFramesNum = 60;     // 关键帧数量
     
     CGFloat imageMagin = 50.f; //左边距
-    _userIconImageV=[[UIImageView alloc]initWithFrame:CGRectMake(imageMagin, 25, (2*kScreenWidth/3)-2*imageMagin, (2*kScreenWidth/3)-2*imageMagin)];
+    _userIconImageV=[[UIImageView alloc]initWithFrame:CGRectMake(imageMagin, 25, (2*WIDTH_SCREEN/3)-2*imageMagin, (2*WIDTH_SCREEN/3)-2*imageMagin)];
     [self.view addSubview:_userIconImageV];
     
     _userIconImageV.layer.masksToBounds=YES;
-    _userIconImageV.layer.cornerRadius=((2*kScreenWidth/3)-2*imageMagin)/2.0f; //设置为图片宽度的一半出来为圆形
+    _userIconImageV.layer.cornerRadius=((2*WIDTH_SCREEN/3)-2*imageMagin)/2.0f; //设置为图片宽度的一半出来为圆形
     _userIconImageV.layer.borderWidth=3.0f; //边框宽度
     _userIconImageV.layer.borderColor=[[UIColor whiteColor] CGColor];//边框颜色
     _userIconImageV.backgroundColor = [UIColor whiteColor];
@@ -68,9 +67,9 @@
     for (NSInteger i = 0; i<11; i++) {
         
         UIButton *role = [UIButton buttonWithType:0];
-        role.frame = CGRectMake(imageMagin, i*30 + 35 + (2*kScreenWidth/3)-2*imageMagin, (2*kScreenWidth/3)-2*imageMagin, 20);
+        role.frame = CGRectMake(imageMagin, i*30 + 35 + (2*WIDTH_SCREEN/3)-2*imageMagin, (2*WIDTH_SCREEN/3)-2*imageMagin, 20);
         [role setTitle:_roleArr[i] forState:UIControlStateNormal];
-        role.titleLabel.font = [UIFont fontWithName:kFontBold size:16];
+        role.titleLabel.font = [UIFont fontWithName:FONT_DEFAULT size:16];
         [role addTarget:self action:@selector(pickRole:) forControlEvents:UIControlEventTouchUpInside];
         role.tag = i+100;
         [_slideMenu addSubview:role];

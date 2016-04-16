@@ -7,7 +7,6 @@
 //
 
 #import "EquipmentViewController.h"
-#import "Header.h"
 
 @interface EquipmentViewController ()
 

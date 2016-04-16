@@ -7,8 +7,9 @@
 //
 
 #import "DatabaseManager.h"
+
 #import "EquipmentModel.h"
-#import "Header.h"
+#import "TitleModel.h"
 
 @implementation DatabaseManager
 

@@ -7,7 +7,6 @@
 //
 
 #import "DataViewController.h"
-#import "Header.h"
 
 @interface DataViewController ()
 
@@ -20,12 +19,6 @@
     [super viewDidLoad];
 
     //self.navigationController.navigationBarHidden = YES;
-    
-
-    
-    
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,4 +29,5 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     segue.destinationViewController.hidesBottomBarWhenPushed = YES;
 }
+
 @end
