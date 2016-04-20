@@ -16,4 +16,6 @@
 
 #import "UIView+Ext.h"
 
+#import "CNPGridMenu.h"
+#import "EquipmentChartViewController.h"
 #endif /* PrefixHeader_pch */

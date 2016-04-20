@@ -15,6 +15,7 @@
 		50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087131CA4E868005352B7 /* FMDatabaseQueue.m */; };
 		50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087161CA4E868005352B7 /* FMResultSet.m */; };
 		940B47481CA8EACC00AFF747 /* EquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B47471CA8EACC00AFF747 /* EquipmentViewController.m */; };
+		940D00541CC62803004F3E23 /* CNPGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 940D00531CC62803004F3E23 /* CNPGridMenu.m */; };
 		9412F7701CA229E50037F461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F76F1CA229E50037F461 /* main.m */; };
 		9412F7731CA229E50037F461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7721CA229E50037F461 /* AppDelegate.m */; };
 		9412F7791CA229E50037F461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9412F7771CA229E50037F461 /* Main.storyboard */; };
@@ -25,8 +26,11 @@
 		9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B21CA236EF0037F461 /* NewsViewController.m */; };
 		9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B51CA236FC0037F461 /* DataViewController.m */; };
 		9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B81CA237360037F461 /* CommunityViewController.m */; };
-		9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BB1CA237420037F461 /* MySelfViewController.m */; };
 		9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */; };
+		9442ECC21CC7810300859422 /* VLDContextSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442ECBD1CC7810300859422 /* VLDContextSheetItem.m */; };
+		9442ECC31CC7810300859422 /* VLDContextSheetItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442ECBF1CC7810300859422 /* VLDContextSheetItemView.m */; };
+		9442ECC41CC7810300859422 /* VLDContextSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442ECC11CC7810300859422 /* VLDContextSheet.m */; };
+		9442ECC71CC786B600859422 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 9442ECC61CC786B600859422 /* vindicyusdb.db */; };
 		9447DA261CA278DD0009AA60 /* MultLevelMeun.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA251CA278DD0009AA60 /* MultLevelMeun.m */; };
 		9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9447DA291CA2841B0009AA60 /* RightCellCollectionViewCell.m */; };
 		9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9447DA2A1CA2841B0009AA60 /* RightCellCollectionViewCell.xib */; };
@@ -39,9 +43,6 @@
 		947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 947B97CF1CB79D3F001C5B98 /* messages_bg_2@2x.png */; };
 		947B97D41CB79F00001C5B98 /* TWMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */; };
 		947BC0931CA4FEA300AAFEB4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */; };
-		947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
-		947BC0971CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
-		947BC0981CA5286900AAFEB4 /* vindicyusdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 947BC0951CA5286900AAFEB4 /* vindicyusdb.db */; };
 		947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		947BC09D1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
 		947BC09E1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */; };
@@ -103,6 +104,8 @@
 		659503FF966D389EC7124B8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		940B47461CA8EACC00AFF747 /* EquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentViewController.h; sourceTree = "<group>"; };
 		940B47471CA8EACC00AFF747 /* EquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentViewController.m; sourceTree = "<group>"; };
+		940D00521CC62803004F3E23 /* CNPGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPGridMenu.h; sourceTree = "<group>"; };
+		940D00531CC62803004F3E23 /* CNPGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPGridMenu.m; sourceTree = "<group>"; };
 		9412F76B1CA229E50037F461 /* Mabinogi_heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mabinogi_heroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412F76F1CA229E50037F461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9412F7711CA229E50037F461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,10 +126,15 @@
 		9412F7B51CA236FC0037F461 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		9412F7B71CA237360037F461 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
 		9412F7B81CA237360037F461 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
-		9412F7BA1CA237420037F461 /* MySelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySelfViewController.h; sourceTree = "<group>"; };
-		9412F7BB1CA237420037F461 /* MySelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySelfViewController.m; sourceTree = "<group>"; };
 		9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
 		9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
+		9442ECBC1CC7810300859422 /* VLDContextSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDContextSheetItem.h; sourceTree = "<group>"; };
+		9442ECBD1CC7810300859422 /* VLDContextSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDContextSheetItem.m; sourceTree = "<group>"; };
+		9442ECBE1CC7810300859422 /* VLDContextSheetItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDContextSheetItemView.h; sourceTree = "<group>"; };
+		9442ECBF1CC7810300859422 /* VLDContextSheetItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDContextSheetItemView.m; sourceTree = "<group>"; };
+		9442ECC01CC7810300859422 /* VLDContextSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDContextSheet.h; sourceTree = "<group>"; };
+		9442ECC11CC7810300859422 /* VLDContextSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDContextSheet.m; sourceTree = "<group>"; };
+		9442ECC61CC786B600859422 /* vindicyusdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vindicyusdb.db; sourceTree = "<group>"; };
 		9447DA241CA278DD0009AA60 /* MultLevelMeun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultLevelMeun.h; sourceTree = "<group>"; };
 		9447DA251CA278DD0009AA60 /* MultLevelMeun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultLevelMeun.m; sourceTree = "<group>"; };
 		9447DA281CA2841B0009AA60 /* RightCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCellCollectionViewCell.h; sourceTree = "<group>"; };
@@ -145,7 +153,6 @@
 		947B97D21CB79F00001C5B98 /* TWMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageViewCell.h; sourceTree = "<group>"; };
 		947B97D31CB79F00001C5B98 /* TWMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageViewCell.m; sourceTree = "<group>"; };
 		947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		947BC0951CA5286900AAFEB4 /* vindicyusdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = vindicyusdb.db; path = ../vindicyusdb.db; sourceTree = "<group>"; };
 		947BC09A1CA5316F00AAFEB4 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		947BC09B1CA5316F00AAFEB4 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		9499FDDB1CB3A1A6000C8856 /* EquipmentChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChartViewController.h; sourceTree = "<group>"; };
@@ -294,6 +301,15 @@
 			name = "头衔";
 			sourceTree = "<group>";
 		};
+		940D00511CC627F1004F3E23 /* 功能菜单1 */ = {
+			isa = PBXGroup;
+			children = (
+				940D00521CC62803004F3E23 /* CNPGridMenu.h */,
+				940D00531CC62803004F3E23 /* CNPGridMenu.m */,
+			);
+			name = "功能菜单1";
+			sourceTree = "<group>";
+		};
 		9412F7621CA229E50037F461 = {
 			isa = PBXGroup;
 			children = (
@@ -395,26 +411,29 @@
 			name = Community;
 			sourceTree = "<group>";
 		};
-		9412F7A41CA232FE0037F461 /* My */ = {
-			isa = PBXGroup;
-			children = (
-				9412F7BA1CA237420037F461 /* MySelfViewController.h */,
-				9412F7BB1CA237420037F461 /* MySelfViewController.m */,
-			);
-			name = My;
-			sourceTree = "<group>";
-		};
 		9412F7BD1CA240A50037F461 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
 				9412F7A11CA232CA0037F461 /* News */,
 				9412F7A21CA232DA0037F461 /* Data */,
 				9412F7A31CA232F60037F461 /* Community */,
-				9412F7A41CA232FE0037F461 /* My */,
 				9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */,
 				9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */,
 			);
 			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		9442ECC51CC7810700859422 /* 长按动画按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				9442ECBC1CC7810300859422 /* VLDContextSheetItem.h */,
+				9442ECBD1CC7810300859422 /* VLDContextSheetItem.m */,
+				9442ECBE1CC7810300859422 /* VLDContextSheetItemView.h */,
+				9442ECBF1CC7810300859422 /* VLDContextSheetItemView.m */,
+				9442ECC01CC7810300859422 /* VLDContextSheet.h */,
+				9442ECC11CC7810300859422 /* VLDContextSheet.m */,
+			);
+			name = "长按动画按钮";
 			sourceTree = "<group>";
 		};
 		9447DA231CA276E00009AA60 /* 混合三级视图 */ = {
@@ -513,6 +532,8 @@
 		BA51EFFE1CC1D9860096B353 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9442ECC51CC7810700859422 /* 长按动画按钮 */,
+				940D00511CC627F1004F3E23 /* 功能菜单1 */,
 				BA51F0001CC1DD220096B353 /* ViewExt */,
 				947BC0991CA5312A00AAFEB4 /* DatabaseManager */,
 				947B97CA1CB79B80001C5B98 /* TWmessage */,
@@ -527,7 +548,7 @@
 		BA51EFFF1CC1D9E70096B353 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				947BC0951CA5286900AAFEB4 /* vindicyusdb.db */,
+				9442ECC61CC786B600859422 /* vindicyusdb.db */,
 				947BC0921CA4FEA300AAFEB4 /* libsqlite3.tbd */,
 			);
 			name = DataBase;
@@ -653,12 +674,12 @@
 			files = (
 				9447DA311CA284370009AA60 /* LeftCell.xib in Resources */,
 				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
+				9442ECC71CC786B600859422 /* vindicyusdb.db in Resources */,
 				947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
 				94B42AA21CC09343007117B8 /* TWMessageViewCell.xib in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
-				947BC0961CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 				947B97D01CB79D3F001C5B98 /* messages_bg_2.png in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
 			);
@@ -668,7 +689,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947BC0971CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,7 +696,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947BC0981CA5286900AAFEB4 /* vindicyusdb.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,12 +755,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */,
+				9442ECC41CC7810300859422 /* VLDContextSheet.m in Sources */,
 				947BC09C1CA5316F00AAFEB4 /* DatabaseManager.m in Sources */,
 				94CEF6E51CB7517F004356C1 /* titleViewController2.m in Sources */,
 				94CEF6DE1CB62ECA004356C1 /* LLSlideMenu.m in Sources */,
 				50F087171CA4E868005352B7 /* FMDatabase.m in Sources */,
 				94CEF6DB1CB62ECA004356C1 /* LLAnimationManager.m in Sources */,
-				9412F7BC1CA237420037F461 /* MySelfViewController.m in Sources */,
 				9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */,
 				940B47481CA8EACC00AFF747 /* EquipmentViewController.m in Sources */,
 				947B97D41CB79F00001C5B98 /* TWMessageViewCell.m in Sources */,
@@ -750,6 +769,7 @@
 				50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */,
 				9412F7731CA229E50037F461 /* AppDelegate.m in Sources */,
 				947B97CD1CB79BAB001C5B98 /* TWSpringyFlowLayout.m in Sources */,
+				940D00541CC62803004F3E23 /* CNPGridMenu.m in Sources */,
 				94CEF6DF1CB62ECA004356C1 /* UIView+SetRect.m in Sources */,
 				9447DA341CA284630009AA60 /* RightHeadView.m in Sources */,
 				9412F7701CA229E50037F461 /* main.m in Sources */,
@@ -757,6 +777,8 @@
 				94D982591CB502D4006E5AFE /* BOSSViewController.m in Sources */,
 				9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */,
 				94D982551CB4F8DA006E5AFE /* UIColor+HexString.m in Sources */,
+				9442ECC31CC7810300859422 /* VLDContextSheetItemView.m in Sources */,
+				9442ECC21CC7810300859422 /* VLDContextSheetItem.m in Sources */,
 				9447DA301CA284370009AA60 /* LeftCell.m in Sources */,
 				BA51EFFB1CC1D9580096B353 /* NewsDetailViewController.m in Sources */,
 				9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */,

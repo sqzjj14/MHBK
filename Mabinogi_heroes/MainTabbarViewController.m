@@ -7,8 +7,9 @@
 //
 
 #import "MainTabbarViewController.h"
+#import "CNPGridMenu.h"
 
-@interface MainTabbarViewController ()
+@interface MainTabbarViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UITabBar *tabBar = self.tabBar;
+    self.delegate = self;
 //    
 //    //首页
 //    homeItem = [tabBar.items objectAtIndex:0];
@@ -57,7 +58,12 @@
 //    tabBar.backgroundColor = [UIColor redColor];
 //    tabBar.alpha = 1;
 }
-
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    if (viewController == self.viewControllers[0] || viewController == self.viewControllers[2]) {
+        [self.viewControllers[1] dismissGridMenuAnimated:YES completion:nil];
+    }
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

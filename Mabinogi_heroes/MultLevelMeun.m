@@ -37,7 +37,17 @@
 {
     if (self == [super initWithFrame:frame]) {
         if (allData.count == 0) {
-            return nil;
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+            view.backgroundColor = [UIColor grayColor];
+            UILabel *tip = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width/2-20 , frame.size.height/2 - 20, 150, 100)];
+            tip.text = @"请长按屏幕～";
+            tip.textColor = [UIColor redColor];
+            tip.textAlignment = NSTextAlignmentCenter;
+            tip.font = [UIFont fontWithName:FONT_DEFAULT_BOLD size:17];
+            tip.numberOfLines = 2;
+            [view addSubview:tip];
+            [self addSubview:view];
+            return self;
         }
         _dataSource = allData;
         _block = selectIndexBlock;

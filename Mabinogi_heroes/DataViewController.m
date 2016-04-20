@@ -7,9 +7,10 @@
 //
 
 #import "DataViewController.h"
+#import "CNPGridMenu.h"
 
-@interface DataViewController ()
-
+@interface DataViewController ()<CNPGridMenuDelegate>
+@property (nonatomic, strong) CNPGridMenu *gridMenu;
 
 @end
 
@@ -17,10 +18,88 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     //self.navigationController.navigationBarHidden = YES;
 }
+- (IBAction)showMenu:(id)sender {
+    
+    CNPGridMenuItem *laterToday = [[CNPGridMenuItem alloc] init];
+    //laterToday.icon = [UIImage imageNamed:@"LaterToday"];
+    laterToday.title = @"装备";
+    
+    CNPGridMenuItem *thisEvening = [[CNPGridMenuItem alloc] init];
+    //thisEvening.icon = [UIImage imageNamed:@"ThisEvening"];
+    thisEvening.title = @"副本";
+    
+    CNPGridMenuItem *tomorrow = [[CNPGridMenuItem alloc] init];
+    // tomorrow.icon = [UIImage imageNamed:@"Tomorrow"];
+    tomorrow.title = @"头衔";
+    
+    CNPGridMenuItem *thisWeekend = [[CNPGridMenuItem alloc] init];
+    //thisWeekend.icon = [UIImage imageNamed:@"ThisWeekend"];
+    thisWeekend.title = @"附魔";
+    
+    CNPGridMenuItem *nextWeek = [[CNPGridMenuItem alloc] init];
+    nextWeek.icon = [UIImage imageNamed:@"NextWeek"];
+    nextWeek.title = @"时装";
+    
+    CNPGridMenuItem *inAMonth = [[CNPGridMenuItem alloc] init];
+    inAMonth.icon = [UIImage imageNamed:@"InMonth"];
+    inAMonth.title = @"里时装";
+    
+    CNPGridMenuItem *someday = [[CNPGridMenuItem alloc] init];
+    someday.icon = [UIImage imageNamed:@"Someday"];
+    someday.title = @"角色技能";
+    
+    CNPGridMenuItem *desktop = [[CNPGridMenuItem alloc] init];
+    desktop.icon = [UIImage imageNamed:@"Desktop"];
+    desktop.title = @"模拟配装";
+    
+    CNPGridMenuItem *pickDate = [[CNPGridMenuItem alloc] init];
+    pickDate.icon = [UIImage imageNamed:@"PickDate"];
+    pickDate.title = @"Pick Date";
+    
+    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend, nextWeek, inAMonth, someday, desktop, pickDate]];
+    gridMenu.delegate = self;
+    [self presentGridMenu:gridMenu animated:YES completion:^{
+        NSLog(@"Grid Menu Presented");
+    }];
+    
+}
 
+
+
+- (void)gridMenuDidTapOnBackground:(CNPGridMenu *)menu {
+    [self dismissGridMenuAnimated:YES completion:^{
+    }];
+}
+
+- (void)gridMenu:(CNPGridMenu *)menu didTapOnItem:(CNPGridMenuItem *)item {
+    if ([item.title isEqualToString:@"装备"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([item.title isEqualToString:@"副本"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([item.title isEqualToString:@"头衔"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([item.title isEqualToString:@"附魔"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
