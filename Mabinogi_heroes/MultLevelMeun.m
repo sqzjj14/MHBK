@@ -8,11 +8,17 @@
 
 #import "MultLevelMeun.h"
 
+
 #import "RightCellCollectionViewCell.h"
 #import "RightHeadView.h"
 #import "LeftCell.h"
+#import "tapEquipmentView.h"
+#import "tapBossView.h"
 
 #import "EquipmentModel.h"
+#import "Masonry.h"
+#import "UIColor+HexString.h"
+
 
 #define KleftWidth 80
 #define kRightCell @"RightCellCollectionViewCell"
@@ -21,6 +27,8 @@
 
 @property(strong,nonatomic)UITableView *leftTable;
 @property(strong,nonatomic)UICollectionView *rightCollection;
+@property(strong,nonatomic)tapEquipmentView *popview;
+@property(strong,nonatomic)UITapGestureRecognizer* closeTap;
 
 @end
 @implementation MultLevelMeun
@@ -33,15 +41,17 @@
 }
 */
 
--(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock
+-(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withType:(NSString *)type withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock
 {
+    _type = type;
+    
     if (self == [super initWithFrame:frame]) {
         if (allData.count == 0) {
             UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
             view.backgroundColor = [UIColor grayColor];
             UILabel *tip = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width/2-20 , frame.size.height/2 - 20, 150, 100)];
             tip.text = @"请长按屏幕～";
-            tip.textColor = [UIColor redColor];
+            tip.textColor = [UIColor whiteColor];
             tip.textAlignment = NSTextAlignmentCenter;
             tip.font = [UIFont fontWithName:FONT_DEFAULT_BOLD size:17];
             tip.numberOfLines = 2;
@@ -87,8 +97,39 @@
             [self addSubview:self.rightCollection];
             
             self.rightCollection.backgroundColor = [UIColor whiteColor] ;
-            
+        
+//          UIImageView *bgImage = [[UIImageView alloc]init];
+//          bgImage.image = [UIImage imageNamed:@"tier_bg"];
+//          bgImage.alpha = 0.2;
+//          [self.rightCollection addSubview:bgImage];
+//          [bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
+//              make.top.equalTo(self.rightCollection.mas_top);
+//              make.left.equalTo(self.rightCollection.mas_left);
+//              make.right.equalTo(self.rightCollection.mas_right);
+//              make.bottom.equalTo(self.rightCollection.mas_bottom);
+//          }];
+        
             //self.backgroundColor = ;
+        
+ //popview 1
+        _popview = [[NSBundle mainBundle]loadNibNamed:@"tapEquipmentView" owner:nil options:nil][0];
+        _popview.backgroundColor = [UIColor whiteColor];
+        _popview.layer.shadowOffset = CGSizeMake(2, 2);
+        _popview.layer.shadowColor = [[UIColor redColor]CGColor];
+        _popview.layer.shadowOpacity = 0.5;
+        _popview.layer.cornerRadius = 2 ;
+        _popview.layer.shadowRadius= 8;
+        _closeTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closePop:)];
+ //popview 2
+        _popview = [[NSBundle mainBundle]loadNibNamed:@"tapEquipmentView" owner:nil options:nil][0];
+        _popview.backgroundColor = [UIColor whiteColor];
+        _popview.layer.shadowOffset = CGSizeMake(2, 2);
+        _popview.layer.shadowColor = [[UIColor redColor]CGColor];
+        _popview.layer.shadowOpacity = 0.5;
+        _popview.layer.cornerRadius = 2 ;
+        _popview.layer.shadowRadius= 8;
+        _closeTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closePop:)];
+        
     }
     return self;
 }
@@ -177,6 +218,45 @@
     void (^select)(NSInteger left,NSInteger right,id model);
     select = self.block;
     select(self.selectIndex,indexPath.row,model);
+    //show popview
+#pragma Popview Setting
+    if ([_type isEqualToString:@"Equipment"]) {
+        EquipmentModel *eqModel = [_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row];
+        _popview.title.text = eqModel.title;
+        _popview.level.text = eqModel.level;
+        _popview.bal.text = [NSString stringWithFormat:@"平衡:%ld",eqModel.bal];
+        _popview.attspd.text = [NSString stringWithFormat:@"攻速:%ld",eqModel.attspd];
+        _popview.critical.text = [NSString stringWithFormat:@"暴击:%ld",eqModel.critical];
+        _popview.att.text = [NSString stringWithFormat:@"攻击力:%ld",eqModel.att];
+        
+        _popview.str.text = [NSString stringWithFormat:@"力量:%ld",eqModel.str];
+        _popview.mint.text = [NSString stringWithFormat:@"智力:%ld",eqModel.mint];
+        _popview.agi.text = [NSString stringWithFormat:@"敏捷:%ld",eqModel.agi];
+        _popview.wil.text = [NSString stringWithFormat:@"意志:%ld",eqModel.wil];
+        _popview.mint.text = [NSString stringWithFormat:@"智力:%ld",eqModel.mint];
+        _popview.critresist.text = [NSString stringWithFormat:@"暴抗:%ld",eqModel.critresist];
+        _popview.shengmingzhi.text = [NSString stringWithFormat:@"血量:%ld",eqModel.shengmingzhi];
+        _popview.sta.text = [NSString stringWithFormat:@"敏捷:%ld",eqModel.sta];
+        _popview.def.text = [NSString stringWithFormat:@"防御:%ld",eqModel.def];
+        _popview.role.text = [NSString stringWithFormat:@"%@",eqModel.role];
+        
+        [self addSubview:_popview];
+        [_popview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.mas_centerX).with.offset(10);
+            make.centerY.equalTo(self.mas_centerY).with.offset(-50);
+            make.width.equalTo(@250);
+            make.height.equalTo(@400);
+        }];
+        _popview.alpha = 0;
+        [UIView animateWithDuration:0.35 animations:^{
+            _popview.alpha = 1;
+        }];
+        [self addGestureRecognizer:_closeTap];
+    }
+    else if ([_type isEqualToString:@"Boss"]){
+        
+    }
+   
 
 }
 //cell
@@ -193,8 +273,12 @@
         cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
     }
     cell.backgroundColor = [UIColor clearColor];
-    cell.image.backgroundColor= COLOR_LEFTTABLE_CELL_IMAGE_BACKGROUD;
-   // [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",cell.title.text]]];
+    
+    if ([_type isEqualToString:@"Equipment"]) {
+        cell.image.backgroundColor= COLOR_LEFTTABLE_CELL_IMAGE_BACKGROUD;
+        [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",cell.title.text]]];
+    }
+  
     
     return cell;
 }
@@ -225,5 +309,15 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     CGSize size={WIDTH_SCREEN,35};
     return size;
+}
+
+#pragma mark 手势
+-(void)closePop:(UITapGestureRecognizer *)tap{
+    [UIView animateWithDuration:0.3 animations:^{
+        _popview.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_popview removeFromSuperview];
+        [self removeGestureRecognizer:tap];
+    }];
 }
 @end

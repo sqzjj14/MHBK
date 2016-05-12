@@ -15,6 +15,7 @@
 @property(nonatomic,assign)NSInteger selectIndex_right;
 @property(nonatomic,copy) id block ;
 @property(assign,nonatomic) NSInteger needToScorllerIndex;
+@property(nonatomic,copy) NSString* type;
 
--(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock;
+-(id)initWithFrame:(CGRect)frame WithLeftData:(NSArray*)allData withType:(NSString*)type withSelecetIndex:(void(^)(NSInteger left,NSInteger right,id info))selectIndexBlock;
 @end

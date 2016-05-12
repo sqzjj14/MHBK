@@ -18,4 +18,7 @@
 
 #import "CNPGridMenu.h"
 #import "EquipmentChartViewController.h"
+#import "BOSSViewController.h"
+#import "Title3ViewController.h"
+#import "DatabaseManager.h"
 #endif /* PrefixHeader_pch */

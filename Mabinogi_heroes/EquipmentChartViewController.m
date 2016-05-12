@@ -38,7 +38,7 @@
 -(void)initTipView
 {
     
-    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withType:@"" withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     [self.view addSubview:multView];
@@ -84,7 +84,7 @@
         _dataSource = [[DatabaseManager mabinogiHelper]CreatOtherDataSource];
     }
     
-    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withType:@"Equipment"  withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     multView.needToScorllerIndex = 0;

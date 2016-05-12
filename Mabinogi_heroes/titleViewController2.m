@@ -38,6 +38,7 @@ CGFloat const kTWMessageViewControllerCellHeight = 50;
     [super viewDidLoad];
     [self initBottomBtn];
     [self initCollectionView];
+   // self.navigationController.navigationBarHidden = YES;
     _allData = [[DatabaseManager mabinogiHelper]CreatAllRoleDataSource];//总数据源
     _dataSource = [[NSMutableArray alloc]init];//collection数据源
     

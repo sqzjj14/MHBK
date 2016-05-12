@@ -23,19 +23,19 @@
 - (IBAction)showMenu:(id)sender {
     
     CNPGridMenuItem *laterToday = [[CNPGridMenuItem alloc] init];
-    //laterToday.icon = [UIImage imageNamed:@"LaterToday"];
+    laterToday.icon = [UIImage imageNamed:@"LaterToday"];
     laterToday.title = @"装备";
     
     CNPGridMenuItem *thisEvening = [[CNPGridMenuItem alloc] init];
-    //thisEvening.icon = [UIImage imageNamed:@"ThisEvening"];
+    thisEvening.icon = [UIImage imageNamed:@"ThisEvening"];
     thisEvening.title = @"副本";
     
     CNPGridMenuItem *tomorrow = [[CNPGridMenuItem alloc] init];
-    // tomorrow.icon = [UIImage imageNamed:@"Tomorrow"];
+     tomorrow.icon = [UIImage imageNamed:@"Tomorrow"];
     tomorrow.title = @"头衔";
     
     CNPGridMenuItem *thisWeekend = [[CNPGridMenuItem alloc] init];
-    //thisWeekend.icon = [UIImage imageNamed:@"ThisWeekend"];
+    thisWeekend.icon = [UIImage imageNamed:@"ThisWeekend"];
     thisWeekend.title = @"附魔";
     
     CNPGridMenuItem *nextWeek = [[CNPGridMenuItem alloc] init];
@@ -58,7 +58,7 @@
     pickDate.icon = [UIImage imageNamed:@"PickDate"];
     pickDate.title = @"Pick Date";
     
-    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend, nextWeek, inAMonth, someday, desktop, pickDate]];
+    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend]];
     gridMenu.delegate = self;
     [self presentGridMenu:gridMenu animated:YES completion:^{
         NSLog(@"Grid Menu Presented");
@@ -83,13 +83,13 @@
     if ([item.title isEqualToString:@"副本"]) {
         [self dismissGridMenuAnimated:YES completion:^{
         }];
-        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        UIViewController *vc = [[BOSSViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     if ([item.title isEqualToString:@"头衔"]) {
         [self dismissGridMenuAnimated:YES completion:^{
         }];
-        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        UIViewController *vc = [[Title3ViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     if ([item.title isEqualToString:@"附魔"]) {
