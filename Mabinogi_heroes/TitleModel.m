@@ -33,7 +33,7 @@
         self.part = @"";
         self.att = @"";
         self.mint = @"";
-        self.will = @"";
+        self.wil = @"";
         self.critresist = @"";
         self.del = @"";self.title = @"";
         self.sta = @"";

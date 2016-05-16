@@ -97,7 +97,7 @@
     if ([item.title isEqualToString:@"附魔"]) {
         [self dismissGridMenuAnimated:YES completion:^{
         }];
-        UIViewController *vc = [[EquipmentChartViewController alloc]init];
+        UIViewController *vc = [[EnchantViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     

@@ -19,6 +19,8 @@
 #import "EquipmentChartViewController.h"
 #import "BOSSViewController.h"
 #import "Title3ViewController.h"
+#import "EnchantViewController.h"
+
 #import "DatabaseManager.h"
 #import "Masonry.h"
 #endif /* PrefixHeader_pch */

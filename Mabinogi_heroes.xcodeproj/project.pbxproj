@@ -93,6 +93,7 @@
 		94D982591CB502D4006E5AFE /* BOSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D982581CB502D4006E5AFE /* BOSSViewController.m */; };
 		94FF61FB1CE9972A00BE73CF /* TitilePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FF61FA1CE9972A00BE73CF /* TitilePopView.m */; };
 		94FF61FD1CE9974E00BE73CF /* TitlePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FF61FC1CE9974E00BE73CF /* TitlePopView.xib */; };
+		94FF62031CE9C50000BE73CF /* EnchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FF62021CE9C50000BE73CF /* EnchantViewController.m */; };
 		A6C6246B0C32738962F8F1EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478172978367723FBD963348 /* libPods.a */; };
 		BA51EFFB1CC1D9580096B353 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51EFFA1CC1D9580096B353 /* NewsDetailViewController.m */; };
 		BA51EFFC1CC1D9580096B353 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51EFFA1CC1D9580096B353 /* NewsDetailViewController.m */; };
@@ -264,6 +265,8 @@
 		94FF61F91CE9972A00BE73CF /* TitilePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitilePopView.h; sourceTree = "<group>"; };
 		94FF61FA1CE9972A00BE73CF /* TitilePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitilePopView.m; sourceTree = "<group>"; };
 		94FF61FC1CE9974E00BE73CF /* TitlePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlePopView.xib; sourceTree = "<group>"; };
+		94FF62011CE9C50000BE73CF /* EnchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnchantViewController.h; sourceTree = "<group>"; };
+		94FF62021CE9C50000BE73CF /* EnchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnchantViewController.m; sourceTree = "<group>"; };
 		BA51EFF71CC1D88C0096B353 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BA51EFF81CC1D8FE0096B353 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		BA51EFF91CC1D9580096B353 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 		940B47441CA8E78C00AFF747 /* 附魔 */ = {
 			isa = PBXGroup;
 			children = (
+				94FF62011CE9C50000BE73CF /* EnchantViewController.h */,
+				94FF62021CE9C50000BE73CF /* EnchantViewController.m */,
 			);
 			name = "附魔";
 			sourceTree = "<group>";
@@ -970,6 +975,7 @@
 				50F087171CA4E868005352B7 /* FMDatabase.m in Sources */,
 				94CEF6DB1CB62ECA004356C1 /* LLAnimationManager.m in Sources */,
 				9447DA2B1CA2841B0009AA60 /* RightCellCollectionViewCell.m in Sources */,
+				94FF62031CE9C50000BE73CF /* EnchantViewController.m in Sources */,
 				94B4A2091CE431160062F27D /* MASViewConstraint.m in Sources */,
 				94B4A20A1CE431160062F27D /* NSArray+MASAdditions.m in Sources */,
 				947B97D41CB79F00001C5B98 /* TWMessageViewCell.m in Sources */,
@@ -1163,6 +1169,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Mabinogi_heroes/PrefixHeader.pch";
 				INFOPLIST_FILE = Mabinogi_heroes/Info.plist;
@@ -1180,6 +1187,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Mabinogi_heroes/PrefixHeader.pch";
 				INFOPLIST_FILE = Mabinogi_heroes/Info.plist;

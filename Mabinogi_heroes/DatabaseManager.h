@@ -39,6 +39,7 @@
 @property(nonatomic,strong)NSArray *roleTitleArr;
 //附魔部位筛选数列
 @property(nonatomic,strong)NSArray *enchantArr;
+@property(nonatomic,strong)NSArray *levelArr;
 
 
 //单例的入口
@@ -65,7 +66,7 @@
 //封装头衔
 - (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName;
 //封装附魔
-- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName;
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName andLevel:(NSString *)level;
 @end
 
 

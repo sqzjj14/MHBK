@@ -33,7 +33,7 @@
 @property (nonatomic,copy)NSString *att;
 @property (nonatomic,copy)NSString *mint;
 @property (nonatomic,copy)NSString *agi;
-@property (nonatomic,copy)NSString *will;
+@property (nonatomic,copy)NSString *wil;
 @property (nonatomic,copy)NSString *critresist;
 @property (nonatomic,copy)NSString *del;
 @property (nonatomic,copy)NSString *sta;
