@@ -20,6 +20,7 @@
 @implementation BOSSViewController
 
 - (void)viewDidLoad {
+    self.title = @"副本";
     [super viewDidLoad];
     [self initMulView];
     
@@ -27,10 +28,11 @@
 - (void)initMulView{
     _dataSource = [[DatabaseManager mabinogiHelper]CreatBossDataSource];
     
-    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN-64) WithLeftData:_dataSource withType:@"Boss" withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *meun = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 40) WithLeftData:_dataSource withType:@"Boss" withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     meun.needToScorllerIndex = 0;
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     [self.view addSubview:meun];
 }

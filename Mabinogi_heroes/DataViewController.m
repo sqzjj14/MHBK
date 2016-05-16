@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.navigationController.navigationBarHidden = YES;
+     self.hidesBottomBarWhenPushed = NO;
 }
 - (IBAction)showMenu:(id)sender {
     
@@ -89,8 +89,10 @@
     if ([item.title isEqualToString:@"头衔"]) {
         [self dismissGridMenuAnimated:YES completion:^{
         }];
-        UIViewController *vc = [[Title3ViewController alloc]init];
+        UIViewController *vc = (UIViewController*)[[Title3ViewController alloc]init];
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+       
     }
     if ([item.title isEqualToString:@"附魔"]) {
         [self dismissGridMenuAnimated:YES completion:^{

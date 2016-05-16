@@ -14,9 +14,8 @@
 #import "LeftCell.h"
 #import "tapEquipmentView.h"
 #import "tapBossView.h"
-
 #import "EquipmentModel.h"
-#import "Masonry.h"
+
 #import "UIColor+HexString.h"
 
 
@@ -28,6 +27,7 @@
 @property(strong,nonatomic)UITableView *leftTable;
 @property(strong,nonatomic)UICollectionView *rightCollection;
 @property(strong,nonatomic)tapEquipmentView *popview;
+@property(strong,nonatomic)tapBossView *popview2;
 @property(strong,nonatomic)UITapGestureRecognizer* closeTap;
 
 @end
@@ -50,7 +50,7 @@
             UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
             view.backgroundColor = [UIColor grayColor];
             UILabel *tip = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width/2-20 , frame.size.height/2 - 20, 150, 100)];
-            tip.text = @"请长按屏幕～";
+            tip.text = @"请长按屏幕,并拖动～";
             tip.textColor = [UIColor whiteColor];
             tip.textAlignment = NSTextAlignmentCenter;
             tip.font = [UIFont fontWithName:FONT_DEFAULT_BOLD size:17];
@@ -63,9 +63,13 @@
         _block = selectIndexBlock;
  //左边的视图
         self.leftTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KleftWidth, frame.size.height)];
+        if ([_type isEqualToString:@"Boss"]) {
+            self.leftTable.frame = CGRectMake(0, -64, KleftWidth, frame.size.height);
+        }
         self.leftTable.delegate = self;
         self.leftTable.dataSource = self;
         self.leftTable.backgroundColor = COLOR_LEFTTABLE_BACKGROUD;
+        self.leftTable.tableHeaderView = [[UIView alloc]init];
         
         [self addSubview:self.leftTable];
         
@@ -119,15 +123,15 @@
         _popview.layer.shadowOpacity = 0.5;
         _popview.layer.cornerRadius = 2 ;
         _popview.layer.shadowRadius= 8;
-        _closeTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closePop:)];
  //popview 2
-        _popview = [[NSBundle mainBundle]loadNibNamed:@"tapEquipmentView" owner:nil options:nil][0];
-        _popview.backgroundColor = [UIColor whiteColor];
-        _popview.layer.shadowOffset = CGSizeMake(2, 2);
-        _popview.layer.shadowColor = [[UIColor redColor]CGColor];
-        _popview.layer.shadowOpacity = 0.5;
-        _popview.layer.cornerRadius = 2 ;
-        _popview.layer.shadowRadius= 8;
+        _popview2 = [[NSBundle mainBundle]loadNibNamed:@"tapBossView" owner:nil options:nil][0];
+        _popview2.backgroundColor = [UIColor whiteColor];
+        _popview2.layer.shadowOffset = CGSizeMake(2, 2);
+        _popview2.layer.shadowColor = [[UIColor redColor]CGColor];
+        _popview2.layer.shadowOpacity = 0.5;
+        _popview2.layer.cornerRadius = 2 ;
+        _popview2.layer.shadowRadius= 8;
+ //closePopViewTap
         _closeTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closePop:)];
         
     }
@@ -168,7 +172,6 @@
     cell.title.numberOfLines = 2;
     cell.title.textColor=[UIColor blackColor];
     cell.backgroundColor = COLOR_LEFTTABLE_BACKGROUD;
-    
     
     return cell;
     
@@ -220,8 +223,9 @@
     select(self.selectIndex,indexPath.row,model);
     //show popview
 #pragma Popview Setting
+    EquipmentModel *eqModel = [_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row];
+    
     if ([_type isEqualToString:@"Equipment"]) {
-        EquipmentModel *eqModel = [_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row];
         _popview.title.text = eqModel.title;
         _popview.level.text = eqModel.level;
         _popview.bal.text = [NSString stringWithFormat:@"平衡:%ld",eqModel.bal];
@@ -254,7 +258,24 @@
         [self addGestureRecognizer:_closeTap];
     }
     else if ([_type isEqualToString:@"Boss"]){
+        _popview2.name.text = eqModel.title;
+        _popview2.att.text = [NSString stringWithFormat:@"攻击:%ld",(long)eqModel.att];
+        _popview2.def.text = [NSString stringWithFormat:@"防御:%ld",(long)eqModel.def];
+        _popview2.resist.text = [NSString stringWithFormat:@"暴抗:%@",eqModel.resist];
+        _popview2.remark.text = eqModel.remarks;
         
+        [self addSubview:_popview2];
+        [_popview2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.mas_centerX).with.offset(10);
+            make.centerY.equalTo(self.mas_centerY).with.offset(-50);
+            make.width.equalTo(@250);
+            make.height.equalTo(@400);
+        }];
+        _popview.alpha = 0;
+        [UIView animateWithDuration:0.35 animations:^{
+            _popview2.alpha = 1;
+        }];
+        [self addGestureRecognizer:_closeTap];
     }
    
 
@@ -314,9 +335,21 @@
 #pragma mark 手势
 -(void)closePop:(UITapGestureRecognizer *)tap{
     [UIView animateWithDuration:0.3 animations:^{
-        _popview.alpha = 0;
+        if (_popview) {
+            _popview.alpha = 0;
+        }
+        if (_popview2) {
+            _popview2.alpha = 0;
+        }
+       
+        _popview2.alpha = 0;
     } completion:^(BOOL finished) {
-        [_popview removeFromSuperview];
+        if (_popview) {
+            [_popview removeFromSuperview];
+        }
+        if (_popview2) {
+            [_popview2 removeFromSuperview];
+        }
         [self removeGestureRecognizer:tap];
     }];
 }

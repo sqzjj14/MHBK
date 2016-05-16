@@ -306,7 +306,7 @@
             EquipmentModel *thirdModel = [[EquipmentModel alloc]init];
             thirdModel.titleBossName = [rs stringForColumn:@"title"];
             thirdModel.att = [[rs stringForColumn:@"att"]intValue];
-            thirdModel.critresist = [[rs stringForColumn:@"resist"]intValue];
+            thirdModel.resist = [rs stringForColumn:@"resist"];
             thirdModel.def = [[rs stringForColumn:@"def"]intValue];
             thirdModel.remarks = [rs stringForColumn:@"remarks"];
             thirdModel.area = [rs stringForColumn:@"area"];
@@ -338,6 +338,7 @@
     while ([rs next]) {
         TitleModel *titleMode = [[TitleModel alloc]init];
         titleMode.title = [rs stringForColumn:@"title"];
+        titleMode.type = [rs stringForColumn:@"type"];
         titleMode.area = [rs stringForColumn:@"area"];
         titleMode.carbons = [rs stringForColumn:@"carbons"];
         titleMode.carbonf = [rs stringForColumn:@"carbonf"];
@@ -346,8 +347,23 @@
         titleMode.minjie = [rs stringForColumn:@"minjie"];
         titleMode.zhili = [rs stringForColumn:@"zhili"];
         titleMode.yizhi = [rs stringForColumn:@"yizhi"];
-        titleMode.remark = [rs stringForColumn:@"remark"];
+        titleMode.remark = [rs stringForColumn:@"remarks"];
         
+        if (titleMode.liliang == nil) {
+            titleMode.liliang = @"";
+        }
+        if (titleMode.minjie == nil) {
+            titleMode.minjie = @"";
+        }
+        if (titleMode.zhili == nil) {
+            titleMode.zhili = @"";
+        }
+        if (titleMode.yizhi == nil) {
+            titleMode.yizhi = @"";
+        }
+        if (titleMode.shengmingzhi == nil) {
+            titleMode.shengmingzhi = @"";
+        }
         [oneRoleArr addObject:titleMode];
     }
     

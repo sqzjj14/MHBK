@@ -91,6 +91,8 @@
 		94CEF6E51CB7517F004356C1 /* titleViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF6E41CB7517F004356C1 /* titleViewController2.m */; };
 		94D982551CB4F8DA006E5AFE /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D982541CB4F8DA006E5AFE /* UIColor+HexString.m */; };
 		94D982591CB502D4006E5AFE /* BOSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D982581CB502D4006E5AFE /* BOSSViewController.m */; };
+		94FF61FB1CE9972A00BE73CF /* TitilePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FF61FA1CE9972A00BE73CF /* TitilePopView.m */; };
+		94FF61FD1CE9974E00BE73CF /* TitlePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FF61FC1CE9974E00BE73CF /* TitlePopView.xib */; };
 		A6C6246B0C32738962F8F1EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478172978367723FBD963348 /* libPods.a */; };
 		BA51EFFB1CC1D9580096B353 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51EFFA1CC1D9580096B353 /* NewsDetailViewController.m */; };
 		BA51EFFC1CC1D9580096B353 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51EFFA1CC1D9580096B353 /* NewsDetailViewController.m */; };
@@ -259,6 +261,9 @@
 		94D982541CB4F8DA006E5AFE /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "FMDB/UIColor+HexString.m"; sourceTree = "<group>"; };
 		94D982571CB502D4006E5AFE /* BOSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSSViewController.h; sourceTree = "<group>"; };
 		94D982581CB502D4006E5AFE /* BOSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOSSViewController.m; sourceTree = "<group>"; };
+		94FF61F91CE9972A00BE73CF /* TitilePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitilePopView.h; sourceTree = "<group>"; };
+		94FF61FA1CE9972A00BE73CF /* TitilePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitilePopView.m; sourceTree = "<group>"; };
+		94FF61FC1CE9974E00BE73CF /* TitlePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlePopView.xib; sourceTree = "<group>"; };
 		BA51EFF71CC1D88C0096B353 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BA51EFF81CC1D8FE0096B353 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		BA51EFF91CC1D9580096B353 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -343,18 +348,10 @@
 		940B473E1CA8E6DF00AFF747 /* 装备 */ = {
 			isa = PBXGroup;
 			children = (
-				940B473F1CA8E6E900AFF747 /* 装备图表 */,
-			);
-			name = "装备";
-			sourceTree = "<group>";
-		};
-		940B473F1CA8E6E900AFF747 /* 装备图表 */ = {
-			isa = PBXGroup;
-			children = (
 				9499FDDB1CB3A1A6000C8856 /* EquipmentChartViewController.h */,
 				9499FDDC1CB3A1A6000C8856 /* EquipmentChartViewController.m */,
 			);
-			name = "装备图表";
+			name = "装备";
 			sourceTree = "<group>";
 		};
 		940B47431CA8E73600AFF747 /* 副本 */ = {
@@ -508,6 +505,7 @@
 		942A9B491CC8681D001A201F /* 头衔图表样式3 */ = {
 			isa = PBXGroup;
 			children = (
+				94FF61F81CE996F800BE73CF /* View */,
 				942A9B581CC86A21001A201F /* Title3ViewController.h */,
 				942A9B591CC86A21001A201F /* Title3ViewController.m */,
 			);
@@ -706,6 +704,16 @@
 			name = RBG;
 			sourceTree = "<group>";
 		};
+		94FF61F81CE996F800BE73CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94FF61F91CE9972A00BE73CF /* TitilePopView.h */,
+				94FF61FA1CE9972A00BE73CF /* TitilePopView.m */,
+				94FF61FC1CE9974E00BE73CF /* TitlePopView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		BA51EFFE1CC1D9860096B353 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,7 +821,6 @@
 				TargetAttributes = {
 					9412F76A1CA229E50037F461 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9Z92Q2DDAJ;
 					};
 					9412F7831CA229E50037F461 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -874,6 +881,7 @@
 				942A9B6C1CC87991001A201F /* icon3.png in Resources */,
 				942A9B6F1CC87991001A201F /* icon6.png in Resources */,
 				94B4A1DD1CE4123D0062F27D /* vindicyusdb.db in Resources */,
+				94FF61FD1CE9974E00BE73CF /* TitlePopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +977,7 @@
 				94CEF6DC1CB62ECA004356C1 /* LLCircleLayer.m in Sources */,
 				50D9D78E1CA6C58C002A6390 /* EquipmentModel.m in Sources */,
 				94B4A2071CE431160062F27D /* MASLayoutConstraint.m in Sources */,
+				94FF61FB1CE9972A00BE73CF /* TitilePopView.m in Sources */,
 				50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */,
 				942A9B531CC869CF001A201F /* GLIRViewController.m in Sources */,
 				94B4A2041CE431160062F27D /* MASCompositeConstraint.m in Sources */,
@@ -1152,6 +1161,7 @@
 			baseConfigurationReference = 257B5762312E00D3F6E4D14D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Mabinogi_heroes/PrefixHeader.pch";
@@ -1168,6 +1178,7 @@
 			baseConfigurationReference = 659503FF966D389EC7124B8E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Mabinogi_heroes/PrefixHeader.pch";

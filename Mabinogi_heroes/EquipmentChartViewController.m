@@ -28,6 +28,7 @@
     [self createContextSheet];
     [self initTipView];
     self.view.backgroundColor = [UIColor grayColor];
+    self.title = @"请长按屏幕选择装备";
     
     UIGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget: self
         action: @selector(longPressed:)];
@@ -73,15 +74,19 @@
     
     if ([item.title isEqualToString:@"武器"]) {
         _dataSource = [[DatabaseManager mabinogiHelper]CreatWeaponDataSource];
+        self.title = @"武器";
     }
     else if ([item.title isEqualToString:@"防具"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatArmorDataSource];
+        self.title = @"防具";
     }
     else if ([item.title isEqualToString:@"首饰"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatJewelryDataSource];
+        self.title = @"首饰";
     }
     else if ([item.title isEqualToString:@"其他"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatOtherDataSource];
+        self.title = @"其他";
     }
     
     MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withType:@"Equipment"  withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
