@@ -225,11 +225,9 @@
     [_dataSource removeAllObjects];
     _enchantArr = [[NSArray alloc]initWithObjects:@"武器",@"防具",@"首饰",@"副", nil];
     _levelArr = [[NSArray alloc]initWithObjects:@"7级",@"8级",@"9级",@"A级",@"B级",@"C级",@"D级",@"E级",@"F级",nil];
-    for (NSString *part in _enchantArr) {
-        NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
-       oneEnchantArr = [self packageOneEnchantWithEquipmentName:part andLevel:nil];
-        [_dataSource addObject:oneEnchantArr];
-    }
+  
+       _dataSource = [self packageOneEnchantWithEquipmentName:_enchantArr andLevel:_levelArr];
+
     return _dataSource;
 }
 
@@ -367,63 +365,77 @@
         }
         [oneRoleArr addObject:titleMode];
     }
-    
+    [self.database close];
     return oneRoleArr;
 }
 //附魔
-- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName andLevel:(NSString *)level{
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSArray *)equipmentName andLevel:(NSArray *)level{
     [self.database open];
-    NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
-    NSString *selecetSQL =
-    [NSString stringWithFormat:@"select * from enchant where part ='%@'",equipmentName];
-    FMResultSet *rs = [self.database executeQuery:selecetSQL];
-    while ([rs next]) {
-        TitleModel *titleMode = [[TitleModel alloc]init];
-        titleMode.title = [rs stringForColumn:@"title"];
-        titleMode.style = [rs stringForColumn:@"style"];
-        titleMode.customattribute = [rs stringForColumn:@"customattribute"];
-        titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
-        titleMode.custompart = [rs stringForColumn:@"custompart"];
-        titleMode.level_enchant = [rs stringForColumn:@"level"];
-        titleMode.part = [rs stringForColumn:@"part"];
-        titleMode.att = [rs stringForColumn:@"att"];
-        titleMode.mint = [rs stringForColumn:@"mint"];
-        titleMode.agi = [rs stringForColumn:@"agi"];
-        titleMode.wil = [rs stringForColumn:@"wil"];
-        titleMode.critresist = [rs stringForColumn:@"part"];
-        titleMode.del = [rs stringForColumn:@"att"];
-        titleMode.mint = [rs stringForColumn:@"mint"];
-        titleMode.sta = [rs stringForColumn:@"agi"];
-        titleMode.simulation = [rs stringForColumn:@"simulation"];
-        
-        [oneEnchantArr addObject:titleMode];
-    }
-    NSString *selecetSQL =
-    [NSString stringWithFormat:@"select * from enchant where level ='%@'",equipmentName];
-    FMResultSet *rs = [self.database executeQuery:selecetSQL];
-    while ([rs next]) {
-        TitleModel *titleMode = [[TitleModel alloc]init];
-        titleMode.title = [rs stringForColumn:@"title"];
-        titleMode.style = [rs stringForColumn:@"style"];
-        titleMode.customattribute = [rs stringForColumn:@"customattribute"];
-        titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
-        titleMode.custompart = [rs stringForColumn:@"custompart"];
-        titleMode.level_enchant = [rs stringForColumn:@"level"];
-        titleMode.part = [rs stringForColumn:@"part"];
-        titleMode.att = [rs stringForColumn:@"att"];
-        titleMode.mint = [rs stringForColumn:@"mint"];
-        titleMode.agi = [rs stringForColumn:@"agi"];
-        titleMode.wil = [rs stringForColumn:@"wil"];
-        titleMode.critresist = [rs stringForColumn:@"part"];
-        titleMode.del = [rs stringForColumn:@"att"];
-        titleMode.mint = [rs stringForColumn:@"mint"];
-        titleMode.sta = [rs stringForColumn:@"agi"];
-        titleMode.simulation = [rs stringForColumn:@"simulation"];
-        
-        [oneEnchantArr addObject:titleMode];
+    NSMutableArray *dataSource = [[NSMutableArray alloc]init];
+    
+    for (NSString *equipmentStr in equipmentName) {
+        NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+        NSString *selecetSQL =
+        [NSString stringWithFormat:@"select * from enchant where part ='%@'",equipmentStr];
+        FMResultSet *rs = [self.database executeQuery:selecetSQL];
+        while ([rs next]) {
+            
+            TitleModel *titleMode = [[TitleModel alloc]init];
+            
+            titleMode.title = [rs stringForColumn:@"title"];
+            titleMode.style = [rs stringForColumn:@"style"];
+            titleMode.customattribute = [rs stringForColumn:@"customattribute"];
+            titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
+            titleMode.custompart = [rs stringForColumn:@"custompart"];
+            titleMode.level_enchant = [rs stringForColumn:@"level"];
+            titleMode.part = [rs stringForColumn:@"part"];
+            titleMode.att = [rs stringForColumn:@"att"];
+            titleMode.mint = [rs stringForColumn:@"mint"];
+            titleMode.agi = [rs stringForColumn:@"agi"];
+            titleMode.wil = [rs stringForColumn:@"wil"];
+            titleMode.critresist = [rs stringForColumn:@"part"];
+            titleMode.del = [rs stringForColumn:@"att"];
+            titleMode.mint = [rs stringForColumn:@"mint"];
+            titleMode.sta = [rs stringForColumn:@"agi"];
+            titleMode.simulation = [rs stringForColumn:@"simulation"];
+            
+            [oneEnchantArr addObject:titleMode];
+        }
+        [dataSource addObject:oneEnchantArr];
     }
     
-    return oneEnchantArr;
+    for (NSString *levelStr in level) {
+        NSMutableArray *oneEnchantArr = [[NSMutableArray alloc]init];
+        NSString *selecetSQL =
+        [NSString stringWithFormat:@"select * from enchant where level ='%@'",levelStr];
+        FMResultSet *rs = [self.database executeQuery:selecetSQL];
+        while ([rs next]) {
+            
+            TitleModel *titleMode = [[TitleModel alloc]init];
+            
+            titleMode.title = [rs stringForColumn:@"title"];
+            titleMode.style = [rs stringForColumn:@"style"];
+            titleMode.customattribute = [rs stringForColumn:@"customattribute"];
+            titleMode.customprovenance = [rs stringForColumn:@"customprovenance"];
+            titleMode.custompart = [rs stringForColumn:@"custompart"];
+            titleMode.level_enchant = [rs stringForColumn:@"level"];
+            titleMode.part = [rs stringForColumn:@"part"];
+            titleMode.att = [rs stringForColumn:@"att"];
+            titleMode.mint = [rs stringForColumn:@"mint"];
+            titleMode.agi = [rs stringForColumn:@"agi"];
+            titleMode.wil = [rs stringForColumn:@"wil"];
+            titleMode.critresist = [rs stringForColumn:@"part"];
+            titleMode.del = [rs stringForColumn:@"att"];
+            titleMode.mint = [rs stringForColumn:@"mint"];
+            titleMode.sta = [rs stringForColumn:@"agi"];
+            titleMode.simulation = [rs stringForColumn:@"simulation"];
+            
+            [oneEnchantArr addObject:titleMode];
+        }
+        [dataSource addObject:oneEnchantArr];
+    }
+    [self.database close];
+    return dataSource;
 }
 
 

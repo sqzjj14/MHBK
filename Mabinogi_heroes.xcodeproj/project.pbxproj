@@ -26,6 +26,8 @@
 		9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B51CA236FC0037F461 /* DataViewController.m */; };
 		9412F7B91CA237360037F461 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B81CA237360037F461 /* CommunityViewController.m */; };
 		9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */; };
+		941933B41CEABE02007C8C82 /* EnchantPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 941933B31CEABE02007C8C82 /* EnchantPopView.m */; };
+		941933B61CEABE12007C8C82 /* EnchantPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941933B51CEABE12007C8C82 /* EnchantPopView.xib */; };
 		942A9B531CC869CF001A201F /* GLIRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A9B4C1CC869CF001A201F /* GLIRViewController.m */; };
 		942A9B541CC869CF001A201F /* RippleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A9B4E1CC869CF001A201F /* RippleModel.m */; };
 		942A9B551CC869CF001A201F /* RippleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A9B501CC869CF001A201F /* RippleTableViewController.m */; };
@@ -163,6 +165,9 @@
 		9412F7B81CA237360037F461 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
 		9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
+		941933B21CEABE02007C8C82 /* EnchantPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnchantPopView.h; sourceTree = "<group>"; };
+		941933B31CEABE02007C8C82 /* EnchantPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnchantPopView.m; sourceTree = "<group>"; };
+		941933B51CEABE12007C8C82 /* EnchantPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnchantPopView.xib; sourceTree = "<group>"; };
 		942A9B4B1CC869CF001A201F /* GLIRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLIRViewController.h; sourceTree = "<group>"; };
 		942A9B4C1CC869CF001A201F /* GLIRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLIRViewController.m; sourceTree = "<group>"; };
 		942A9B4D1CC869CF001A201F /* RippleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleModel.h; sourceTree = "<group>"; };
@@ -369,6 +374,7 @@
 		940B47441CA8E78C00AFF747 /* 附魔 */ = {
 			isa = PBXGroup;
 			children = (
+				941933B11CEABDE6007C8C82 /* View */,
 				94FF62011CE9C50000BE73CF /* EnchantViewController.h */,
 				94FF62021CE9C50000BE73CF /* EnchantViewController.m */,
 			);
@@ -505,6 +511,16 @@
 				9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */,
 			);
 			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		941933B11CEABDE6007C8C82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				941933B21CEABE02007C8C82 /* EnchantPopView.h */,
+				941933B31CEABE02007C8C82 /* EnchantPopView.m */,
+				941933B51CEABE12007C8C82 /* EnchantPopView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		942A9B491CC8681D001A201F /* 头衔图表样式3 */ = {
@@ -886,6 +902,7 @@
 				942A9B6C1CC87991001A201F /* icon3.png in Resources */,
 				942A9B6F1CC87991001A201F /* icon6.png in Resources */,
 				94B4A1DD1CE4123D0062F27D /* vindicyusdb.db in Resources */,
+				941933B61CEABE12007C8C82 /* EnchantPopView.xib in Resources */,
 				94FF61FD1CE9974E00BE73CF /* TitlePopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,6 +986,7 @@
 				94CEF6E51CB7517F004356C1 /* titleViewController2.m in Sources */,
 				94CEF6DE1CB62ECA004356C1 /* LLSlideMenu.m in Sources */,
 				942A9B601CC872AA001A201F /* btSimpleMenuItem.m in Sources */,
+				941933B41CEABE02007C8C82 /* EnchantPopView.m in Sources */,
 				942A9B541CC869CF001A201F /* RippleModel.m in Sources */,
 				942A9B611CC872AA001A201F /* btSimpleSideMenu.m in Sources */,
 				94B4A20C1CE431160062F27D /* View+MASAdditions.m in Sources */,

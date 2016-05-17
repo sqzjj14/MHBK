@@ -66,7 +66,7 @@
 //封装头衔
 - (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName;
 //封装附魔
-- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSString *)equipmentName andLevel:(NSString *)level;
+- (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSArray *)equipmentName andLevel:(NSArray *)level;
 @end
 
 
