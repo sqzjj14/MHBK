@@ -135,17 +135,21 @@
     
     [_dataSource removeAllObjects];
     
-     _arr5 =[[NSArray alloc]initWithObjects:@"Lv70",@"Lv60",@"Lv44",@"Lv40",nil];
-    _arr6 = [[NSArray alloc]initWithObjects:@"Lv85",@"Lv80",@"Lv60",nil];
+    _arr5 =[[NSArray alloc]initWithObjects:@"Lv70",@"Lv60",@"Lv52",@"Lv50",@"Lv44",@"Lv40",nil];
+    
+    _arr6 = [[NSArray alloc]initWithObjects:@"Lv85",@"Lv80",@"Lv60",@"Lv54",@"Lv48",nil];
+    
+    NSArray *beltArr = [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv54",@"Lv52",nil];
+    NSArray *ringArr = [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",@"Lv55",@"Lv52",@"Lv37",nil];
     
     EquipmentModel *Belt =
-    [self packageOneTypeWithName:BELT withLevel:_arr2];
+    [self packageOneTypeWithName:BELT withLevel:beltArr];
     EquipmentModel *Brooch =
     [self packageOneTypeWithName:BROOCH withLevel:_arr5];
     EquipmentModel *Earrings =
     [self packageOneTypeWithName:EARRINGS withLevel:_arr6];
     EquipmentModel *Ring =
-    [self packageOneTypeWithName:RING withLevel:_arr2];
+    [self packageOneTypeWithName:RING withLevel:ringArr];
     
     [_dataSource addObject:Belt];
     [_dataSource addObject:Brooch];
@@ -160,15 +164,17 @@
     _arr3 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv60",@"Lv42",nil];
     _arr4 = [[NSArray alloc]initWithObjects:@"Lv60",@"Lv54",@"Lv52",nil];
     _arr7 = [[NSArray alloc]initWithObjects:@"Lv0", nil];
-    _arr8 =[ [NSArray alloc]initWithObjects:@"Lv80", nil];
+    //_arr8 =[ [NSArray alloc]initWithObjects:@"Lv80", nil];
+    
+    NSArray *ShieldArr = [[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
    
     
     EquipmentModel *Horcruxes =
     [self packageOneTypeWithName:HORCRUXES withLevel:_arr3];
     EquipmentModel *smallShield =
-    [self packageOneTypeWithName:SMALL_SHIELD withLevel:_arr8];
+    [self packageOneTypeWithName:SMALL_SHIELD withLevel:ShieldArr];
     EquipmentModel *bigShield =
-    [self packageOneTypeWithName:BIG_SHIELD withLevel:_arr2];
+    [self packageOneTypeWithName:BIG_SHIELD withLevel:ShieldArr];
     EquipmentModel *magicBook =
     [self packageOneTypeWithName:MAGIC_BOOK withLevel:_arr4];
     EquipmentModel *craft =
@@ -180,6 +186,10 @@
     [_dataSource addObject:magicBook];
     [_dataSource addObject:craft];
     
+    return _dataSource;
+}
+- (NSMutableArray *)Creat90Stone{
+    _dataSource = [self package90Stone];
     return _dataSource;
 }
 #pragma mark -副本、boss-
@@ -285,7 +295,55 @@
       [self.database close];
       return secondModel;
 }
-//boss
+//90Stione
+-(NSMutableArray *)package90Stone{
+    [self.database open];
+    NSMutableArray *dataSource = [[NSMutableArray alloc]init];
+    EquipmentModel *secondOne = [[EquipmentModel alloc]init];
+    EquipmentModel *secondTwo = [[EquipmentModel alloc]init];
+    secondOne.meunTitle = @"封印";
+    secondTwo.meunTitle = @"传承石";
+
+    NSArray *typeArr = [NSArray arrayWithObjects:@"武器封印",@"头手脚封印",@"胸部封印",@"腿部封印",@"巨盾封印",@"小盾封印",nil];
+    NSArray *stoneArr = [NSArray arrayWithObjects:@"稳定传承石",@"完美传承石",@"锐利传承石",@"轻盈传承石",@"结实传承石",@"光滑传承石",nil];
+    //封印
+    for (NSString *typeStr in typeArr) {
+        NSString *selecetSQL =
+        [NSString stringWithFormat: @"SELECT * FROM equipment where type ='%@'",typeStr];
+        FMResultSet *rs = [self.database executeQuery:selecetSQL];
+        NSMutableArray *thirdArr = [[NSMutableArray alloc]init];
+        while ([rs next]) {
+            EquipmentModel *thirdModel = [[EquipmentModel alloc]init];
+            thirdModel.title = [rs stringForColumn:@"title"];
+            thirdModel.level = [rs stringForColumn:@"type"];  //为了让二级好显示
+            thirdModel.role = [rs stringForColumn:@"role"];
+            thirdModel.remarks = [rs stringForColumn:@"remarks"];
+            [thirdArr addObject:thirdModel];
+       }
+        [secondOne.nextArray addObject:thirdArr];
+    }
+    //传承石
+    for (NSString *stoneStr in stoneArr) {
+        NSString *selecetSQL =
+        [NSString stringWithFormat: @"SELECT * FROM equipment where type ='%@'",stoneStr];
+        FMResultSet *rs = [self.database executeQuery:selecetSQL];
+         NSMutableArray *thirdArr = [[NSMutableArray alloc]init];
+        while ([rs next]) {
+            EquipmentModel *thirdModel = [[EquipmentModel alloc]init];
+            thirdModel.title = [rs stringForColumn:@"title"];
+            thirdModel.level = [rs stringForColumn:@"type"];
+            thirdModel.role = [rs stringForColumn:@"role"];
+            thirdModel.remarks = [rs stringForColumn:@"remarks"];
+            [thirdArr addObject:thirdModel];
+       }
+         [secondTwo.nextArray addObject:thirdArr];
+    }
+    [dataSource addObject:secondOne];
+    [dataSource addObject:secondTwo];
+     return dataSource;
+}
+    
+//Boss
 - (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr{
     [self.database open];
     

@@ -8,6 +8,7 @@
 
 #import "DataViewController.h"
 #import "CNPGridMenu.h"
+#import "UMCommunity.h"
 
 @interface DataViewController ()<CNPGridMenuDelegate>
 @property (nonatomic, strong) CNPGridMenu *gridMenu;
@@ -18,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.hidesBottomBarWhenPushed = NO;
+    
 }
 - (IBAction)showMenu:(id)sender {
     
@@ -40,7 +41,7 @@
     
     CNPGridMenuItem *nextWeek = [[CNPGridMenuItem alloc] init];
     nextWeek.icon = [UIImage imageNamed:@"NextWeek"];
-    nextWeek.title = @"时装";
+    nextWeek.title = @"社区";
     
     CNPGridMenuItem *inAMonth = [[CNPGridMenuItem alloc] init];
     inAMonth.icon = [UIImage imageNamed:@"InMonth"];
@@ -58,7 +59,7 @@
     pickDate.icon = [UIImage imageNamed:@"PickDate"];
     pickDate.title = @"Pick Date";
     
-    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend]];
+    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend,nextWeek]];
     gridMenu.delegate = self;
     [self presentGridMenu:gridMenu animated:YES completion:^{
         NSLog(@"Grid Menu Presented");
@@ -99,6 +100,12 @@
         }];
         UIViewController *vc = [[EnchantViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([item.title isEqualToString:@"社区"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UINavigationController *communityViewController = [UMCommunity getFeedsModalViewController];
+        [self presentModalViewController:communityViewController animated:YES];
     }
     
 }

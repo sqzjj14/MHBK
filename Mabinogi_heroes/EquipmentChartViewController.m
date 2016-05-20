@@ -17,7 +17,7 @@
 
 @property (nonatomic,strong) NSMutableArray *dataSource;
 @property (strong, nonatomic) VLDContextSheet *contextSheet;
-
+@property (copy,nonatomic) NSString *selectType;
 @end
 
 @implementation EquipmentChartViewController
@@ -28,7 +28,7 @@
     [self createContextSheet];
     [self initTipView];
     self.view.backgroundColor = [UIColor grayColor];
-    self.title = @"请长按屏幕选择装备";
+    self.title = @"装备";
     
     UIGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget: self
         action: @selector(longPressed:)];
@@ -66,7 +66,13 @@
     image: [UIImage imageNamed: @"gift_button"]
                               highlightedImage: [UIImage imageNamed: @"gift_button2"]];
     
-    self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[item1, item2, item3, item4 ]];
+    VLDContextSheetItem *item5 =
+    [[VLDContextSheetItem alloc] initWithTitle: @"90材料"
+                                         image: [UIImage imageNamed: @"gift_button"]
+                              highlightedImage: [UIImage imageNamed: @"gift_button2"]];
+    
+    
+    self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[item1, item2, item3, item4,item5 ]];
     self.contextSheet.delegate = self;
     
 }
@@ -75,24 +81,36 @@
     if ([item.title isEqualToString:@"武器"]) {
         _dataSource = [[DatabaseManager mabinogiHelper]CreatWeaponDataSource];
         self.title = @"武器";
+        _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"防具"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatArmorDataSource];
         self.title = @"防具";
+        _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"首饰"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatJewelryDataSource];
         self.title = @"首饰";
+        _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"其他"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatOtherDataSource];
         self.title = @"其他";
+        _selectType = @"Equipment";
+    }
+    else if ([item.title isEqualToString:@"90材料"]){
+        _dataSource = [[DatabaseManager mabinogiHelper]Creat90Stone];
+        self.title = @"90材料";
+        _selectType = @"90";
     }
     
-    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64) WithLeftData:_dataSource withType:@"Equipment"  withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
+    MultLevelMeun *multView = [[MultLevelMeun alloc]initWithFrame:CGRectMake(0, 64, WIDTH_SCREEN, HEIGHT_SCREEN - 64 - 49) WithLeftData:_dataSource withType:_selectType  withSelecetIndex:^(NSInteger left, NSInteger right, id info) {
         
     }];
     multView.needToScorllerIndex = 0;
+
+    
+    
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.view addSubview:multView];
 

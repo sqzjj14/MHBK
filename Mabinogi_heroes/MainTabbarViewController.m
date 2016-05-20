@@ -59,7 +59,7 @@
 //    tabBar.alpha = 1;
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-    if (viewController == self.viewControllers[0] || viewController == self.viewControllers[2]) {
+    if (viewController == self.viewControllers[0]) {
         [self.viewControllers[1] dismissGridMenuAnimated:YES completion:nil];
     }
     return YES;

@@ -203,7 +203,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
     TitleModel *titlemodel = _dataSource[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.          %@",indexPath.row+1,titlemodel.title];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld.                            %@",indexPath.row+1,titlemodel.title];
     cell.textLabel.textColor = [UIColor whiteColor];
     return cell;
 }

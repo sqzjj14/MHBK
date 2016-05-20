@@ -245,10 +245,10 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利斯塔" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4N-OR-FI2">
-                    <rect key="frame" x="20" y="354" width="210" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利斯塔" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4N-OR-FI2">
+                    <rect key="frame" x="20" y="354" width="210" height="38"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="5mY-Ha-ZNB"/>
+                        <constraint firstAttribute="height" constant="38" id="5mY-Ha-ZNB"/>
                         <constraint firstAttribute="width" constant="210" id="vsb-OZ-OS3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -289,7 +289,7 @@
                 <constraint firstAttribute="trailing" secondItem="upE-mY-6qP" secondAttribute="trailing" constant="172" id="P5R-jZ-e0J"/>
                 <constraint firstAttribute="trailing" secondItem="QD2-Tc-bSy" secondAttribute="trailing" constant="20" id="POY-ZL-maT"/>
                 <constraint firstItem="T4N-OR-FI2" firstAttribute="top" secondItem="Gkt-Ob-wJ1" secondAttribute="bottom" constant="18" id="PwL-1N-uyk"/>
-                <constraint firstAttribute="bottom" secondItem="T4N-OR-FI2" secondAttribute="bottom" constant="25" id="QAv-vP-jWX"/>
+                <constraint firstAttribute="bottom" secondItem="T4N-OR-FI2" secondAttribute="bottom" constant="8" id="QAv-vP-jWX"/>
                 <constraint firstItem="5Zs-1i-Y89" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="QCX-xY-UXA"/>
                 <constraint firstItem="6Ff-U0-Lsv" firstAttribute="width" secondItem="hkH-5q-W9d" secondAttribute="width" id="Sz1-gs-3Ox"/>
                 <constraint firstAttribute="trailing" secondItem="752-6y-7Pd" secondAttribute="trailing" constant="20" id="VWb-y2-2Ou"/>

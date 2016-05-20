@@ -50,6 +50,7 @@
 - (NSMutableArray *)CreatArmorDataSource;
 - (NSMutableArray *)CreatJewelryDataSource;
 - (NSMutableArray *)CreatOtherDataSource;
+- (NSMutableArray *)Creat90Stone;
 //BOSSdb源封装、
 - (NSMutableArray *)CreatBossDataSource;
 //头衔db源封装
@@ -61,12 +62,15 @@
 
 //封装一种武器的类型：如双剑 parma1:双剑 param2:lv90 lv80 lv70
 - (EquipmentModel *)packageOneTypeWithName:(NSString *)weaponName withLevel:(NSArray *)levelArr;
+//封装90传承石
+- (NSMutableArray *)package90Stone;
 //封装副本Boss
 - (EquipmentModel *)packageOneSubAreaWithName:(NSString *)areaName with:(NSArray *)SubAreaArr;
 //封装头衔
 - (NSMutableArray *)packageOneTitleWithName:(NSString *)roleName;
 //封装附魔
 - (NSMutableArray *)packageOneEnchantWithEquipmentName:(NSArray *)equipmentName andLevel:(NSArray *)level;
+
 @end
 
 

@@ -15,6 +15,7 @@
 #import "tapEquipmentView.h"
 #import "tapBossView.h"
 #import "EquipmentModel.h"
+#import "90PopView.h"
 
 #import "UIColor+HexString.h"
 
@@ -28,6 +29,7 @@
 @property(strong,nonatomic)UICollectionView *rightCollection;
 @property(strong,nonatomic)tapEquipmentView *popview;
 @property(strong,nonatomic)tapBossView *popview2;
+@property(strong,nonatomic)_0PopView *popview3;
 @property(strong,nonatomic)UITapGestureRecognizer* closeTap;
 
 @end
@@ -64,7 +66,7 @@
  //左边的视图
         self.leftTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KleftWidth, frame.size.height)];
         if ([_type isEqualToString:@"Boss"]) {
-            self.leftTable.frame = CGRectMake(0, -64, KleftWidth, frame.size.height);
+            self.leftTable.frame = CGRectMake(0, -64, KleftWidth, frame.size.height +64);
         }
         self.leftTable.delegate = self;
         self.leftTable.dataSource = self;
@@ -131,6 +133,14 @@
         _popview2.layer.shadowOpacity = 0.5;
         _popview2.layer.cornerRadius = 2 ;
         _popview2.layer.shadowRadius= 8;
+ //popview3
+        _popview3 = [[NSBundle mainBundle]loadNibNamed:@"90PopView" owner:nil options:nil][0];
+        _popview3.backgroundColor = [UIColor whiteColor];
+        _popview3.layer.shadowOffset = CGSizeMake(2, 2);
+        _popview3.layer.shadowColor = [[UIColor redColor]CGColor];
+        _popview3.layer.shadowOpacity = 0.5;
+        _popview3.layer.cornerRadius = 2 ;
+        _popview3.layer.shadowRadius= 8;
  //closePopViewTap
         _closeTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closePop:)];
         
@@ -224,7 +234,7 @@
     //show popview
 #pragma Popview Setting
     EquipmentModel *eqModel = [_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row];
-    
+//popview1
     if ([_type isEqualToString:@"Equipment"]) {
         _popview.title.text = eqModel.title;
         _popview.level.text = eqModel.level;
@@ -257,6 +267,26 @@
         }];
         [self addGestureRecognizer:_closeTap];
     }
+//popview3
+    else if ([_type isEqualToString:@"90"]){
+        _popview3.title.text = eqModel.title;
+        _popview3.remarks.text = eqModel.remarks;
+        _popview3.role.text = eqModel.role;
+        [self addSubview:_popview3];
+        [_popview3 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.mas_centerX).with.offset(10);
+            make.centerY.equalTo(self.mas_centerY).with.offset(-50);
+            make.width.equalTo(@250);
+            make.height.equalTo(@250);
+        }];
+        _popview3.alpha = 0;
+        [UIView animateWithDuration:0.35 animations:^{
+            _popview3.alpha = 1;
+        }];
+        [self addGestureRecognizer:_closeTap];
+    }
+    
+//popview2
     else if ([_type isEqualToString:@"Boss"]){
         _popview2.name.text = eqModel.title;
         _popview2.att.text = [NSString stringWithFormat:@"攻击:%ld",(long)eqModel.att];
@@ -294,13 +324,12 @@
         cell.title.text = [[_dataSource[_selectIndex]nextArray][indexPath.section][indexPath.row]title];
     }
     cell.backgroundColor = [UIColor clearColor];
-    
-    if ([_type isEqualToString:@"Equipment"]) {
-        cell.image.backgroundColor= COLOR_LEFTTABLE_CELL_IMAGE_BACKGROUD;
-        [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",cell.title.text]]];
+    cell.image.backgroundColor= COLOR_LEFTTABLE_CELL_IMAGE_BACKGROUD;
+    [cell.image setImage:[UIImage imageNamed:@"Icon-76"]];
+    [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",cell.title.text]]];
+    if ([_type isEqualToString:@"90"]) {
+        [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",someoneThird.level]]];
     }
-  
-    
     return cell;
 }
 //二级目录headView
@@ -341,14 +370,19 @@
         if (_popview2) {
             _popview2.alpha = 0;
         }
+        if (_popview3) {
+            _popview3.alpha = 0;
+        }
        
-        _popview2.alpha = 0;
     } completion:^(BOOL finished) {
         if (_popview) {
             [_popview removeFromSuperview];
         }
         if (_popview2) {
             [_popview2 removeFromSuperview];
+        }
+        if (_popview3) {
+            [_popview3 removeFromSuperview];
         }
         [self removeGestureRecognizer:tap];
     }];
