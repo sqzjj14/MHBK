@@ -17,14 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molian" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-di-3cQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="molian" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-di-3cQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="白嬳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxU-DP-Zif">
-                                <rect key="frame" x="269" y="577" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者 白嬳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxU-DP-Zif">
+                                <rect key="frame" x="261" y="631" width="114" height="21"/>
                                 <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="4Xg-GC-GS2"/>
+                                    <constraint firstAttribute="height" constant="21" id="EiH-OQ-mwR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,9 +36,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xu8-di-3cQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="75E-KW-mZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="mxU-DP-Zif" secondAttribute="trailing" id="WOk-CP-aSc"/>
                             <constraint firstItem="Xu8-di-3cQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aKi-gw-u1G"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mxU-DP-Zif" secondAttribute="bottom" constant="15" id="bLq-Qw-vA9"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Xu8-di-3cQ" secondAttribute="bottom" id="dMw-ky-W8O"/>
                             <constraint firstAttribute="trailing" secondItem="Xu8-di-3cQ" secondAttribute="trailing" id="iC2-KX-hAt"/>
+                            <constraint firstItem="mxU-DP-Zif" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="611" id="u5g-h5-8SG"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

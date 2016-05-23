@@ -80,27 +80,27 @@
     
     if ([item.title isEqualToString:@"武器"]) {
         _dataSource = [[DatabaseManager mabinogiHelper]CreatWeaponDataSource];
-        self.title = @"武器";
+        self.title = @"武器(长按屏幕切换)";
         _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"防具"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatArmorDataSource];
-        self.title = @"防具";
+        self.title = @"防具(长按屏幕切换)";
         _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"首饰"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatJewelryDataSource];
-        self.title = @"首饰";
+        self.title = @"首饰(长按屏幕切换)";
         _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"其他"]){
         _dataSource = [[DatabaseManager mabinogiHelper]CreatOtherDataSource];
-        self.title = @"其他";
+        self.title = @"其他(长按屏幕切换)";
         _selectType = @"Equipment";
     }
     else if ([item.title isEqualToString:@"90材料"]){
         _dataSource = [[DatabaseManager mabinogiHelper]Creat90Stone];
-        self.title = @"90材料";
+        self.title = @"90材料(长按屏幕切换)";
         _selectType = @"90";
     }
     

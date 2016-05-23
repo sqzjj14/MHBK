@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     
-    self.rippleImageName = @"tier_bg.png";
+    self.rippleImageName = @"tier_bg.jpg";
     [super viewDidLoad];
     self.title = @"右滑选择附魔类型";
     
@@ -203,8 +203,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
     TitleModel *titlemodel = _dataSource[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.                            %@",indexPath.row+1,titlemodel.title];
+    cell.textLabel.text = [NSString stringWithFormat:@" %ld.                         %@",indexPath.row+1,titlemodel.title];
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:17];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
