@@ -25,6 +25,16 @@
 		9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B21CA236EF0037F461 /* NewsViewController.m */; };
 		9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7B51CA236FC0037F461 /* DataViewController.m */; };
 		9412F7C01CA240D50037F461 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */; };
+		94170CC51CF7DA4700DC20A5 /* SizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94170CC41CF7DA4700DC20A5 /* SizeViewController.m */; };
+		94170CC91CF7E08700DC20A5 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CC71CF7E08700DC20A5 /* 0.jpg */; };
+		94170CCA1CF7E08700DC20A5 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CC81CF7E08700DC20A5 /* 1.jpg */; };
+		94170CD11CF7E88700DC20A5 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CCB1CF7E88700DC20A5 /* 2.jpg */; };
+		94170CD21CF7E88700DC20A5 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CCC1CF7E88700DC20A5 /* 3.jpg */; };
+		94170CD31CF7E88700DC20A5 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CCD1CF7E88700DC20A5 /* 4.jpg */; };
+		94170CD41CF7E88700DC20A5 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CCE1CF7E88700DC20A5 /* 5.jpg */; };
+		94170CD51CF7E88700DC20A5 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CCF1CF7E88700DC20A5 /* 6.jpg */; };
+		94170CD61CF7E88700DC20A5 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CD01CF7E88700DC20A5 /* 7.jpg */; };
+		94170CD81CF7E8B200DC20A5 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94170CD71CF7E8B200DC20A5 /* 8.jpg */; };
 		941933B41CEABE02007C8C82 /* EnchantPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 941933B31CEABE02007C8C82 /* EnchantPopView.m */; };
 		941933B61CEABE12007C8C82 /* EnchantPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941933B51CEABE12007C8C82 /* EnchantPopView.xib */; };
 		941935E71CEACBD2007C8C82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941935E61CEACBD2007C8C82 /* Security.framework */; };
@@ -327,6 +337,17 @@
 		9412F7B51CA236FC0037F461 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
 		9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
+		94170CC31CF7DA4700DC20A5 /* SizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeViewController.h; sourceTree = "<group>"; };
+		94170CC41CF7DA4700DC20A5 /* SizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeViewController.m; sourceTree = "<group>"; };
+		94170CC71CF7E08700DC20A5 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		94170CC81CF7E08700DC20A5 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		94170CCB1CF7E88700DC20A5 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		94170CCC1CF7E88700DC20A5 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		94170CCD1CF7E88700DC20A5 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		94170CCE1CF7E88700DC20A5 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		94170CCF1CF7E88700DC20A5 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		94170CD01CF7E88700DC20A5 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		94170CD71CF7E8B200DC20A5 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		941933B21CEABE02007C8C82 /* EnchantPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnchantPopView.h; sourceTree = "<group>"; };
 		941933B31CEABE02007C8C82 /* EnchantPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnchantPopView.m; sourceTree = "<group>"; };
 		941933B51CEABE12007C8C82 /* EnchantPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnchantPopView.xib; sourceTree = "<group>"; };
@@ -1050,6 +1071,7 @@
 				940B47431CA8E73600AFF747 /* 副本 */,
 				940B47441CA8E78C00AFF747 /* 附魔 */,
 				940B47451CA8E88600AFF747 /* 头衔 */,
+				94170CC21CF7DA1300DC20A5 /* 卡肉 */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1071,6 +1093,32 @@
 				9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */,
 			);
 			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		94170CC21CF7DA1300DC20A5 /* 卡肉 */ = {
+			isa = PBXGroup;
+			children = (
+				94170CC61CF7E05900DC20A5 /* Image */,
+				94170CC31CF7DA4700DC20A5 /* SizeViewController.h */,
+				94170CC41CF7DA4700DC20A5 /* SizeViewController.m */,
+			);
+			name = "卡肉";
+			sourceTree = "<group>";
+		};
+		94170CC61CF7E05900DC20A5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				94170CC71CF7E08700DC20A5 /* 0.jpg */,
+				94170CC81CF7E08700DC20A5 /* 1.jpg */,
+				94170CCB1CF7E88700DC20A5 /* 2.jpg */,
+				94170CCC1CF7E88700DC20A5 /* 3.jpg */,
+				94170CCD1CF7E88700DC20A5 /* 4.jpg */,
+				94170CCE1CF7E88700DC20A5 /* 5.jpg */,
+				94170CCF1CF7E88700DC20A5 /* 6.jpg */,
+				94170CD01CF7E88700DC20A5 /* 7.jpg */,
+				94170CD71CF7E8B200DC20A5 /* 8.jpg */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		941933B11CEABDE6007C8C82 /* View */ = {
@@ -2279,6 +2327,7 @@
 				942EA29D1CF2D30700228172 /* UMComTableViewCell.xib in Resources */,
 				942EA2711CF2D30700228172 /* UMComLoginViewController.xib in Resources */,
 				942EA2CB1CF2D30700228172 /* UMComFriendTableViewCell.xib in Resources */,
+				94170CD61CF7E88700DC20A5 /* 7.jpg in Resources */,
 				9447DA311CA284370009AA60 /* LeftCell.xib in Resources */,
 				942EA2D41CF2D30700228172 /* UMComFeedsTableViewCell.xib in Resources */,
 				942EA2771CF2D30700228172 /* UMSCommentDetailController.xib in Resources */,
@@ -2286,6 +2335,7 @@
 				942EA27A1CF2D30700228172 /* UMShareEditViewController.xib in Resources */,
 				9447DA2C1CA2841B0009AA60 /* RightCellCollectionViewCell.xib in Resources */,
 				947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */,
+				94170CD31CF7E88700DC20A5 /* 4.jpg in Resources */,
 				94E54A821CEDBB0C001988AC /* 90PopView.xib in Resources */,
 				942A9B6B1CC87991001A201F /* icon2.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
@@ -2300,16 +2350,19 @@
 				942EA2C71CF2D30700228172 /* UMComEditTopicsTableViewCell.xib in Resources */,
 				942EA2E01CF2D30700228172 /* UMComCommentTableViewCell.xib in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
+				94170CC91CF7E08700DC20A5 /* 0.jpg in Resources */,
 				942EA30B1CF2DDB300228172 /* tier_bg.jpg in Resources */,
 				942A9B6E1CC87991001A201F /* icon5.png in Resources */,
 				942EA2F61CF2D30700228172 /* UMComProfileSettingController.xib in Resources */,
 				94B4A1E71CE422C00062F27D /* tapEquipmentView.xib in Resources */,
 				943517E01CE478FA00510963 /* tapBossView.xib in Resources */,
+				94170CD11CF7E88700DC20A5 /* 2.jpg in Resources */,
 				942EA2C11CF2D30700228172 /* UMComFindTableViewCell.xib in Resources */,
 				942EA27D1CF2D30700228172 /* UMSnsAccountViewController.xib in Resources */,
 				942EA2CF1CF2D30700228172 /* UMComLocationTableViewCell.xib in Resources */,
 				942A9B6D1CC87991001A201F /* icon4.png in Resources */,
 				942A9B571CC869CF001A201F /* Shader.vsh in Resources */,
+				94170CD21CF7E88700DC20A5 /* 3.jpg in Resources */,
 				942EA2791CF2D30700228172 /* UMSCommentInputControlleriPad.xib in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
 				942A9B701CC87991001A201F /* icon7.png in Resources */,
@@ -2326,6 +2379,10 @@
 				94B4A1DD1CE4123D0062F27D /* vindicyusdb.db in Resources */,
 				942EA2FE1CF2D30700228172 /* UMComUserTableViewCell.xib in Resources */,
 				941933B61CEABE12007C8C82 /* EnchantPopView.xib in Resources */,
+				94170CD51CF7E88700DC20A5 /* 6.jpg in Resources */,
+				94170CD81CF7E8B200DC20A5 /* 8.jpg in Resources */,
+				94170CD41CF7E88700DC20A5 /* 5.jpg in Resources */,
+				94170CCA1CF7E08700DC20A5 /* 1.jpg in Resources */,
 				942EA27B1CF2D30700228172 /* UMShareEditViewControlleriPad.xib in Resources */,
 				94FF61FD1CE9974E00BE73CF /* TitlePopView.xib in Resources */,
 				942EA27C1CF2D30700228172 /* UMSLoginViewController.xib in Resources */,
@@ -2458,6 +2515,7 @@
 				942EA2C21CF2D30700228172 /* UMComFindViewController.m in Sources */,
 				942EA2EE1CF2D30700228172 /* UMComPrivateChatTableViewController.m in Sources */,
 				943517DE1CE4785500510963 /* tapBossView.m in Sources */,
+				94170CC51CF7DA4700DC20A5 /* SizeViewController.m in Sources */,
 				94CEF6DC1CB62ECA004356C1 /* LLCircleLayer.m in Sources */,
 				50D9D78E1CA6C58C002A6390 /* EquipmentModel.m in Sources */,
 				94B4A2071CE431160062F27D /* MASLayoutConstraint.m in Sources */,
@@ -2771,7 +2829,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sqzjj14.Mabinogi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "094508d2-afaa-444b-a2f6-22ea2638cba9";
+				PROVISIONING_PROFILE = "b8cee8ca-c7a6-41b5-94a8-403bdf72f28f";
 			};
 			name = Debug;
 		};
@@ -2814,7 +2872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sqzjj14.Mabinogi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "094508d2-afaa-444b-a2f6-22ea2638cba9";
+				PROVISIONING_PROFILE = "b8cee8ca-c7a6-41b5-94a8-403bdf72f28f";
 			};
 			name = Release;
 		};

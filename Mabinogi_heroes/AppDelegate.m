@@ -21,6 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //检测版本更新
+    [self updateVersion];
    
      [UMCommunity setAppKey:@"573a983b67e58ed37400332e" withAppSecret:@"a3b8921355528e47164ed10b5b52f935"];
     
@@ -41,6 +44,39 @@
     }
 
     return YES;
+}
+#pragma mark －版本更新提示－
+- (void)updateVersion{
+    //获取发布版本的Version
+    NSString *string = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"https://itunes.apple.com/lookup?id=1116582532"] encoding:NSUTF8StringEncoding error:nil];
+    
+    if (string!=nil && string.length > 0 && [string rangeOfString:@"version"].length ==7 ) {
+        
+        //获取当前版本
+        NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        //appStore版本
+        NSString *appStoreVersion = [string substringFromIndex:[string rangeOfString:@"\"version\":"].location+10];
+        appStoreVersion = [[appStoreVersion substringToIndex:[appStoreVersion rangeOfString:@"," ].location]stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        
+        if (![currentVersion isEqualToString:appStoreVersion]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"洛英百科有新版本啦！ %@ 已发布",appStoreVersion] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+            alert.delegate =self;
+            [alert addButtonWithTitle:@"前往更新"];
+            [alert show];
+            alert.tag = 20;
+        }
+        else{
+            //[[[UIAlertView alloc]initWithTitle:nil message:@"已是最新版本" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil]show];
+            return;
+        }
+    }
+}
+#pragma mark -UIAlertView代理方法-
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1 && alertView.tag == 20) {
+        NSString *url = @"https://itunes.apple.com/cn/app/hua-hui-tong/id1098073214?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    }
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{

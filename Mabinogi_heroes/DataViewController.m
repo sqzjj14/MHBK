@@ -45,7 +45,7 @@
     
     CNPGridMenuItem *inAMonth = [[CNPGridMenuItem alloc] init];
     inAMonth.icon = [UIImage imageNamed:@"InMonth"];
-    inAMonth.title = @"里时装";
+    inAMonth.title = @"模型尺寸";
     
     CNPGridMenuItem *someday = [[CNPGridMenuItem alloc] init];
     someday.icon = [UIImage imageNamed:@"Someday"];
@@ -59,7 +59,7 @@
     pickDate.icon = [UIImage imageNamed:@"PickDate"];
     pickDate.title = @"Pick Date";
     
-    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend,nextWeek]];
+    CNPGridMenu *gridMenu = [[CNPGridMenu alloc] initWithMenuItems:@[laterToday, thisEvening, tomorrow, thisWeekend,nextWeek,inAMonth]];
     gridMenu.delegate = self;
     [self presentGridMenu:gridMenu animated:YES completion:^{
         NSLog(@"Grid Menu Presented");
@@ -107,7 +107,12 @@
         UINavigationController *communityViewController = [UMCommunity getFeedsModalViewController];
         [self presentModalViewController:communityViewController animated:YES];
     }
-    
+    if ([item.title isEqualToString:@"模型尺寸"]) {
+        [self dismissGridMenuAnimated:YES completion:^{
+        }];
+        UIViewController *vc = [[SizeViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,6 +20,7 @@
 #import "BOSSViewController.h"
 #import "Title3ViewController.h"
 #import "EnchantViewController.h"
+#import "SizeViewController.h"
 
 #import "DatabaseManager.h"
 #import "Masonry.h"
