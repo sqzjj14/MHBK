@@ -113,7 +113,7 @@
     _arr2 =[[NSArray alloc]initWithObjects:@"Lv80",@"Lv70",@"Lv60",nil];
     
     EquipmentModel *Head =
-    [self packageOneTypeWithName:HEAD withLevel:_arr2];
+    [self packageOneTypeWithName:THEHEAD withLevel:_arr2];
     EquipmentModel *Chest =
     [self packageOneTypeWithName:CHEST withLevel:_arr2];
     EquipmentModel *Leg =

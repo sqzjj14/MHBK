@@ -79,7 +79,7 @@
 #pragma mark ---------- EQUIMENT ----------
 /******************************* EQUIMENT */
 
-#define HEAD @"头部"
+#define THEHEAD @"头部"
 #define CHEST @"胸部"
 #define LEG @"腿部"
 #define HAND @"手部"

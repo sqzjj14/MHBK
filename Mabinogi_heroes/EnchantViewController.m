@@ -29,7 +29,7 @@
     
     self.rippleImageName = @"tier_bg.jpg";
     [super viewDidLoad];
-    self.title = @"右滑选择附魔类型";
+    self.title = @"从左向右拖动开始选择";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -220,7 +220,7 @@
     [self.view addSubview:_enchantPopView];
     [_enchantPopView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).with.offset(10);
-        make.centerY.equalTo(self.view.mas_centerY).with.offset(-50);
+        make.centerY.equalTo(self.view.mas_centerY).with.offset(0);
         make.width.equalTo(@250);
         make.height.equalTo(@400);
     }];

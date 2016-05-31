@@ -13,17 +13,22 @@
 
 @interface SizeViewController ()<UIScrollViewDelegate>
 @property (strong,nonatomic) UIScrollView *scrollView;
+@property (strong,nonatomic) UIPinchGestureRecognizer *pgr;
 @end
 
 @implementation SizeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"双剑";
     self.view.backgroundColor = [UIColor whiteColor];
+    //创建捏合手势
+     _pgr = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(onPinch:)];
     [self creatScrollView];
 }
 
 -(void)creatScrollView{
+    
     UIImage *fristImage = [UIImage imageNamed:@"1.jpg"];
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kWitdh, kHeight )];
     _scrollView.contentSize = CGSizeMake(9 * kWitdh, fristImage.size.height);
@@ -39,8 +44,6 @@
     _scrollView.pagingEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
-    _scrollView.maximumZoomScale = 2.0;//允许放大2倍
-    _scrollView.minimumZoomScale = 1;
     [self.view addSubview:_scrollView];
     
 }
@@ -86,7 +89,6 @@
     }
 }
 
- 
 
 
 @end

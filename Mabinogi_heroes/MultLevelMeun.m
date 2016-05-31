@@ -297,7 +297,7 @@
         [self addSubview:_popview2];
         [_popview2 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.mas_centerX).with.offset(10);
-            make.centerY.equalTo(self.mas_centerY).with.offset(-50);
+            make.centerY.equalTo(self.mas_centerY).with.offset(0);
             make.width.equalTo(@250);
             make.height.equalTo(@400);
         }];

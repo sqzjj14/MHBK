@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     self.rippleImageName = @"background.png";
     [super viewDidLoad];
-    self.title = @"向右滑动选择角色";
+    self.title = @"从左向右拖动选择角色";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -137,7 +137,7 @@
                                                             NSLog(ARISHA);
                                                             _dataSource = _allData[8];
                                                             [self.tableView reloadData];
-                                                            self.title = LYNN;
+                                                            self.title = ARISHA;
                                                             
                                                         }];
     BTSimpleMenuItem *item10 = [[BTSimpleMenuItem alloc]initWithTitle:HAGIE
@@ -254,7 +254,7 @@
     [self.tableView addSubview:_titlePopView];
     [_titlePopView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX).with.offset(10);
-        make.centerY.equalTo(self.view.mas_centerY).with.offset(-50);
+        make.centerY.equalTo(self.view.mas_centerY).with.offset(0);
         make.width.equalTo(@250);
         make.height.equalTo(@400);
     }];
