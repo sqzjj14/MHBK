@@ -15,6 +15,17 @@
 		50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087131CA4E868005352B7 /* FMDatabaseQueue.m */; };
 		50F0871B1CA4E868005352B7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F087161CA4E868005352B7 /* FMResultSet.m */; };
 		940D00541CC62803004F3E23 /* CNPGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 940D00531CC62803004F3E23 /* CNPGridMenu.m */; };
+		940F84B81D065852006EA285 /* DIYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84B71D065852006EA285 /* DIYHomeViewController.m */; };
+		940F84BC1D065896006EA285 /* DIYBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84BA1D065896006EA285 /* DIYBasicViewController.m */; };
+		940F84BD1D065896006EA285 /* DIYBasicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940F84BB1D065896006EA285 /* DIYBasicViewController.xib */; };
+		940F84C01D06660C006EA285 /* DIYRoleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84BF1D06660C006EA285 /* DIYRoleModel.m */; };
+		940F84C81D068112006EA285 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84C31D068112006EA285 /* SVIndefiniteAnimatedView.m */; };
+		940F84C91D068112006EA285 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 940F84C51D068112006EA285 /* SVProgressHUD.bundle */; };
+		940F84CA1D068112006EA285 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84C71D068112006EA285 /* SVProgressHUD.m */; };
+		940F84CE1D0682C9006EA285 /* DIYDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84CC1D0682C9006EA285 /* DIYDetailViewController.m */; };
+		940F84CF1D0682C9006EA285 /* DIYDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940F84CD1D0682C9006EA285 /* DIYDetailViewController.xib */; };
+		940F84D41D06A861006EA285 /* RoleListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84D31D06A861006EA285 /* RoleListView.m */; };
+		940F84D71D06A871006EA285 /* DressListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F84D61D06A871006EA285 /* DressListView.m */; };
 		9412F7701CA229E50037F461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F76F1CA229E50037F461 /* main.m */; };
 		9412F7731CA229E50037F461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9412F7721CA229E50037F461 /* AppDelegate.m */; };
 		9412F7791CA229E50037F461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9412F7771CA229E50037F461 /* Main.storyboard */; };
@@ -328,6 +339,26 @@
 		659503FF966D389EC7124B8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		940D00521CC62803004F3E23 /* CNPGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPGridMenu.h; sourceTree = "<group>"; };
 		940D00531CC62803004F3E23 /* CNPGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPGridMenu.m; sourceTree = "<group>"; };
+		940F84B61D065852006EA285 /* DIYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYHomeViewController.h; sourceTree = "<group>"; };
+		940F84B71D065852006EA285 /* DIYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYHomeViewController.m; sourceTree = "<group>"; };
+		940F84B91D065896006EA285 /* DIYBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYBasicViewController.h; sourceTree = "<group>"; };
+		940F84BA1D065896006EA285 /* DIYBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYBasicViewController.m; sourceTree = "<group>"; };
+		940F84BB1D065896006EA285 /* DIYBasicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DIYBasicViewController.xib; sourceTree = "<group>"; };
+		940F84BE1D06660C006EA285 /* DIYRoleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYRoleModel.h; sourceTree = "<group>"; };
+		940F84BF1D06660C006EA285 /* DIYRoleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYRoleModel.m; sourceTree = "<group>"; };
+		940F84C21D068112006EA285 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		940F84C31D068112006EA285 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		940F84C41D068112006EA285 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		940F84C51D068112006EA285 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		940F84C61D068112006EA285 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		940F84C71D068112006EA285 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		940F84CB1D0682C9006EA285 /* DIYDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYDetailViewController.h; sourceTree = "<group>"; };
+		940F84CC1D0682C9006EA285 /* DIYDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYDetailViewController.m; sourceTree = "<group>"; };
+		940F84CD1D0682C9006EA285 /* DIYDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DIYDetailViewController.xib; sourceTree = "<group>"; };
+		940F84D21D06A861006EA285 /* RoleListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoleListView.h; sourceTree = "<group>"; };
+		940F84D31D06A861006EA285 /* RoleListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoleListView.m; sourceTree = "<group>"; };
+		940F84D51D06A871006EA285 /* DressListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DressListView.h; sourceTree = "<group>"; };
+		940F84D61D06A871006EA285 /* DressListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DressListView.m; sourceTree = "<group>"; };
 		9412F76B1CA229E50037F461 /* Mabinogi_heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mabinogi_heroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412F76F1CA229E50037F461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9412F7711CA229E50037F461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -915,6 +946,8 @@
 		50D9D77F1CA6BB05002A6390 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				940F84BE1D06660C006EA285 /* DIYRoleModel.h */,
+				940F84BF1D06660C006EA285 /* DIYRoleModel.m */,
 				50D9D7891CA6C569002A6390 /* TitleModel.h */,
 				50D9D78A1CA6C569002A6390 /* TitleModel.m */,
 				50D9D78C1CA6C58C002A6390 /* EquipmentModel.h */,
@@ -1016,6 +1049,78 @@
 				940D00531CC62803004F3E23 /* CNPGridMenu.m */,
 			);
 			name = "功能菜单1";
+			sourceTree = "<group>";
+		};
+		940F84B11D0656A1006EA285 /* DIYEquipment */ = {
+			isa = PBXGroup;
+			children = (
+				940F84B21D0657AC006EA285 /* DIYHome */,
+				940F84B31D0657BB006EA285 /* DIYBasic */,
+				940F84B41D0657F7006EA285 /* DIYDetail */,
+			);
+			name = DIYEquipment;
+			sourceTree = "<group>";
+		};
+		940F84B21D0657AC006EA285 /* DIYHome */ = {
+			isa = PBXGroup;
+			children = (
+				940F84B61D065852006EA285 /* DIYHomeViewController.h */,
+				940F84B71D065852006EA285 /* DIYHomeViewController.m */,
+			);
+			name = DIYHome;
+			sourceTree = "<group>";
+		};
+		940F84B31D0657BB006EA285 /* DIYBasic */ = {
+			isa = PBXGroup;
+			children = (
+				940F84D11D06A821006EA285 /* 时装list */,
+				940F84D01D06A812006EA285 /* 角色list */,
+				940F84B91D065896006EA285 /* DIYBasicViewController.h */,
+				940F84BA1D065896006EA285 /* DIYBasicViewController.m */,
+				940F84BB1D065896006EA285 /* DIYBasicViewController.xib */,
+			);
+			name = DIYBasic;
+			sourceTree = "<group>";
+		};
+		940F84B41D0657F7006EA285 /* DIYDetail */ = {
+			isa = PBXGroup;
+			children = (
+				940F84CB1D0682C9006EA285 /* DIYDetailViewController.h */,
+				940F84CC1D0682C9006EA285 /* DIYDetailViewController.m */,
+				940F84CD1D0682C9006EA285 /* DIYDetailViewController.xib */,
+			);
+			name = DIYDetail;
+			sourceTree = "<group>";
+		};
+		940F84C11D068112006EA285 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				940F84C21D068112006EA285 /* SVIndefiniteAnimatedView.h */,
+				940F84C31D068112006EA285 /* SVIndefiniteAnimatedView.m */,
+				940F84C41D068112006EA285 /* SVProgressHUD-Prefix.pch */,
+				940F84C51D068112006EA285 /* SVProgressHUD.bundle */,
+				940F84C61D068112006EA285 /* SVProgressHUD.h */,
+				940F84C71D068112006EA285 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		940F84D01D06A812006EA285 /* 角色list */ = {
+			isa = PBXGroup;
+			children = (
+				940F84D21D06A861006EA285 /* RoleListView.h */,
+				940F84D31D06A861006EA285 /* RoleListView.m */,
+			);
+			name = "角色list";
+			sourceTree = "<group>";
+		};
+		940F84D11D06A821006EA285 /* 时装list */ = {
+			isa = PBXGroup;
+			children = (
+				940F84D51D06A871006EA285 /* DressListView.h */,
+				940F84D61D06A871006EA285 /* DressListView.m */,
+			);
+			name = "时装list";
 			sourceTree = "<group>";
 		};
 		9412F7621CA229E50037F461 = {
@@ -1124,6 +1229,7 @@
 			children = (
 				9412F7A11CA232CA0037F461 /* News */,
 				9412F7A21CA232DA0037F461 /* Data */,
+				940F84B11D0656A1006EA285 /* DIYEquipment */,
 				9412F7BE1CA240D50037F461 /* MainTabbarViewController.h */,
 				9412F7BF1CA240D50037F461 /* MainTabbarViewController.m */,
 			);
@@ -2242,6 +2348,7 @@
 			children = (
 				946EB1831CFC229C0060C3D9 /* HttpClient.h */,
 				946EB1841CFC229C0060C3D9 /* HttpClient.m */,
+				940F84C11D068112006EA285 /* SVProgressHUD */,
 				946EB1661CFBE8D50060C3D9 /* AFNetworking */,
 				9412F7A31CA232F60037F461 /* 友盟微社区 */,
 				94B4A1EC1CE431160062F27D /* Masonry */,
@@ -2401,6 +2508,7 @@
 				947B97D11CB79D3F001C5B98 /* messages_bg_2@2x.png in Resources */,
 				94170CD31CF7E88700DC20A5 /* 4.jpg in Resources */,
 				94E54A821CEDBB0C001988AC /* 90PopView.xib in Resources */,
+				940F84CF1D0682C9006EA285 /* DIYDetailViewController.xib in Resources */,
 				942A9B6B1CC87991001A201F /* icon2.png in Resources */,
 				9412F77E1CA229E50037F461 /* LaunchScreen.storyboard in Resources */,
 				942EA2851CF2D30700228172 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -2415,6 +2523,7 @@
 				942EA2E01CF2D30700228172 /* UMComCommentTableViewCell.xib in Resources */,
 				9412F77B1CA229E50037F461 /* Assets.xcassets in Resources */,
 				94170CC91CF7E08700DC20A5 /* 0.jpg in Resources */,
+				940F84C91D068112006EA285 /* SVProgressHUD.bundle in Resources */,
 				942EA30B1CF2DDB300228172 /* tier_bg.jpg in Resources */,
 				942A9B6E1CC87991001A201F /* icon5.png in Resources */,
 				942EA2F61CF2D30700228172 /* UMComProfileSettingController.xib in Resources */,
@@ -2430,6 +2539,7 @@
 				942EA2791CF2D30700228172 /* UMSCommentInputControlleriPad.xib in Resources */,
 				9447DA361CA284DC0009AA60 /* RightHeadView.xib in Resources */,
 				942A9B701CC87991001A201F /* icon7.png in Resources */,
+				940F84BD1D065896006EA285 /* DIYBasicViewController.xib in Resources */,
 				942EA2891CF2D30700228172 /* UMCommunityStrings.strings in Resources */,
 				947B97D01CB79D3F001C5B98 /* messages_bg_2.png in Resources */,
 				9412F7791CA229E50037F461 /* Main.storyboard in Resources */,
@@ -2535,6 +2645,7 @@
 				94CEF6E51CB7517F004356C1 /* titleViewController2.m in Sources */,
 				942EA2B21CF2D30700228172 /* UMComRefreshView.m in Sources */,
 				942EA2B71CF2D30700228172 /* UMComGridTableViewCellOne.m in Sources */,
+				940F84CE1D0682C9006EA285 /* DIYDetailViewController.m in Sources */,
 				942EA2D81CF2D30700228172 /* UMComFocusFeedTableViewController.m in Sources */,
 				94CEF6DE1CB62ECA004356C1 /* LLSlideMenu.m in Sources */,
 				942A9B601CC872AA001A201F /* btSimpleMenuItem.m in Sources */,
@@ -2555,6 +2666,7 @@
 				942EA2BD1CF2D30700228172 /* UMComWebView.m in Sources */,
 				942EA2F41CF2D30700228172 /* UMComSysPrivateLetterCell.m in Sources */,
 				942EA2D61CF2D30700228172 /* UMComFeedTableViewController.m in Sources */,
+				940F84CA1D068112006EA285 /* SVProgressHUD.m in Sources */,
 				942EA2DF1CF2D30700228172 /* UMComCommentTableViewCell.m in Sources */,
 				942EA2A21CF2D30700228172 /* UMImageProgressView.m in Sources */,
 				942EA2EA1CF2D30700228172 /* UMComCommentMenuViewController.m in Sources */,
@@ -2592,6 +2704,7 @@
 				942EA2A31CF2D30700228172 /* UMComHorizonCollectionView.m in Sources */,
 				942A9B531CC869CF001A201F /* GLIRViewController.m in Sources */,
 				942EA2D11CF2D30700228172 /* UMComSelectTopicView.m in Sources */,
+				940F84C01D06660C006EA285 /* DIYRoleModel.m in Sources */,
 				942EA2B31CF2D30700228172 /* UMComSearchBar.m in Sources */,
 				942EA2E81CF2D30700228172 /* UMComHomeFeedViewController.m in Sources */,
 				942EA2F31CF2D30700228172 /* UMComSysLikeTableViewCell.m in Sources */,
@@ -2622,6 +2735,7 @@
 				94E54A801CEDBAFE001988AC /* 90PopView.m in Sources */,
 				942EA2C91CF2D30700228172 /* UMComEditViewController.m in Sources */,
 				9412F7701CA229E50037F461 /* main.m in Sources */,
+				940F84B81D065852006EA285 /* DIYHomeViewController.m in Sources */,
 				942EA2A91CF2D30700228172 /* UMComPageControlView.m in Sources */,
 				94CEF6DD1CB62ECA004356C1 /* LLDisplayLayer.m in Sources */,
 				942EA2CD1CF2D30700228172 /* UMComLocationListController.m in Sources */,
@@ -2634,6 +2748,7 @@
 				942EA2F51CF2D30700228172 /* UMComProfileSettingController.m in Sources */,
 				942EA2EF1CF2D30700228172 /* UMComPrivateLetterTableViewController.m in Sources */,
 				942EA2A41CF2D30700228172 /* UMComHorizonMenuView.m in Sources */,
+				940F84C81D068112006EA285 /* SVIndefiniteAnimatedView.m in Sources */,
 				942EA2F21CF2D30700228172 /* UMComSysCommonTableViewCell.m in Sources */,
 				9442ECC31CC7810300859422 /* VLDContextSheetItemView.m in Sources */,
 				942EA2E31CF2D30700228172 /* UMComHtmlFeedStyle.m in Sources */,
@@ -2659,6 +2774,7 @@
 				942EA28C1CF2D30700228172 /* UMComLoginManager.m in Sources */,
 				9412F7B31CA236EF0037F461 /* NewsViewController.m in Sources */,
 				942EA2921CF2D30700228172 /* UMComRequestTableViewController.m in Sources */,
+				940F84D71D06A871006EA285 /* DressListView.m in Sources */,
 				942EA28D1CF2D30700228172 /* UMComMessageManager.m in Sources */,
 				942EA2941CF2D30700228172 /* UMComActionDeleteView.m in Sources */,
 				942EA2C51CF2D30700228172 /* UMComEditForwardView.m in Sources */,
@@ -2671,6 +2787,7 @@
 				9412F7B61CA236FC0037F461 /* DataViewController.m in Sources */,
 				9499FDDD1CB3A1A6000C8856 /* EquipmentChartViewController.m in Sources */,
 				942EA29E1CF2D30700228172 /* UMComEditTextView.m in Sources */,
+				940F84D41D06A861006EA285 /* RoleListView.m in Sources */,
 				942EA2FB1CF2D30700228172 /* UMComUserNearbyViewController.m in Sources */,
 				942EA2CC1CF2D30700228172 /* UMComFriendTableViewController.m in Sources */,
 				942EA2A51CF2D30700228172 /* UMComMedalImageView.m in Sources */,
@@ -2690,6 +2807,7 @@
 				942EA2971CF2D30700228172 /* UMComAddedImageView.m in Sources */,
 				942EA2A01CF2D30700228172 /* UMComGridViewerController.m in Sources */,
 				942A9B551CC869CF001A201F /* RippleTableViewController.m in Sources */,
+				940F84BC1D065896006EA285 /* DIYBasicViewController.m in Sources */,
 				94CEF6D01CB62E1C004356C1 /* TitleViewController.m in Sources */,
 				50F0871A1CA4E868005352B7 /* FMDatabaseQueue.m in Sources */,
 				942EA2CA1CF2D30700228172 /* UMComFriendTableViewCell.m in Sources */,

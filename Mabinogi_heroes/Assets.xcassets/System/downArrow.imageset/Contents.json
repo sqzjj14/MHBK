@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "lynn_normol.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "下箭头.png",
       "scale" : "2x"
     },
     {

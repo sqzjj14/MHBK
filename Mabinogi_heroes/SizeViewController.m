@@ -52,11 +52,11 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView{
     NSLog(@"%f",scrollView.contentOffset.x);
     if (scrollView.contentOffset.x == 0) {
-        self.title = @"双剑";
+        self.title = @"双枪";
         scrollView.contentSize = CGSizeMake(9 *kWitdh, scrollView.subviews[0].size.height);
     }
     if (scrollView.contentOffset.x == kWitdh) {
-        self.title = @"双枪";
+        self.title = @"双剑";
         scrollView.contentSize = CGSizeMake(9 *kWitdh, scrollView.subviews[1].size.height);
     }
     if (scrollView.contentOffset.x == 2*kWitdh) {
