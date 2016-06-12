@@ -93,7 +93,7 @@
     
 }
 
-#pragma mark 提交
+#pragma mark 提交(判断输入是否为数字)
 - (IBAction)submit:(id)sender {
     if(_strTF.text.length == 0){
         [SVProgressHUD setErrorImage:nil];
@@ -126,10 +126,11 @@
         [SVProgressHUD showErrorWithStatus:@"生命值不能为空" maskType:SVProgressHUDMaskTypeBlack];
         return;
     }
-  
+#pragma mark 基础属性计算
 //传入基础数据到配装界面
   //计算属性
     DIYDetailViewController *vc = [[DIYDetailViewController alloc]init];
+    vc.roleModel = [[DIYRoleModel alloc]init];
     vc.roleModel.str = [_strTF.text integerValue];
     vc.roleModel.mint = [_mintTF.text integerValue];
     vc.roleModel.agi = [_agiTF.text integerValue];
@@ -150,6 +151,7 @@
     else if ([_selectRoleLab.text isEqualToString:@"艾莉莎"]){
         vc.roleModel.att = vc.roleModel.mint * 2 + 700;
     }
+    
      //防御计算公式
     vc.roleModel.def = vc.roleModel.agi * 0.5;
      //暴击计算公式  （133的整数倍 再多1 才加一点暴击）
@@ -162,8 +164,28 @@
     vc.roleModel.gongsu = 0;
      //暴抗
     vc.roleModel.baokang = 0;
+    //选择时装时
+    if ([_selectDressLab.text isEqualToString:@"无时装"]) {
+        vc.roleModel.att = vc.roleModel.att + 0;
+    }
+    else if ([_selectDressLab.text isEqualToString:@"C级时装一套"]){
+        vc.roleModel.att = vc.roleModel.att + 100;
+    }
+    else if ([_selectDressLab.text isEqualToString:@"B级时装一套"]){
+        vc.roleModel.att = vc.roleModel.att + 350;
+        vc.roleModel.pingheng = 2;
+    }
+    else if ([_selectDressLab.text isEqualToString:@"A级时装一套"]){
+        vc.roleModel.att = vc.roleModel.att + 600;
+        vc.roleModel.pingheng = 4;
+    }
+    else if ([_selectDressLab.text isEqualToString:@"C级时装一套"]){
+        vc.roleModel.att = vc.roleModel.att + 1000;
+        vc.roleModel.pingheng = 4;
+    }
      
-    
+    vc.type = @"start";
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

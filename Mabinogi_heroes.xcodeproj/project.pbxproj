@@ -227,6 +227,7 @@
 		942EA3041CF2D30700228172 /* UMComErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 942EA26A1CF2D30700228172 /* UMComErrorCode.m */; };
 		942EA3051CF2D30700228172 /* UMComTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 942EA26D1CF2D30700228172 /* UMComTools.m */; };
 		942EA30B1CF2DDB300228172 /* tier_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 942EA30A1CF2DDB300228172 /* tier_bg.jpg */; };
+		942FC5F31D0CFE4E00D3775F /* DIYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FC5F21D0CFE4E00D3775F /* DIYHelper.m */; };
 		943517DE1CE4785500510963 /* tapBossView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943517DD1CE4785500510963 /* tapBossView.m */; };
 		943517E01CE478FA00510963 /* tapBossView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943517DF1CE478FA00510963 /* tapBossView.xib */; };
 		9442ECC21CC7810300859422 /* VLDContextSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442ECBD1CC7810300859422 /* VLDContextSheetItem.m */; };
@@ -779,6 +780,8 @@
 		942EA26C1CF2D30700228172 /* UMComTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMComTools.h; sourceTree = "<group>"; };
 		942EA26D1CF2D30700228172 /* UMComTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMComTools.m; sourceTree = "<group>"; };
 		942EA30A1CF2DDB300228172 /* tier_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tier_bg.jpg; sourceTree = "<group>"; };
+		942FC5F11D0CFE4E00D3775F /* DIYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYHelper.h; sourceTree = "<group>"; };
+		942FC5F21D0CFE4E00D3775F /* DIYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYHelper.m; sourceTree = "<group>"; };
 		943517DC1CE4785500510963 /* tapBossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tapBossView.h; sourceTree = "<group>"; };
 		943517DD1CE4785500510963 /* tapBossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tapBossView.m; sourceTree = "<group>"; };
 		943517DF1CE478FA00510963 /* tapBossView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tapBossView.xib; sourceTree = "<group>"; };
@@ -1056,7 +1059,6 @@
 			children = (
 				940F84B21D0657AC006EA285 /* DIYHome */,
 				940F84B31D0657BB006EA285 /* DIYBasic */,
-				940F84B41D0657F7006EA285 /* DIYDetail */,
 			);
 			name = DIYEquipment;
 			sourceTree = "<group>";
@@ -1078,6 +1080,7 @@
 				940F84B91D065896006EA285 /* DIYBasicViewController.h */,
 				940F84BA1D065896006EA285 /* DIYBasicViewController.m */,
 				940F84BB1D065896006EA285 /* DIYBasicViewController.xib */,
+				940F84B41D0657F7006EA285 /* DIYDetail */,
 			);
 			name = DIYBasic;
 			sourceTree = "<group>";
@@ -2346,6 +2349,8 @@
 		BA51EFFE1CC1D9860096B353 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				942FC5F11D0CFE4E00D3775F /* DIYHelper.h */,
+				942FC5F21D0CFE4E00D3775F /* DIYHelper.m */,
 				946EB1831CFC229C0060C3D9 /* HttpClient.h */,
 				946EB1841CFC229C0060C3D9 /* HttpClient.m */,
 				940F84C11D068112006EA285 /* SVProgressHUD */,
@@ -2816,6 +2821,7 @@
 				942EA2BF1CF2D30700228172 /* UMComDiscoverViewController.m in Sources */,
 				94B4A20B1CE431160062F27D /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				942EA29A1CF2D30700228172 /* UMComCommentEditView.m in Sources */,
+				942FC5F31D0CFE4E00D3775F /* DIYHelper.m in Sources */,
 				942EA3021CF2D30700228172 /* UMComModel.xcdatamodeld in Sources */,
 				942EA2AC1CF2D30700228172 /* UMAssetsCollectionController.m in Sources */,
 				94B4A1E31CE422AE0062F27D /* tapEquipmentView.m in Sources */,
